@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const StarTecXTProductPage = () => {
   return (
@@ -19,10 +20,12 @@ const StarTecXTProductPage = () => {
         {/* Product Hero Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
           <div className="overflow-hidden rounded-lg shadow-lg">
-            <img 
+            <Image 
               src="/images/StarTex.jpg" 
               alt="StarTec XT Formwork" 
-              className="w-full h-auto"
+              className="w-full h-full object-cover rounded-lg shadow-lg"
+              width={600}
+              height={400}
             />
           </div>
           <div className="flex flex-col justify-center">
@@ -123,7 +126,7 @@ const StarTecXTProductPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg overflow-hidden shadow-md">
               <div className="h-48 overflow-hidden">
-                <img src="/images/project1.jpeg" alt="High-Rise Construction" className="w-full h-full object-cover" />
+                <Image src="/images/project1.jpeg" alt="High-Rise Construction" className="w-full h-full object-cover" width={600} height={400} />
               </div>
               <div className="p-4">
                 <h3 className="font-bold text-lg mb-2">High-Rise Construction</h3>
@@ -132,7 +135,7 @@ const StarTecXTProductPage = () => {
             </div>
             <div className="bg-white rounded-lg overflow-hidden shadow-md">
               <div className="h-48 overflow-hidden">
-                <img src="/images/project2.jpeg" alt="Industrial Facilities" className="w-full h-full object-cover" />
+                <Image src="/images/project2.jpeg" alt="Industrial Construction" className="w-full h-full object-cover" width={400} height={300} />
               </div>
               <div className="p-4">
                 <h3 className="font-bold text-lg mb-2">Industrial Facilities</h3>
@@ -141,7 +144,7 @@ const StarTecXTProductPage = () => {
             </div>
             <div className="bg-white rounded-lg overflow-hidden shadow-md">
               <div className="h-48 overflow-hidden">
-                <img src="/images/project3.jpeg" alt="Infrastructure Projects" className="w-full h-full object-cover" />
+                <Image src="/images/project3.jpeg" alt="Infrastructure Projects" className="w-full h-full object-cover" width={400} height={300} />
               </div>
               <div className="p-4">
                 <h3 className="font-bold text-lg mb-2">Infrastructure Projects</h3>

@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const AluStarProductPage = () => {
   return (
@@ -19,11 +20,12 @@ const AluStarProductPage = () => {
         {/* Product Hero Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
           <div className="overflow-hidden rounded-lg shadow-lg">
-            <img 
+            <Image 
               src="/images/AluStar.jpg" 
               alt="AluStar Formwork" 
-              className="w-full h-auto"
-            />
+              className="w-full h-full object-cover rounded-lg shadow-lg"
+              width={600}
+              height={400} />
           </div>
           <div className="flex flex-col justify-center">
             <h2 className="text-2xl font-bold mb-6">Key Features</h2>
@@ -119,7 +121,7 @@ const AluStarProductPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg overflow-hidden shadow-md">
               <div className="h-48 overflow-hidden">
-                <img src="/images/project1.jpeg" alt="Commercial Construction" className="w-full h-full object-cover" />
+                <Image src="/images/project1.jpeg" alt="Residential Construction" className="w-full h-full object-cover" width={400} height={300} />
               </div>
               <div className="p-4">
                 <h3 className="font-bold text-lg mb-2">Commercial Construction</h3>
@@ -128,7 +130,7 @@ const AluStarProductPage = () => {
             </div>
             <div className="bg-white rounded-lg overflow-hidden shadow-md">
               <div className="h-48 overflow-hidden">
-                <img src="/images/project2.jpeg" alt="Multi-story Buildings" className="w-full h-full object-cover" />
+                <Image src="/images/project2.jpeg" alt="Multi-story Buildings" className="w-full h-full object-cover" width={400} height={300} />
               </div>
               <div className="p-4">
                 <h3 className="font-bold text-lg mb-2">Multi-story Buildings</h3>
@@ -137,7 +139,7 @@ const AluStarProductPage = () => {
             </div>
             <div className="bg-white rounded-lg overflow-hidden shadow-md">
               <div className="h-48 overflow-hidden">
-                <img src="/images/project3.jpeg" alt="Infrastructure Projects" className="w-full h-full object-cover" />
+                <Image src="/images/project3.jpeg" alt="Infrastructure Projects" className="w-full h-full object-cover" width={400} height={300} />
               </div>
               <div className="p-4">
                 <h3 className="font-bold text-lg mb-2">Infrastructure Projects</h3>

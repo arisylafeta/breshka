@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const AluFixProductPage = () => {
   return (
@@ -12,7 +13,7 @@ const AluFixProductPage = () => {
           <h1 className="text-4xl font-bold mb-4">AluFix</h1>
           <div className="w-20 h-1 bg-red-600 mb-6"></div>
           <p className="text-xl text-gray-700 max-w-3xl">
-            MEVA's lightweight, portable formwork. The modular aluminum formwork impresses with its optimized heights for efficient formwork without the need for extensions.
+            MEVA&apos;s lightweight, portable formwork. The modular aluminum formwork impresses with its optimized heights for efficient formwork without the need for extensions.
           </p>
         </div>
 
@@ -119,7 +120,7 @@ const AluFixProductPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg overflow-hidden shadow-md">
               <div className="h-48 overflow-hidden">
-                <img src="/images/project1.jpeg" alt="Residential Construction" className="w-full h-full object-cover" />
+                <Image src="/images/project1.jpeg" alt="Residential Construction" className="w-full h-full object-cover" width={400} height={300} />
               </div>
               <div className="p-4">
                 <h3 className="font-bold text-lg mb-2">Residential Construction</h3>
@@ -128,7 +129,7 @@ const AluFixProductPage = () => {
             </div>
             <div className="bg-white rounded-lg overflow-hidden shadow-md">
               <div className="h-48 overflow-hidden">
-                <img src="/images/project2.jpeg" alt="Commercial Buildings" className="w-full h-full object-cover" />
+                <Image src="/images/project2.jpeg" alt="Commercial Buildings" className="w-full h-full object-cover" width={400} height={300} />
               </div>
               <div className="p-4">
                 <h3 className="font-bold text-lg mb-2">Commercial Buildings</h3>
@@ -137,7 +138,7 @@ const AluFixProductPage = () => {
             </div>
             <div className="bg-white rounded-lg overflow-hidden shadow-md">
               <div className="h-48 overflow-hidden">
-                <img src="/images/project3.jpeg" alt="Infrastructure Projects" className="w-full h-full object-cover" />
+                <Image src="/images/project3.jpeg" alt="Infrastructure Projects" className="w-full h-full object-cover" width={600} height={400} />
               </div>
               <div className="p-4">
                 <h3 className="font-bold text-lg mb-2">Infrastructure Projects</h3>

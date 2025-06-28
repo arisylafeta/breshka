@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const ProductsPage = () => {
   return (
@@ -22,10 +23,12 @@ const ProductsPage = () => {
           {/* AluFix Product Card */}
           <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
             <div className="relative h-64 overflow-hidden">
-              <img 
+              <Image 
                 src="/images/AluFix.jpg" 
                 alt="AluFix Formwork" 
                 className="w-full h-full object-cover"
+                width={500}
+                height={300}
               />
               <div className="absolute top-0 left-0 w-full h-1 bg-red-600"></div>
             </div>
@@ -33,7 +36,7 @@ const ProductsPage = () => {
               <div className="text-sm text-gray-500 mb-1">Wall formwork</div>
               <h3 className="text-2xl font-bold mb-4">AluFix</h3>
               <p className="text-gray-600 mb-6 h-24 overflow-hidden">
-                AluFix is MEVA's lightweight, portable formwork. The modular aluminum formwork impresses with its optimized heights for efficient formwork without the need for extensions.
+                AluFix is MEVA&apos;s lightweight, portable formwork. The modular aluminum formwork impresses with its optimized heights for efficient formwork without the need for extensions.
               </p>
               <div className="flex justify-between items-center">
                 <span className="text-sm font-medium text-gray-500">Aluminum Construction</span>
@@ -50,10 +53,12 @@ const ProductsPage = () => {
           {/* AluStar Product Card */}
           <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
             <div className="relative h-64 overflow-hidden">
-              <img 
+              <Image 
                 src="/images/AluStar.jpg" 
                 alt="AluStar Formwork" 
                 className="w-full h-full object-cover"
+                width={500}
+                height={300}
               />
               <div className="absolute top-0 left-0 w-full h-1 bg-red-600"></div>
             </div>
@@ -78,10 +83,12 @@ const ProductsPage = () => {
           {/* StarTec XT Product Card */}
           <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
             <div className="relative h-64 overflow-hidden">
-              <img 
+              <Image 
                 src="/images/StarTex.jpg" 
                 alt="StarTec XT Formwork" 
                 className="w-full h-full object-cover"
+                width={500}
+                height={300}
               />
               <div className="absolute top-0 left-0 w-full h-1 bg-red-600"></div>
             </div>
