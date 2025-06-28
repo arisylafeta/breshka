@@ -54,10 +54,10 @@ const HomePage = () => {
         <div className="flex flex-col md:flex-row justify-between items-start">
           {/* 600+ Employees */}
           <div className="flex-1 px-8 py-6 relative">
-            <h3 className="text-5xl font-normal text-gray-400 mb-2">
+            <h3 className="text-5xl font-normal text-red-600 mb-2">
               <AnimatedCounter end={600} suffix="+" className="inline-block" />
             </h3>
-            <h4 className="text-lg font-medium text-gray-800 mb-3">Employees</h4>
+            <h4 className="text-lg font-medium text-red-600 mb-3">Employees</h4>
             <p className="text-sm text-gray-600 leading-relaxed">
               Our people are our greatest asset. Their knowledge, expertise and focus on serving our clients to the highest level is what has made MEVA the company it is today.
             </p>
@@ -67,10 +67,10 @@ const HomePage = () => {
 
           {/* 40+ Locations */}
           <div className="flex-1 px-8 py-6 relative">
-            <h3 className="text-5xl font-normal text-gray-400 mb-2">
+            <h3 className="text-5xl font-normal text-red-600 mb-2">
               <AnimatedCounter end={40} suffix="+" className="inline-block" />
             </h3>
-            <h4 className="text-lg font-medium text-gray-800 mb-3">Locations</h4>
+            <h4 className="text-lg font-medium text-red-600 mb-3">Locations</h4>
             <p className="text-sm text-gray-600 leading-relaxed">
               We have seen substantial growth in recent years, with regional offices and local representatives serving MEVA across the globe.
             </p>
@@ -80,10 +80,10 @@ const HomePage = () => {
 
           {/* 130m Euros */}
           <div className="flex-1 px-8 py-6 relative">
-            <h3 className="text-5xl font-normal text-gray-400 mb-2">
+            <h3 className="text-5xl font-normal text-red-600 mb-2">
               <AnimatedCounter end={130} suffix="m" className="inline-block" />
             </h3>
-            <h4 className="text-lg font-medium text-gray-800 mb-3">Euros</h4>
+            <h4 className="text-lg font-medium text-red-600 mb-3">Euros</h4>
             <p className="text-sm text-gray-600 leading-relaxed">
               With our annual sales exceeding €130 million, we continue to re-invest in research and development to deliver innovation in product design.
             </p>
@@ -93,10 +93,10 @@ const HomePage = () => {
 
           {/* 8,000+ Clients */}
           <div className="flex-1 px-8 py-6">
-            <h3 className="text-5xl font-normal text-gray-400 mb-2">
+            <h3 className="text-5xl font-normal text-red-600 mb-2">
               <AnimatedCounter end={8000} suffix="+" className="inline-block" />
             </h3>
-            <h4 className="text-lg font-medium text-gray-800 mb-3">Clients</h4>
+            <h4 className="text-lg font-medium text-red-600 mb-3">Clients</h4>
             <p className="text-sm text-gray-600 leading-relaxed">
               We are truly humbled by the number of clients that put their trust in us every day to deliver formwork solutions to their specific needs.
             </p>
@@ -195,7 +195,8 @@ const HomePage = () => {
       </div>
 
       {/* Popular Products */}
-      <div className="container mx-auto px-4 lg:px-8 py-20">
+      <div className="py-20 bg-gray-50 dark:bg-zinc-900">
+      <div className="container mx-auto px-4 lg:px-8">
         <h2 className="text-3xl font-bold mb-12">Popular Products</h2>
         <div className="flex flex-col md:flex-row gap-8">
           {/* AluFix Product Card - Large Left */}
@@ -272,6 +273,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
 
        {/* Projects Section */}
