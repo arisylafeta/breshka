@@ -51,14 +51,14 @@
 }
 
 /* Global style to override NavigationMenuLink hover background */
-:global(.no-hover-bg) {
+.noHoverBg {
   background-color: transparent !important;
 }
 
-:global(.no-hover-bg:hover) {
+.noHoverBg:hover {
   background-color: transparent !important;
 }
 
-:global(.no-hover-bg:focus) {
+.noHoverBg:focus {
   background-color: transparent !important;
 }
