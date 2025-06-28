@@ -1,0 +1,64 @@
+.navItem {
+  position: relative;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.navLink {
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.25rem;
+  font-weight: 500;
+  height: 100%;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: transparent !important;
+}
+
+.navText {
+  position: relative;
+  z-index: 10;
+}
+
+.hoverEffect {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 0;
+  background-color: #dc2626;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.navItem:hover .hoverEffect {
+  height: 100%;
+}
+
+.navItem:hover .navText {
+  color: white;
+  background-color: transparent !important;
+}
+
+.navItem:hover .navLink {
+  background-color: transparent !important;
+}
+
+.navLink:hover {
+  background-color: transparent !important;
+}
+
+/* Global style to override NavigationMenuLink hover background */
+:global(.no-hover-bg) {
+  background-color: transparent !important;
+}
+
+:global(.no-hover-bg:hover) {
+  background-color: transparent !important;
+}
+
+:global(.no-hover-bg:focus) {
+  background-color: transparent !important;
+}
