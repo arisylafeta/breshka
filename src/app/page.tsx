@@ -115,7 +115,7 @@ const HomePage = () => {
               
               {/* Quote Section */}
               <div className="w-full md:w-2/3 p-12 flex flex-col justify-center">
-                <div className="text-5xl font-serif text-red-600 mb-6">"</div>
+                <div className="text-5xl font-serif text-red-600 mb-6">&ldquo;</div>
                 <blockquote className="text-2xl font-light text-gray-700 leading-relaxed mb-8">
                 Whatever challenges you face, our extensive technical expertise in formwork allows us to find the best solutions for your needs to ensure smooth progress and deadlines are met. With us, your project is in good hands.
                 </blockquote>
@@ -207,7 +207,7 @@ const HomePage = () => {
               <div className="text-sm text-gray-500 mb-1">Wall formwork</div>
               <h3 className="text-2xl font-bold mb-4">AluFix</h3>
               <p className="text-gray-600 mb-6">
-                AluFix is MEVA's lightweight, portable formwork. The modular aluminum formwork impresses with its optimized heights for efficient formwork without the need for extensions.
+                AluFix is MEVA&apos;s lightweight, portable formwork. The modular aluminum formwork impresses with its optimized heights for efficient formwork without the need for extensions.
               </p>
               <div className="flex justify-end">
                 <a href="/products/AluFix" className="inline-flex items-center justify-center w-12 h-12 bg-red-600 rounded-md hover:bg-red-700 transition-colors">

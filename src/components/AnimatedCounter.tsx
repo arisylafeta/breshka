@@ -16,24 +16,23 @@ export default function AnimatedCounter({ end, duration = 2000, suffix = '', cla
   const hasAnimated = useRef(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        // Only set to visible if it hasn't animated before
-        if (entry.isIntersecting && !hasAnimated.current) {
-          setIsVisible(true);
-          hasAnimated.current = true;
-        }
-      },
-      { threshold: 0.1 } // Trigger when 10% of the element is visible
-    );
+    const observer = new IntersectionObserver((entries) => {
+      const [entry] = entries;
+      // Only set to visible if it hasn't animated before
+      if (entry.isIntersecting && !hasAnimated.current) {
+        setIsVisible(true);
+        hasAnimated.current = true;
+      }
+    });
 
-    if (counterRef.current) {
-      observer.observe(counterRef.current);
+    const currentRef = counterRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (counterRef.current) {
-        observer.unobserve(counterRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
