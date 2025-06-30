@@ -20,9 +20,11 @@ const AluFixProductPage = () => {
         {/* Product Hero Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
           <div className="overflow-hidden rounded-lg shadow-lg">
-            <img 
+            <Image 
               src="/images/AluFix.jpg" 
               alt="AluFix Formwork" 
+              width={800}
+              height={600}
               className="w-full h-auto"
             />
           </div>

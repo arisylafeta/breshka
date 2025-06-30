@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const Project3Page = () => {
   return (
@@ -7,9 +8,11 @@ const Project3Page = () => {
         <h1 className="text-4xl font-bold mb-8">Contemporary Museum</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <img 
+            <Image 
               src="/images/project3.jpeg" 
               alt="Contemporary Museum" 
+              width={800}
+              height={600}
               className="w-full h-auto rounded-lg shadow-lg"
             />
           </div>

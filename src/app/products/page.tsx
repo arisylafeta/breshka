@@ -4,13 +4,16 @@ import Image from 'next/image'
 const ProductsPage = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <div className="relative py-24 bg-gray-50 dark:bg-zinc-900">
-        <div className="container mx-auto px-4">
+      {/* Hero Section with Background Image */}
+      <div className="relative py-32 bg-cover bg-center" style={{ backgroundImage: 'url(/images/Products.jpg)' }}>
+        {/* Dark overlay for better text visibility */}
+        <div className="absolute inset-0 bg-black/60"></div>
+        
+        <div className="container relative z-10 mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Formwork Products</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Our Formwork Products</h1>
             <div className="w-20 h-1 bg-red-600 mx-auto mb-8"></div>
-            <p className="text-xl text-gray-700 mb-8">
+            <p className="text-xl text-white/90 mb-8">
               Discover our premium formwork solutions designed for efficiency, durability, and versatility across all construction projects.
             </p>
           </div>
