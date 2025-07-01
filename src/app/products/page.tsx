@@ -1,7 +1,11 @@
-import React from 'react'
+"use client"
+
+import React, { useState } from 'react'
 import Image from 'next/image'
 
 const ProductsPage = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const [selectedCategory, setSelectedCategory] = useState('All products')
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section with Background Image */}
@@ -16,6 +20,77 @@ const ProductsPage = () => {
             <p className="text-xl text-white/90 mb-8">
               Discover our premium formwork solutions designed for efficiency, durability, and versatility across all construction projects.
             </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Product Filter Section */}
+      <div className="bg-gray-100 py-6">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+            {/* Product Filter Dropdown */}
+            <div className="relative w-full md:w-64 mb-4 md:mb-0">
+              <button 
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="w-full flex items-center justify-between bg-white border border-gray-300 rounded-md px-4 py-2 text-gray-800 focus:outline-none"
+              >
+                <span>{selectedCategory}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" className={`h-5 w-5 transition-transform ${isDropdownOpen ? 'transform rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              
+              {isDropdownOpen && (
+                <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg">
+                  <ul className="py-1">
+                    {[
+                      'All products',
+                      'Wall formwork',
+                      'Column formwork',
+                      'Showering Tower',
+                      'Access and security platforms',
+                      'Accessories'
+                    ].map((category) => (
+                      <li key={category}>
+                        <button
+                          onClick={() => {
+                            setSelectedCategory(category)
+                            setIsDropdownOpen(false)
+                          }}
+                          className={`w-full text-left px-4 py-2 hover:bg-gray-100 ${selectedCategory === category ? 'font-medium bg-gray-50' : ''}`}
+                        >
+                          {category}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+            
+            {/* Filter Options */}
+            <div className="flex flex-wrap gap-4">
+              <div className="flex items-center">
+                <input type="checkbox" id="available" className="h-4 w-4 text-red-600" />
+                <label htmlFor="available" className="ml-2 text-sm text-gray-700">Available for rental</label>
+              </div>
+              <div className="flex items-center">
+                <input type="checkbox" id="crane" className="h-4 w-4 text-red-600" />
+                <label htmlFor="crane" className="ml-2 text-sm text-gray-700">Crane independent</label>
+              </div>
+              <div className="flex items-center">
+                <input type="checkbox" id="heavy" className="h-4 w-4 text-red-600" />
+                <label htmlFor="heavy" className="ml-2 text-sm text-gray-700">Heavy formwork</label>
+              </div>
+              <div className="flex items-center">
+                <input type="checkbox" id="single" className="h-4 w-4 text-red-600" />
+                <label htmlFor="single" className="ml-2 text-sm text-gray-700">Single-sided anchored formwork</label>
+              </div>
+              <div className="flex items-center">
+                <input type="checkbox" id="hydraulic" className="h-4 w-4 text-red-600" />
+                <label htmlFor="hydraulic" className="ml-2 text-sm text-gray-700">Hydraulic climber</label>
+              </div>
+            </div>
           </div>
         </div>
       </div>

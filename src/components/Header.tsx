@@ -72,36 +72,36 @@ const Header = () => {
               <NavigationMenu>
                 <NavigationMenuList className="space-x-6">
                   <NavigationMenuItem className={styles.navItem}>
-                    <Link href="/" legacyBehavior passHref>
-                      <NavigationMenuLink className={`${styles.navLink} no-hover-bg`}>
+                    <NavigationMenuLink asChild className={`${styles.navLink} no-hover-bg`}>
+                      <Link href="/">
                         <span className={`${styles.navText} font-semibold ${scrolled ? 'text-black' : 'text-white'}`}>Home</span>
                         <span className={styles.hoverEffect}></span>
-                      </NavigationMenuLink>
-                    </Link>
+                      </Link>
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
                   <NavigationMenuItem className={styles.navItem}>
-                    <Link href="/products" legacyBehavior passHref>
-                      <NavigationMenuLink className={`${styles.navLink} no-hover-bg`}>
+                    <NavigationMenuLink asChild className={`${styles.navLink} no-hover-bg`}>
+                      <Link href="/products">
                         <span className={`${styles.navText} font-semibold ${scrolled ? 'text-black' : 'text-white'}`}>Products</span>
                         <span className={styles.hoverEffect}></span>
-                      </NavigationMenuLink>
-                    </Link>
+                      </Link>
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
                   <NavigationMenuItem className={styles.navItem}>
-                    <Link href="/services" legacyBehavior passHref>
-                      <NavigationMenuLink className={`${styles.navLink} no-hover-bg`}>
+                    <NavigationMenuLink asChild className={`${styles.navLink} no-hover-bg`}>
+                      <Link href="/services">
                         <span className={`${styles.navText} font-semibold ${scrolled ? 'text-black' : 'text-white'}`}>Services</span>
                         <span className={styles.hoverEffect}></span>
-                      </NavigationMenuLink>
-                    </Link>
+                      </Link>
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
                   <NavigationMenuItem className={styles.navItem}>
-                    <Link href="/contact" legacyBehavior passHref>
-                      <NavigationMenuLink className={`${styles.navLink} no-hover-bg`}>
+                    <NavigationMenuLink asChild className={`${styles.navLink} no-hover-bg`}>
+                      <Link href="/contact">
                         <span className={`${styles.navText} font-semibold ${scrolled ? 'text-black' : 'text-white'}`}>Contact</span>
                         <span className={styles.hoverEffect}></span>
-                      </NavigationMenuLink>
-                    </Link>
+                      </Link>
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
                 </NavigationMenuList>
               </NavigationMenu>
