@@ -1,34 +1,85 @@
-import React from 'react'
+"use client"
+
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 
-const AluStarProductPage = () => {
+export default function AluStarProductPage() {
+  const [currentImage, setCurrentImage] = useState(1);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImage(prev => (prev % 3) + 1);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
   return (
-    <div className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <div>
+{/* Hero Image */}
+<div className="relative h-[400px] md:h-[500px] w-full">
+  <Image
+    src="/images/AluStar.jpg"
+    alt="AluStar Formwork"
+    priority
+    className="object-cover"
+    fill
+  />
+  <div className="absolute inset-0 bg-opacity-40 flex items-center justify-center">
+    <div className="text-center text-white px-4">
+      <h1 className="text-4xl md:text-6xl font-bold mb-4">AluStar</h1>
+      <p className="text-xl md:text-2xl max-w-2xl mx-auto">
+        Universal. Durable. Versatile. The aluminum formwork system for all your construction needs.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+      <div className="py-20 bg-background w-full">
+        <div className="container mx-auto px-4 w-full">
         {/* Product Header */}
-        <div className="mb-12">
+        <div className="mb-12 w-full">
           <div className="flex items-center mb-2">
             <span className="text-sm text-gray-500">Wall formwork</span>
           </div>
           <h1 className="text-4xl font-bold mb-4">AluStar</h1>
           <div className="w-20 h-1 bg-red-600 mb-6"></div>
-          <p className="text-xl text-gray-700 max-w-3xl">
+          <p className="text-xl text-gray-700 max-w-full">
             AluStar is a universal, hand-held formwork made of aluminum. Lightweight and easy to handle, it offers versatility for a wide range of construction applications.
           </p>
         </div>
 
-        {/* Product Hero Section */}
+        {/* Product Image Carousel */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-          <div className="overflow-hidden rounded-lg shadow-lg">
-            <Image 
-              src="/images/AluStar.jpg" 
-              alt="AluStar Formwork" 
-              className="w-full h-full object-cover rounded-lg shadow-lg"
-              width={600}
-              height={400} />
+          <div className="relative overflow-hidden rounded-lg shadow-lg" style={{ height: '600px' }}>
+            <div className="relative w-full h-full">
+              {[1, 2, 3].map((index) => (
+                <div 
+                  key={index}
+                  className={`absolute inset-0 transition-opacity duration-500 ${currentImage === index ? 'opacity-100' : 'opacity-0'}`}
+                >
+                  <Image 
+                    src="/images/AluStar.jpg" 
+                    alt={`AluStar Formwork ${index}`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+            {/* Navigation Dots */}
+            <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+              {[1, 2, 3].map((index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentImage(index)}
+                  className={`w-3 h-3 rounded-full ${currentImage === index ? 'bg-white' : 'bg-white/50'}`}
+                  aria-label={`Go to slide ${index}`}
+                />
+              ))}
+            </div>
           </div>
-          <div className="flex flex-col justify-center">
-            <h2 className="text-2xl font-bold mb-6">Key Features</h2>
+          <div className="flex flex-col pt-8">
+            <h2 className="text-2xl font-bold mb-6">Details</h2>
             <ul className="space-y-4">
               <li className="flex items-start">
                 <div className="mr-4 mt-1 text-red-600">
@@ -150,20 +201,82 @@ const AluStarProductPage = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="bg-gray-100 rounded-lg p-8 flex flex-col md:flex-row items-center justify-between">
-          <div className="mb-6 md:mb-0 md:mr-6">
-            <h3 className="text-2xl font-bold mb-2">Ready to use AluStar for your next project?</h3>
-            <p className="text-gray-600">Our team can help you determine the right formwork solution for your specific construction needs.</p>
+        <div className="bg-gray-100 w-screen relative left-1/2 right-1/2 -mx-[50vw] py-12 my-16">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold mb-2">Interested in AluStar for your project?</h3>
+              <p className="text-gray-600 mb-6">Contact our team for a quote or to learn more about how AluStar can benefit your construction project.</p>
+              <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 transition-colors">
+                Contact Us
+              </a>
+            </div>
           </div>
-          <div>
-            <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 transition-colors">
-              Request a Quote
+        </div>
+
+        {/* Recommended Products */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold mb-8 text-center">You Might Also Like</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Product 1 */}
+            <a href="/products/AluFix" className="group">
+              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div className="h-64 overflow-hidden">
+                  <Image 
+                    src="/images/AluFix.jpg" 
+                    alt="AluFix Formwork" 
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-red-600 transition-colors">AluFix</h3>
+                  <p className="text-gray-600">Lightweight, portable formwork system for efficient construction.</p>
+                </div>
+              </div>
+            </a>
+
+            {/* Product 2 */}
+            <a href="/products/Plyform" className="group">
+              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div className="h-64 overflow-hidden">
+                  <Image 
+                    src="/images/Plyform.jpg" 
+                    alt="Plyform System" 
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-red-600 transition-colors">Plyform</h3>
+                  <p className="text-gray-600">Versatile plywood formwork system for walls, columns, and slabs.</p>
+                </div>
+              </div>
+            </a>
+
+            {/* Product 3 */}
+            <a href="/products/Table-Form" className="group">
+              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div className="h-64 overflow-hidden">
+                  <Image 
+                    src="/images/Table-Form.jpg" 
+                    alt="Table Form System" 
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-red-600 transition-colors">Table Form</h3>
+                  <p className="text-gray-600">Flying form system for efficient slab construction in high-rise buildings.</p>
+                </div>
+              </div>
             </a>
           </div>
         </div>
       </div>
     </div>
+  </div>
   )
 }
-
-export default AluStarProductPage
