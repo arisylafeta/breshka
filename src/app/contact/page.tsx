@@ -1,9 +1,21 @@
 import React from 'react'
+import Image from 'next/image'
 
 const ContactPage = () => {
   return (
-    <div className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <div className="pb-20 bg-background">
+      {/* Hero Image */}
+      <div className="relative h-[400px] md:h-[500px] w-full">
+        <Image
+          src="/images/Contact.webp"
+          alt="contact"
+          priority
+          className="object-cover"
+          fill
+        />
+      </div>
+
+      <div className="container mx-auto px-4 pt-16">
         <h1 className="text-4xl font-bold mb-8">Contact Us</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
