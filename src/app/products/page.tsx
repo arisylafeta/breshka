@@ -102,8 +102,8 @@ const ProductsPage = () => {
           <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
             <div className="relative h-64 overflow-hidden">
               <Image 
-                src="/images/AluFix.jpg" 
-                alt="AluFix Formwork" 
+                src="/images/AlphaN.jpg" 
+                alt="Alpha N Formwork" 
                 className="w-full h-full object-cover"
                 width={500}
                 height={300}
@@ -112,13 +112,13 @@ const ProductsPage = () => {
             </div>
             <div className="p-6">
               <div className="text-sm text-gray-500 mb-1">Wall formwork</div>
-              <h3 className="text-2xl font-bold mb-4">AluFix</h3>
+              <h3 className="text-2xl font-bold mb-4">Alpha N</h3>
               <p className="text-gray-600 mb-6 h-24 overflow-hidden">
-                AluFix is MEVA&apos;s lightweight, portable formwork. The modular aluminum formwork impresses with its optimized heights for efficient formwork without the need for extensions.
+              Alpha N allows a homogeneous materialization of joints and panel holes, thus meeting the aesthetic requirements of exposed concrete.
               </p>
               <div className="flex justify-between items-center">
                 <span className="text-sm font-medium text-gray-500">Aluminum Construction</span>
-                <a href="/products/AluFix" className="inline-flex items-center justify-center px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors">
+                <a href="/products/AlphaN" className="inline-flex items-center justify-center px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors">
                   View Details
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -142,13 +142,13 @@ const ProductsPage = () => {
             </div>
             <div className="p-6">
               <div className="text-sm text-gray-500 mb-1">Wall formwork</div>
-              <h3 className="text-2xl font-bold mb-4">AluStar</h3>
+              <h3 className="text-2xl font-bold mb-4">AluB</h3>
               <p className="text-gray-600 mb-6 h-24 overflow-hidden">
-                AluStar is a universal, hand-held formwork made of aluminum. Lightweight and easy to handle, it offers versatility for a wide range of construction applications.
+                AluB is a universal, hand-held formwork made of aluminum. Lightweight and easy to handle, it offers versatility for a wide range of construction applications.
               </p>
               <div className="flex justify-between items-center">
                 <span className="text-sm font-medium text-gray-500">Universal Application</span>
-                <a href="/products/AluStar" className="inline-flex items-center justify-center px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors">
+                <a href="/products/AluB" className="inline-flex items-center justify-center px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors">
                   View Details
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

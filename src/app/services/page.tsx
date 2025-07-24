@@ -6,15 +6,14 @@ export default function ServicesPage() {
   return (
     <div className="pb-20 bg-background">
       {/* Hero Image */}
-      <div className="relative h-[400px] md:h-[500px] w-full">
+      <div className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] w-full">
         <Image
           src="/images/service.png"
           alt="service"
           priority
-          className="object-cover"
+          className="object-cover object-center"
           fill
         />
-
       </div>
 
       <div className="container mx-auto px-4 pt-16">
