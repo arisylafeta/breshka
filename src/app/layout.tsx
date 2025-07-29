@@ -5,6 +5,7 @@ import "./globals.css";
 // 1. Import your Header and Footer components
 import Header from "../components/Header"; // Make sure this path is correct
 import Footer from "../components/Footer"; // Make sure this path is correct
+import { LanguageProvider } from "../contexts/LanguageContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,14 +22,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* 2. Place your Header component here, above the page content */}
+        <LanguageProvider>
+          {/* 2. Place your Header component here, above the page content */}
 
-        {/* It's good practice to wrap the main content in a <main> tag */}
-        <Header />
-        <main>{children}</main>
+          {/* It's good practice to wrap the main content in a <main> tag */}
+          <Header />
+          <main>{children}</main>
 
-        {/* 3. Place your Footer component here, below the page content */}
-        <Footer />
+          {/* 3. Place your Footer component here, below the page content */}
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

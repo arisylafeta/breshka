@@ -2,8 +2,10 @@
 
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
+import { useLanguage } from '../../../contexts/LanguageContext'
 
 export default function AlphaNProductPage() {
+  const { t } = useLanguage()
   const [currentImage, setCurrentImage] = useState(1);
 
   useEffect(() => {
@@ -27,7 +29,7 @@ export default function AlphaNProductPage() {
     <div className="text-center text-white px-4">
       <h1 className="text-4xl md:text-6xl font-bold mb-4">Alpha N</h1>
       <p className="text-xl md:text-2xl max-w-2xl mx-auto">
-        Lightweight. Modular. Efficient. The next generation of portable formwork.
+        {t('alphaNHeroDesc')}
       </p>
     </div>
   </div>
@@ -39,12 +41,12 @@ export default function AlphaNProductPage() {
         {/* Product Header */}
         <div className="mb-12 w-full">
           <div className="flex items-center mb-2">
-            <span className="text-sm text-gray-500">Wall formwork</span>
+            <span className="text-sm text-gray-500">{t('productsWallFormwork')}</span>
           </div>
           <h1 className="text-4xl font-bold mb-4">Alpha N</h1>
           <div className="w-20 h-1 bg-red-600 mb-6"></div>
           <p className="text-xl text-gray-700 max-w-full">
-            Every construction site is different, with its own requirements. The Alpha N formwork system has been designed to meet these requirements with maximum flexibility. Modular, it adapts to all configurations, ensuring that you always have the right equipment, regardless of the complexity of the structure.
+            {t('alphaNProductDesc')}
           </p>
         </div>
 
@@ -82,18 +84,11 @@ export default function AlphaNProductPage() {
             <h2 className="text-2xl font-bold mb-6">Details</h2>
             <div className="space-y-8">
               {/* Quality of facing concrete */}
-              <div>
-                <div className="flex items-start">
-                  <div className="mr-4 mt-1 text-red-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <span className="font-medium text-lg">Quality of facing concrete assured</span>
-                    <p className="text-gray-600 mt-2">Thanks to a symmetrical layout of the rod passages and various panel sizes, Alpha N allows a homogeneous materialization of joints and panel holes, thus meeting the aesthetic requirements of exposed concrete.</p>
-                  </div>
-                </div>
+              <div className="mb-8">
+                <h3 className="text-xl font-bold mb-4 text-red-600">{t('qualityFacingConcrete')}</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  {t('qualityFacingDesc')}
+                </p>
               </div>
 
               {/* Assembly and anchoring system */}
@@ -105,24 +100,24 @@ export default function AlphaNProductPage() {
                     </svg>
                   </div>
                   <div>
-                    <span className="font-medium text-lg">Assembly and anchoring system</span>
+                    <span className="font-medium text-lg">{t('assemblyAnchoringSystem')}</span>
                     <ul className="text-gray-600 mt-2 space-y-2">
                       <li className="flex items-start">
                         <span className="font-medium mr-2">•</span>
                         <div>
-                          <span className="font-medium">AlphaTECH lock:</span> quick fastening of panels with simple hammer blows
+                          <span className="font-medium">{t('alphaTechLock')}</span> {t('alphaTechLockDesc')}
                         </div>
                       </li>
                       <li className="flex items-start">
                         <span className="font-medium mr-2">•</span>
                         <div>
-                          <span className="font-medium">Multi-function crossbeam:</span> Welded DW nuts for quick installation of accessories with one piece – the flange screw
+                          <span className="font-medium">{t('multiFunctionCrossbeam')}</span> {t('multiFunctionDesc')}
                         </div>
                       </li>
                       <li className="flex items-start">
                         <span className="font-medium mr-2">•</span>
                         <div>
-                          <span className="font-medium">Anchoring system:</span> DW Ø 15 mm with 80 kN load capacity double-sided
+                          <span className="font-medium">{t('anchoringSystem')}</span> {t('anchoringSystemDesc')}
                         </div>
                       </li>
                     </ul>
@@ -139,28 +134,28 @@ export default function AlphaNProductPage() {
                     </svg>
                   </div>
                   <div>
-                    <span className="font-medium text-lg">Ease of use</span>
+                    <span className="font-medium text-lg">{t('easeOfUse')}</span>
                     <ul className="text-gray-600 mt-2 space-y-2">
                       <li className="flex items-start">
                         <span className="font-medium mr-2">•</span>
                         <div>
-                          <span className="font-medium">Identical faces:</span> no mistakes, faster installation
+                          <span className="font-medium">{t('identicalFaces')}</span> {t('identicalFacesDesc')}
                         </div>
                       </li>
                       <li className="flex items-start">
                         <span className="font-medium mr-2">•</span>
                         <div>
-                          <span className="font-medium">Layout:</span> symmetrical horizontal and vertical installation
+                          <span className="font-medium">{t('layout')}</span> {t('layoutDesc')}
                         </div>
                       </li>
                       <li className="flex items-start">
                         <span className="font-medium mr-2">•</span>
                         <div>
-                          <span className="font-medium">Corners:</span> corner solutions that can be implemented for all wall thicknesses, with a complete range:
+                          <span className="font-medium">{t('corners')}</span> {t('cornersDesc')}
                           <ul className="ml-4 mt-1 space-y-1">
-                            <li>○ Inside, outside, hinged and slashing corners</li>
-                            <li>○ Three outer corners (0.5 cm and 10 cm on each side)</li>
-                            <li>○ Inside corner (30 cm on each side)</li>
+                            <li>○ {t('cornerTypes')}</li>
+                            <li>○ {t('outerCorners')}</li>
+                            <li>○ {t('insideCorner')}</li>
                           </ul>
                         </div>
                       </li>
@@ -174,29 +169,29 @@ export default function AlphaNProductPage() {
 
         {/* Technical Specifications */}
         <div className="mb-16">
-          <h2 className="text-2xl font-bold mb-6">Technical Specifications</h2>
+          <h2 className="text-2xl font-bold mb-6">{t('technicalSpecifications')}</h2>
           <div className="bg-white rounded-lg shadow-md p-8">
             {/* Maximum adaptability */}
             <div className="mb-8">
-              <h3 className="text-xl font-bold mb-4 text-red-600">Maximum adaptability</h3>
+              <h3 className="text-xl font-bold mb-4 text-red-600">{t('maximumAdaptability')}</h3>
               <div className="mb-4">
-                <h4 className="font-semibold mb-2">Panel dimensions:</h4>
+                <h4 className="font-semibold mb-2">{t('panelDimensions')}</h4>
                 <ul className="text-gray-600 space-y-1 ml-4">
                   <li className="flex items-start">
                     <span className="font-medium mr-2">•</span>
-                    <div><span className="font-medium">Heights:</span> 330 cm, 270 cm, 150 cm</div>
+                    <div><span className="font-medium">{t('heights')}</span> {t('heightsValues')}</div>
                   </li>
                   <li className="flex items-start">
                     <span className="font-medium mr-2">•</span>
-                    <div><span className="font-medium">Widths:</span> ranging from from 270 cm to 30 cm (240 cm, 120 cm, 90 cm, 60 cm, 50 cm, 45 cm, 40 cm)</div>
+                    <div><span className="font-medium">{t('widths')}</span> {t('widthsValues')}</div>
                   </li>
                   <li className="flex items-start">
                     <span className="font-medium mr-2">•</span>
-                    <div><span className="font-medium">Other custom sizes available</span></div>
+                    <div><span className="font-medium">{t('customSizes')}</span></div>
                   </li>
                 </ul>
               </div>
-              <p className="text-gray-600">These dimensions make it possible to quickly adapt to the geometry of the building and to achieve all the usual wall thicknesses without compensation parts.</p>
+              <p className="text-gray-600">{t('adaptabilityDesc')}</p>
             </div>
 
             {/* Divider */}
@@ -204,29 +199,29 @@ export default function AlphaNProductPage() {
 
             {/* Technical performance */}
             <div>
-              <h3 className="text-xl font-bold mb-4 text-red-600">Technical performance</h3>
+              <h3 className="text-xl font-bold mb-4 text-red-600">{t('technicalPerformance')}</h3>
               <div className="overflow-hidden">
                 <table className="min-w-full">
                   <tbody className="divide-y divide-gray-200">
                     <tr>
-                      <td className="py-2 pr-4 text-sm font-medium text-gray-900">Permissible pressure</td>
-                      <td className="py-2 text-sm text-gray-600">80 kN/m² for a single wall</td>
+                      <td className="py-2 pr-4 text-sm font-medium text-gray-900">{t('permissiblePressure')}</td>
+                      <td className="py-2 text-sm text-gray-600">{t('pressureValue')}</td>
                     </tr>
                     <tr>
-                      <td className="py-2 pr-4 text-sm font-medium text-gray-900">Material</td>
-                      <td className="py-2 text-sm text-gray-600">high-dimensional, torsion-resistant steel</td>
+                      <td className="py-2 pr-4 text-sm font-medium text-gray-900">{t('material')}</td>
+                      <td className="py-2 text-sm text-gray-600">{t('materialSpec')}</td>
                     </tr>
                     <tr>
-                      <td className="py-2 pr-4 text-sm font-medium text-gray-900">Coating</td>
-                      <td className="py-2 text-sm text-gray-600">220 g/m² phenolic resin on both sides</td>
+                      <td className="py-2 pr-4 text-sm font-medium text-gray-900">{t('coating')}</td>
+                      <td className="py-2 text-sm text-gray-600">{t('coatingValue')}</td>
                     </tr>
                     <tr>
-                      <td className="py-2 pr-4 text-sm font-medium text-gray-900">Painting</td>
-                      <td className="py-2 text-sm text-gray-600">electromatic</td>
+                      <td className="py-2 pr-4 text-sm font-medium text-gray-900">{t('painting')}</td>
+                      <td className="py-2 text-sm text-gray-600">{t('paintingValue')}</td>
                     </tr>
                     <tr>
-                      <td className="py-2 pr-4 text-sm font-medium text-gray-900">Crane</td>
-                      <td className="py-2 text-sm text-gray-600">requires the use of a crane</td>
+                      <td className="py-2 pr-4 text-sm font-medium text-gray-900">{t('crane')}</td>
+                      <td className="py-2 text-sm text-gray-600">{t('craneValue')}</td>
                     </tr>
                   </tbody>
                 </table>
@@ -237,33 +232,33 @@ export default function AlphaNProductPage() {
 
         {/* Application Examples */}
         <div className="mb-16">
-          <h2 className="text-2xl font-bold mb-6">Application Examples</h2>
+          <h2 className="text-2xl font-bold mb-6">{t('applicationExamples')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg overflow-hidden shadow-md">
               <div className="h-48 overflow-hidden">
-                <Image src="/images/project1.jpeg" alt="Residential Construction" className="w-full h-full object-cover" width={400} height={300} />
+                <Image src="/images/project1.jpeg" alt={t('residentialConstruction')} className="w-full h-full object-cover" width={400} height={300} />
               </div>
               <div className="p-4">
-                <h3 className="font-bold text-lg mb-2">Residential Construction</h3>
-                <p className="text-gray-600 text-sm">Perfect for foundation walls and basement construction in residential projects.</p>
+                <h3 className="font-bold text-lg mb-2">{t('residentialConstruction')}</h3>
+                <p className="text-gray-600 text-sm">{t('residentialDesc')}</p>
               </div>
             </div>
             <div className="bg-white rounded-lg overflow-hidden shadow-md">
               <div className="h-48 overflow-hidden">
-                <Image src="/images/project2.jpeg" alt="Commercial Buildings" className="w-full h-full object-cover" width={400} height={300} />
+                <Image src="/images/project2.jpeg" alt={t('commercialBuildings')} className="w-full h-full object-cover" width={400} height={300} />
               </div>
               <div className="p-4">
-                <h3 className="font-bold text-lg mb-2">Commercial Buildings</h3>
-                <p className="text-gray-600 text-sm">Ideal for small to medium-sized commercial construction projects.</p>
+                <h3 className="font-bold text-lg mb-2">{t('commercialBuildings')}</h3>
+                <p className="text-gray-600 text-sm">{t('commercialDesc')}</p>
               </div>
             </div>
             <div className="bg-white rounded-lg overflow-hidden shadow-md">
               <div className="h-48 overflow-hidden">
-                <Image src="/images/project3.jpeg" alt="Infrastructure Projects" className="w-full h-full object-cover" width={600} height={400} />
+                <Image src="/images/project3.jpeg" alt={t('infrastructureProjects')} className="w-full h-full object-cover" width={600} height={400} />
               </div>
               <div className="p-4">
-                <h3 className="font-bold text-lg mb-2">Infrastructure Projects</h3>
-                <p className="text-gray-600 text-sm">Used in smaller infrastructure elements like retaining walls and foundations.</p>
+                <h3 className="font-bold text-lg mb-2">{t('infrastructureProjects')}</h3>
+                <p className="text-gray-600 text-sm">{t('infrastructureDesc')}</p>
               </div>
             </div>
           </div>
@@ -272,10 +267,10 @@ export default function AlphaNProductPage() {
         <div className="bg-gray-100 w-screen relative left-1/2 right-1/2 -mx-[50vw] py-12 my-16">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="text-center">
-              <h3 className="text-2xl font-bold mb-2">Interested in AluFix for your project?</h3>
-              <p className="text-gray-600 mb-6">Contact our team for a quote or to learn more about how AluFix can benefit your construction project.</p>
+              <h3 className="text-2xl font-bold mb-2">{t('interestedInAlphaFix')}</h3>
+              <p className="text-gray-600 mb-6">{t('alphaFixContactDesc')}</p>
               <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 transition-colors">
-                Contact Us
+                {t('contactUs')}
               </a>
             </div>
           </div>
@@ -283,23 +278,23 @@ export default function AlphaNProductPage() {
 
         {/* Recommended Products */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">You Might Also Like</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">{t('youMightAlsoLike')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Product 1 */}
             <a href="/products/AluStar" className="group">
               <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                 <div className="h-64 overflow-hidden">
                   <Image 
-                    src="/images/AluStar.jpg" 
-                    alt="AluStar Formwork" 
+                    src="/images/AlphaN.jpg" 
+                    alt="Alpha N Formwork" 
                     width={400}
                     height={300}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-red-600 transition-colors">AluStar</h3>
-                  <p className="text-gray-600">Heavy-duty aluminum formwork system for large-scale concrete structures.</p>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-red-600 transition-colors">Alpha N</h3>
+                  <p className="text-gray-600">{t('alphaNProductDesc')}</p>
                 </div>
               </div>
             </a>
@@ -309,8 +304,8 @@ export default function AlphaNProductPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                 <div className="h-64 overflow-hidden">
                   <Image 
-                    src="/images/Plyform.jpg" 
-                    alt="Plyform System" 
+                    src="/images/AlphaN.jpg" 
+                    alt="Alpha N System" 
                     width={400}
                     height={300}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -318,7 +313,7 @@ export default function AlphaNProductPage() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2 group-hover:text-red-600 transition-colors">Plyform</h3>
-                  <p className="text-gray-600">Versatile plywood formwork system for walls, columns, and slabs.</p>
+                  <p className="text-gray-600">{t('plyformDesc')}</p>
                 </div>
               </div>
             </a>
@@ -328,8 +323,8 @@ export default function AlphaNProductPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                 <div className="h-64 overflow-hidden">
                   <Image 
-                    src="/images/Table-Form.jpg" 
-                    alt="Table Form System" 
+                    src="/images/AlphaN.jpg" 
+                    alt="Alpha N System" 
                     width={400}
                     height={300}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -337,7 +332,7 @@ export default function AlphaNProductPage() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2 group-hover:text-red-600 transition-colors">Table Form</h3>
-                  <p className="text-gray-600">Flying form system for efficient slab construction in high-rise buildings.</p>
+                  <p className="text-gray-600">{t('tableFormDesc')}</p>
                 </div>
               </div>
             </a>

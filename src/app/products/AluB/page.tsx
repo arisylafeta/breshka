@@ -2,8 +2,10 @@
 
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
+import { useLanguage } from '../../../contexts/LanguageContext'
 
 export default function AluBProductPage() {
+  const { t } = useLanguage()
   const [currentImage, setCurrentImage] = useState(1);
 
   useEffect(() => {
@@ -27,7 +29,7 @@ export default function AluBProductPage() {
     <div className="text-center text-white px-4">
       <h1 className="text-4xl md:text-6xl font-bold mb-4">AluB</h1>
       <p className="text-xl md:text-2xl max-w-2xl mx-auto">
-        Universal. Durable. Versatile. The aluminum formwork system for all your construction needs.
+        {t('aluBHeroDesc')}
       </p>
     </div>
   </div>
@@ -39,12 +41,12 @@ export default function AluBProductPage() {
         {/* Product Header */}
         <div className="mb-12 w-full">
           <div className="flex items-center mb-2">
-            <span className="text-sm text-gray-500">Wall formwork</span>
+            <span className="text-sm text-gray-500">{t('productsWallFormwork')}</span>
           </div>
           <h1 className="text-4xl font-bold mb-4">AluB</h1>
           <div className="w-20 h-1 bg-red-600 mb-6"></div>
           <p className="text-xl text-gray-700 max-w-full">
-          The AluB system  is a manuportable aluminium formwork solution designed for the production of standard height straight concrete walls. It is particularly suitable for construction sites without cranes or in hard-to-reach areas.
+            {t('aluBProductDesc')}
           </p>
         </div>
 
@@ -58,8 +60,8 @@ export default function AluBProductPage() {
                   className={`absolute inset-0 transition-opacity duration-500 ${currentImage === index ? 'opacity-100' : 'opacity-0'}`}
                 >
                   <Image 
-                    src="/images/AluStar.jpg" 
-                    alt={`AluStar Formwork ${index}`}
+                    src="/images/AluB.jpg" 
+                    alt={`AluB Formwork ${index}`}
                     fill
                     className="object-cover"
                   />
@@ -79,7 +81,7 @@ export default function AluBProductPage() {
             </div>
           </div>
           <div className="flex flex-col pt-8">
-            <h2 className="text-2xl font-bold mb-6">Key Benefits</h2>
+            <h2 className="text-2xl font-bold mb-6">{t('keyBenefits')}</h2>
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="mr-4 mt-1 text-red-600">
@@ -88,8 +90,8 @@ export default function AluBProductPage() {
                   </svg>
                 </div>
                 <div>
-                  <span className="font-medium text-lg">Manuportable</span>
-                  <p className="text-gray-600 mt-1">No need for a crane – easy handling by one person.</p>
+                  <span className="font-medium text-lg">{t('manuportable')}</span>
+                  <p className="text-gray-600 mt-1">{t('manuportableDesc')}</p>
                 </div>
               </div>
 
@@ -100,8 +102,8 @@ export default function AluBProductPage() {
                   </svg>
                 </div>
                 <div>
-                  <span className="font-medium text-lg">Lightweight and efficient</span>
-                  <p className="text-gray-600 mt-1">Approx. 21.5 kg/m² for an excellent weight/strength ratio.</p>
+                  <span className="font-medium text-lg">{t('lightweightEfficient')}</span>
+                  <p className="text-gray-600 mt-1">{t('lightweightEfficientDesc')}</p>
                 </div>
               </div>
 
@@ -112,8 +114,8 @@ export default function AluBProductPage() {
                   </svg>
                 </div>
                 <div>
-                  <span className="font-medium text-lg">Optimal modularity</span>
-                  <p className="text-gray-600 mt-1">Wide choice of standard panels (270 x 90, 60, 50, 30 cm) + custom-made construction.</p>
+                  <span className="font-medium text-lg">{t('optimalModularity')}</span>
+                  <p className="text-gray-600 mt-1">{t('optimalModularityDesc')}</p>
                 </div>
               </div>
 
@@ -124,8 +126,8 @@ export default function AluBProductPage() {
                   </svg>
                 </div>
                 <div>
-                  <span className="font-medium text-lg">Quality finish</span>
-                  <p className="text-gray-600 mt-1">15 mm all-birch plywood, 220 g film – 1.5 mm plastic film option available.</p>
+                  <span className="font-medium text-lg">{t('qualityFinish')}</span>
+                  <p className="text-gray-600 mt-1">{t('qualityFinishDesc')}</p>
                 </div>
               </div>
 
@@ -136,10 +138,10 @@ export default function AluBProductPage() {
                   </svg>
                 </div>
                 <div>
-                  <span className="font-medium text-lg">Adaptability</span>
+                  <span className="font-medium text-lg">{t('aluBAdaptability')}</span>
                   <ul className="text-gray-600 mt-1 ml-4 space-y-1">
-                    <li>• Possibility of adding a wooden furring (up to 10 cm) between two panels to adjust the width.</li>
-                    <li>• Corner and stabilization accessories available for all configurations.</li>
+                    <li>• {t('aluBAdaptabilityPoint1')}</li>
+                    <li>• {t('aluBAdaptabilityPoint2')}</li>
                   </ul>
                 </div>
               </div>
@@ -151,10 +153,10 @@ export default function AluBProductPage() {
                   </svg>
                 </div>
                 <div>
-                  <span className="font-medium text-lg">Enhanced security</span>
+                  <span className="font-medium text-lg">{t('enhancedSecurity')}</span>
                   <ul className="text-gray-600 mt-1 ml-4 space-y-1">
-                    <li>• Service consoles, railing posts, push-pull props included.</li>
-                    <li>• Stability and access accessories painted for better visibility.</li>
+                    <li>• {t('enhancedSecurityPoint1')}</li>
+                    <li>• {t('enhancedSecurityPoint2')}</li>
                   </ul>
                 </div>
               </div>
@@ -164,51 +166,51 @@ export default function AluBProductPage() {
 
         {/* Technical Specifications */}
         <div className="mb-16">
-          <h2 className="text-2xl font-bold mb-6">Technical Characteristics</h2>
+          <h2 className="text-2xl font-bold mb-6">{t('technicalCharacteristics')}</h2>
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
                 <tr>
-                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Specification</th>
-                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Details</th>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">{t('specification')}</th>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">{t('aluBDetailsHeader')}</th>
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Material</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Aluminum (mostly recycled)</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{t('material')}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{t('materialAluminum')}</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Panel covering</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">15 mm birch plywood, 220 g film – optional 1.5 mm plastic film</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{t('panelCovering')}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{t('panelCoveringValue')}</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Edge profile thickness</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">100 mm</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{t('edgeProfileThickness')}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{t('edgeProfileValue')}</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Standard Dimensions - Height</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">270 cm</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{t('standardDimensionsHeight')}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{t('standardHeightValue')}</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Standard Dimensions - Widths</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">90, 60, 50, 30 cm + custom-made</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{t('standardDimensionsWidths')}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{t('standardWidthsValue')}</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Weight</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">21.5 kg/m² | Panel 270 x 90 cm ≈ 65 kg</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{t('aluBWeight')}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{t('aluBWeightValue')}</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Anchoring</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">DW system Ø15 mm, double-sided clamping</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{t('aluBAnchoring')}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{t('anchoringValue')}</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Number of rods</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">3 vertical rods for H 270 cm and 300 cm panels</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{t('numberOfRods')}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{t('numberOfRodsValue')}</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Permissible concrete pressure</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">30 tons/m²</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{t('permissibleConcretePressure')}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{t('concretePressureValue')}</td>
                 </tr>
               </tbody>
             </table>
@@ -217,33 +219,33 @@ export default function AluBProductPage() {
 
         {/* Application Examples */}
         <div className="mb-16">
-          <h2 className="text-2xl font-bold mb-6">Application Examples</h2>
+          <h2 className="text-2xl font-bold mb-6">{t('applicationExamples')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg overflow-hidden shadow-md">
               <div className="h-48 overflow-hidden">
-                <Image src="/images/project1.jpeg" alt="Residential Construction" className="w-full h-full object-cover" width={400} height={300} />
+                <Image src="/images/project1.jpeg" alt={t('aluBCommercialConstruction')} className="w-full h-full object-cover" width={400} height={300} />
               </div>
               <div className="p-4">
-                <h3 className="font-bold text-lg mb-2">Commercial Construction</h3>
-                <p className="text-gray-600 text-sm">Ideal for medium to large commercial buildings with complex concrete requirements.</p>
+                <h3 className="font-bold text-lg mb-2">{t('aluBCommercialConstruction')}</h3>
+                <p className="text-gray-600 text-sm">{t('aluBCommercialConstructionDesc')}</p>
               </div>
             </div>
             <div className="bg-white rounded-lg overflow-hidden shadow-md">
               <div className="h-48 overflow-hidden">
-                <Image src="/images/project2.jpeg" alt="Multi-story Buildings" className="w-full h-full object-cover" width={400} height={300} />
+                <Image src="/images/project2.jpeg" alt={t('multiStoryBuildings')} className="w-full h-full object-cover" width={400} height={300} />
               </div>
               <div className="p-4">
-                <h3 className="font-bold text-lg mb-2">Multi-story Buildings</h3>
-                <p className="text-gray-600 text-sm">Perfect for constructing walls in multi-story residential and office buildings.</p>
+                <h3 className="font-bold text-lg mb-2">{t('multiStoryBuildings')}</h3>
+                <p className="text-gray-600 text-sm">{t('multiStoryBuildingsDesc')}</p>
               </div>
             </div>
             <div className="bg-white rounded-lg overflow-hidden shadow-md">
               <div className="h-48 overflow-hidden">
-                <Image src="/images/project3.jpeg" alt="Infrastructure Projects" className="w-full h-full object-cover" width={400} height={300} />
+                <Image src="/images/project3.jpeg" alt={t('infrastructureBridges')} className="w-full h-full object-cover" width={400} height={300} />
               </div>
               <div className="p-4">
-                <h3 className="font-bold text-lg mb-2">Infrastructure Projects</h3>
-                <p className="text-gray-600 text-sm">Used in bridges, tunnels, and other medium-sized infrastructure elements.</p>
+                <h3 className="font-bold text-lg mb-2">{t('infrastructureBridges')}</h3>
+                <p className="text-gray-600 text-sm">{t('infrastructureBridgesDesc')}</p>
               </div>
             </div>
           </div>
@@ -253,10 +255,10 @@ export default function AluBProductPage() {
         <div className="bg-gray-100 w-screen relative left-1/2 right-1/2 -mx-[50vw] py-12 my-16">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="text-center">
-              <h3 className="text-2xl font-bold mb-2">Interested in AluStar for your project?</h3>
-              <p className="text-gray-600 mb-6">Contact our team for a quote or to learn more about how AluStar can benefit your construction project.</p>
+              <h3 className="text-2xl font-bold mb-2">{t('interestedInAluStar')}</h3>
+              <p className="text-gray-600 mb-6">{t('aluStarContactDesc')}</p>
               <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 transition-colors">
-                Contact Us
+                {t('contactUs')}
               </a>
             </div>
           </div>
@@ -264,14 +266,14 @@ export default function AluBProductPage() {
 
         {/* Recommended Products */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">You Might Also Like</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">{t('youMightAlsoLike')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Product 1 */}
             <a href="/products/AluFix" className="group">
               <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                 <div className="h-64 overflow-hidden">
                   <Image 
-                    src="/images/AluFix.jpg" 
+                    src="/images/AluB.jpg" 
                     alt="AluFix Formwork" 
                     width={400}
                     height={300}
@@ -280,7 +282,7 @@ export default function AluBProductPage() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2 group-hover:text-red-600 transition-colors">AluFix</h3>
-                  <p className="text-gray-600">Lightweight, portable formwork system for efficient construction.</p>
+                  <p className="text-gray-600">{t('aluFixDesc')}</p>
                 </div>
               </div>
             </a>
@@ -290,7 +292,7 @@ export default function AluBProductPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                 <div className="h-64 overflow-hidden">
                   <Image 
-                    src="/images/Plyform.jpg" 
+                    src="/images/AluB.jpg" 
                     alt="Plyform System" 
                     width={400}
                     height={300}
@@ -299,7 +301,7 @@ export default function AluBProductPage() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2 group-hover:text-red-600 transition-colors">Plyform</h3>
-                  <p className="text-gray-600">Versatile plywood formwork system for walls, columns, and slabs.</p>
+                  <p className="text-gray-600">{t('plyformDesc')}</p>
                 </div>
               </div>
             </a>
@@ -309,7 +311,7 @@ export default function AluBProductPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                 <div className="h-64 overflow-hidden">
                   <Image 
-                    src="/images/Table-Form.jpg" 
+                    src="/images/AluB.jpg" 
                     alt="Table Form System" 
                     width={400}
                     height={300}
@@ -318,7 +320,7 @@ export default function AluBProductPage() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2 group-hover:text-red-600 transition-colors">Table Form</h3>
-                  <p className="text-gray-600">Flying form system for efficient slab construction in high-rise buildings.</p>
+                  <p className="text-gray-600">{t('tableFormDesc')}</p>
                 </div>
               </div>
             </a>

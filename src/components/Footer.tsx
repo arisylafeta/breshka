@@ -3,8 +3,10 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Footer = () => {
+  const { t } = useLanguage();
   return (
     <footer className="bg-black text-white py-12">
       <div className="container mx-auto px-4 lg:px-8">
@@ -22,13 +24,13 @@ const Footer = () => {
               />
             </div>
             <p className="text-sm text-gray-400 mb-4">
-              Specialists in the manufacture and sale of formwork equipment. MEVA is a family-owned company with an international reach. With 40+ years worldwide, we are proud of the confidence put in more than 40 countries. The headquarters is located in Haiterbach, Germany. Be the first. Build smart.
+              {t('companyDescription')}
             </p>
           </div>
 
           {/* Popular Products */}
           <div className="md:col-span-1">
-            <h3 className="text-sm font-bold mb-4">Popular Products</h3>
+            <h3 className="text-sm font-bold mb-4">{t('footerPopularProducts')}</h3>
             <ul className="space-y-2">
               <li><Link href="/products/AluFix" className="text-gray-400 hover:text-white text-sm">AluFix</Link></li>
               <li><Link href="/products/AluStar" className="text-gray-400 hover:text-white text-sm">AluStar</Link></li>
@@ -42,36 +44,36 @@ const Footer = () => {
 
           {/* MEVA Services */}
           <div className="md:col-span-1">
-            <h3 className="text-sm font-bold mb-4">MEVA Services</h3>
+            <h3 className="text-sm font-bold mb-4">{t('mevaServices')}</h3>
             <ul className="space-y-2">
-              <li><Link href="#" className="text-gray-400 hover:text-white text-sm">Rental</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white text-sm">Engineering</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white text-sm">On-site guidance</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white text-sm">Refurbishment</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white text-sm">Rental</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white text-sm">Pre-assembly</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white text-sm">Academy</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white text-sm">{t('footerRental')}</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white text-sm">{t('engineering')}</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white text-sm">{t('onSiteGuidance')}</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white text-sm">{t('refurbishment')}</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white text-sm">{t('footerRental')}</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white text-sm">{t('preAssembly')}</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white text-sm">{t('academy')}</Link></li>
             </ul>
           </div>
 
           {/* Tools & Contact */}
           <div className="md:col-span-1">
             <div className="mb-8">
-              <h3 className="text-sm font-bold mb-4">Tools</h3>
+              <h3 className="text-sm font-bold mb-4">{t('tools')}</h3>
               <ul className="space-y-2">
-                <li><Link href="#" className="text-gray-400 hover:text-white text-sm">Downloads</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white text-sm">BIM tools</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white text-sm">Wall thickness pressure calculator</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white text-sm">Calculator for supporting column forms</Link></li>
+                <li><Link href="#" className="text-gray-400 hover:text-white text-sm">{t('downloads')}</Link></li>
+                <li><Link href="#" className="text-gray-400 hover:text-white text-sm">{t('bimTools')}</Link></li>
+                <li><Link href="#" className="text-gray-400 hover:text-white text-sm">{t('wallThicknessCalculator')}</Link></li>
+                <li><Link href="#" className="text-gray-400 hover:text-white text-sm">{t('columnFormsCalculator')}</Link></li>
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-bold mb-4">Contact</h3>
+              <h3 className="text-sm font-bold mb-4">{t('footerContact')}</h3>
               <ul className="space-y-2">
-                <li><Link href="#" className="text-gray-400 hover:text-white text-sm">MEVA Formwork Systems Ltd</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white text-sm">MEVA UK</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white text-sm">MEVA Spain</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white text-sm">International</Link></li>
+                <li><Link href="#" className="text-gray-400 hover:text-white text-sm">{t('mevaFormworkSystems')}</Link></li>
+                <li><Link href="#" className="text-gray-400 hover:text-white text-sm">{t('mevaUK')}</Link></li>
+                <li><Link href="#" className="text-gray-400 hover:text-white text-sm">{t('mevaSpain')}</Link></li>
+                <li><Link href="#" className="text-gray-400 hover:text-white text-sm">{t('international')}</Link></li>
                 <li>
                   <p className="text-gray-400 text-sm">+41 62 769 71 00</p>
                   <a href="mailto:info@meva.net" className="text-gray-400 hover:text-white text-sm">info@meva.net</a>
@@ -84,16 +86,16 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-xs text-gray-500 mb-4 md:mb-0">
-            © {new Date().getFullYear()} MEVA. All rights reserved. 
+            © {new Date().getFullYear()} MEVA. {t('allRightsReserved')} 
             <span className="mx-2">|</span>
-            <Link href="#" className="hover:text-white">Terms</Link>
+            <Link href="#" className="hover:text-white">{t('terms')}</Link>
             <span className="mx-2">|</span>
-            <Link href="#" className="hover:text-white">Legal Notice</Link>
+            <Link href="#" className="hover:text-white">{t('legalNotice')}</Link>
             <span className="mx-2">|</span>
-            <Link href="#" className="hover:text-white">Privacy Policy</Link>
+            <Link href="#" className="hover:text-white">{t('privacyPolicyFooter')}</Link>
           </div>
           <div className="flex space-x-4">
-            <span className="text-xs text-gray-500">Visit us on social media:</span>
+            <span className="text-xs text-gray-500">{t('visitSocialMedia')}</span>
             <a href="#" className="text-gray-400 hover:text-white">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-facebook" viewBox="0 0 16 16">
                 <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>

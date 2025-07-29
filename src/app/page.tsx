@@ -1,9 +1,14 @@
+'use client';
+
 import React from 'react'
 import Image from 'next/image'
 import MessageImage from "@/components/MessageImage";
 import AnimatedCounter from "@/components/AnimatedCounter";
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const HomePage = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen">
       {/* Hero Section with Background Image */}
@@ -24,22 +29,20 @@ const HomePage = () => {
               {/* Background effect */}
               <div className="absolute inset-0 bg-white/5 backdrop-blur-[1.5px] rounded-r-3xl -z-10"></div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
-                Premium Metal Building 
+                {t('heroTitle')} 
                 <span className="text-white">
-                  Solutions
+                  {t('heroTitleSpan')}
                 </span>
               </h1>
               <p className="text-xl font-bold text-white mb-8 leading-relaxed">
-                Engineering excellence in steel construction. From industrial warehouses to 
-                commercial complexes, we deliver durable, cost-effective metal building solutions 
-                that stand the test of time.
+                {t('heroDescription')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-3 bg-white text-zinc-900 rounded-lg font-medium hover:bg-zinc-100 transition-colors">
-                  View Our Projects
+                  {t('viewProjects')}
                 </button>
                 <button className="px-8 py-3 border-2 border-white text-white rounded-lg font-medium hover:bg-white/10 transition-colors">
-                  Get Quote
+                  {t('getQuote')}
                 </button>
               </div>
             </div>
@@ -54,9 +57,9 @@ const HomePage = () => {
             <h3 className="text-5xl font-normal text-red-600 mb-2">
               <AnimatedCounter end={600} suffix="+" className="inline-block" />
             </h3>
-            <h4 className="text-lg font-medium text-red-600 mb-3">Employees</h4>
+            <h4 className="text-lg font-medium text-red-600 mb-3">{t('employees')}</h4>
             <p className="text-sm text-gray-600 leading-relaxed">
-              Our people are our greatest asset. Their knowledge, expertise and focus on serving our clients to the highest level is what has made MEVA the company it is today.
+              {t('employeesDesc')}
             </p>
             {/* Vertical Red Line */}
             <div className="hidden md:block absolute right-0 top-6 bottom-6 w-px bg-red-600"></div>
@@ -67,9 +70,9 @@ const HomePage = () => {
             <h3 className="text-5xl font-normal text-red-600 mb-2">
               <AnimatedCounter end={40} suffix="+" className="inline-block" />
             </h3>
-            <h4 className="text-lg font-medium text-red-600 mb-3">Locations</h4>
+            <h4 className="text-lg font-medium text-red-600 mb-3">{t('locations')}</h4>
             <p className="text-sm text-gray-600 leading-relaxed">
-              We have seen substantial growth in recent years, with regional offices and local representatives serving MEVA across the globe.
+              {t('locationsDesc')}
             </p>
             {/* Vertical Red Line */}
             <div className="hidden md:block absolute right-0 top-6 bottom-6 w-px bg-red-600"></div>
@@ -80,9 +83,9 @@ const HomePage = () => {
             <h3 className="text-5xl font-normal text-red-600 mb-2">
               <AnimatedCounter end={130} suffix="m" className="inline-block" />
             </h3>
-            <h4 className="text-lg font-medium text-red-600 mb-3">Euros</h4>
+            <h4 className="text-lg font-medium text-red-600 mb-3">{t('euros')}</h4>
             <p className="text-sm text-gray-600 leading-relaxed">
-              With our annual sales exceeding €130 million, we continue to re-invest in research and development to deliver innovation in product design.
+              {t('eurosDesc')}
             </p>
             {/* Vertical Red Line */}
             <div className="hidden md:block absolute right-0 top-6 bottom-6 w-px bg-red-600"></div>
@@ -93,9 +96,9 @@ const HomePage = () => {
             <h3 className="text-5xl font-normal text-red-600 mb-2">
               <AnimatedCounter end={8000} suffix="+" className="inline-block" />
             </h3>
-            <h4 className="text-lg font-medium text-red-600 mb-3">Clients</h4>
+            <h4 className="text-lg font-medium text-red-600 mb-3">{t('clients')}</h4>
             <p className="text-sm text-gray-600 leading-relaxed">
-              We are truly humbled by the number of clients that put their trust in us every day to deliver formwork solutions to their specific needs.
+              {t('clientsDesc')}
             </p>
           </div>
         </div>
@@ -114,11 +117,11 @@ const HomePage = () => {
               <div className="w-full md:w-2/3 p-12 flex flex-col justify-center">
                 <div className="text-5xl font-serif text-red-600 mb-6">&ldquo;</div>
                 <blockquote className="text-2xl font-light text-gray-700 leading-relaxed mb-8">
-                Whatever challenges you face, our extensive technical expertise in formwork allows us to find the best solutions for your needs to ensure smooth progress and deadlines are met. With us, your project is in good hands.
+                {t('leadershipQuote')}
                 </blockquote>
                 <div className="border-t border-gray-200 w-20 my-6"></div>
-                <div className="text-lg font-medium text-gray-900">John Smith</div>
-                <div className="text-gray-600">CEO & Founder</div>
+                <div className="text-lg font-medium text-gray-900">{t('ceoName')}</div>
+                <div className="text-gray-600">{t('ceoTitle')}</div>
               </div>
             </div>
           </div>
@@ -140,9 +143,9 @@ const HomePage = () => {
               />
             </div>
             <div className="flex flex-col justify-between h-48">
-              <h3 className="text-2xl font-bold text-foreground mb-4">Rental</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-4">{t('rental')}</h3>
               <p className="text-muted-foreground text-base leading-relaxed tracking-wide">
-                Our products are available for purchase directly or for rental through our partners. We also stock all the spare parts and accessories you may need.
+                {t('rentalDesc')}
               </p>
             </div>
           </div>
@@ -156,9 +159,9 @@ const HomePage = () => {
               <img src="/images/Know.jpg" alt="Technical know-how" className="w-full h-full object-cover rounded-md" />
             </div>
             <div className="flex flex-col justify-between h-48">
-              <h3 className="text-2xl font-bold text-foreground mb-4">Technical know-how</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-4">{t('technicalKnowHow')}</h3>
               <p className="text-muted-foreground text-base leading-relaxed tracking-wide">
-                Do you have technical questions? Do you need help optimizing formwork, material rotations, and formwork solutions, or creating technical drawings or BIM models?
+                {t('technicalDesc')}
               </p>
             </div>
           </div>
@@ -172,9 +175,9 @@ const HomePage = () => {
               <img src="/images/Service.jpg" alt="Repair and maintenance" className="w-full h-full object-cover rounded-md" />
             </div>
             <div className="flex flex-col justify-between h-48">
-              <h3 className="text-2xl font-bold text-foreground mb-4">Repair and maintenance</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-4">{t('repairMaintenance')}</h3>
               <p className="text-muted-foreground text-base leading-relaxed tracking-wide">
-                We take care of maintaining the value of your formwork. Our service includes cleaning, panel replacement, and repairs, all the way to complete regeneration.
+                {t('repairDesc')}
               </p>
             </div>
           </div>
@@ -188,9 +191,9 @@ const HomePage = () => {
               <img src="/images/Onsite.jpg" alt="On-site assistance" className="w-full h-full object-cover rounded-md" />
             </div>
             <div className="flex flex-col justify-between h-48">
-              <h3 className="text-2xl font-bold text-foreground mb-4">On-site assistance</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-4">{t('onsiteAssistance')}</h3>
               <p className="text-muted-foreground text-base leading-relaxed tracking-wide">
-                Do you need training for formwork installation or maintenance? Do you have a project and need advice? Our team is here to support you.
+                {t('onsiteDesc')}
               </p>
             </div>
           </div>
@@ -200,7 +203,7 @@ const HomePage = () => {
       {/* Popular Products */}
       <div className="py-20 bg-gray-50 dark:bg-zinc-900">
       <div className="container mx-auto px-4 lg:px-8">
-        <h2 className="text-3xl font-bold mb-12">Popular Products</h2>
+        <h2 className="text-3xl font-bold mb-12">{t('popularProducts')}</h2>
         <div className="flex flex-col md:flex-row gap-8">
           {/* AluFix Product Card - Large Left */}
           <div className="md:w-1/2 bg-white rounded-lg overflow-hidden shadow-md">
@@ -208,10 +211,10 @@ const HomePage = () => {
               <img src="/images/AlphaN.jpg" alt="Alpha N Formwork" className="w-full h-full object-cover" />
             </div>
             <div className="p-6">
-              <div className="text-sm text-gray-500 mb-1">Wall formwork</div>
+              <div className="text-sm text-gray-500 mb-1">{t('wallFormwork')}</div>
               <h3 className="text-2xl font-bold mb-4">Alpha N</h3>
               <p className="text-gray-600 mb-6">
-              Alpha N allows a homogeneous materialization of joints and panel holes, thus meeting the aesthetic requirements of exposed concrete.
+              {t('alphaNDesc')}
               </p>
               <div className="flex justify-end">
                 <a href="/products/AlphaN" className="inline-flex items-center justify-center w-12 h-12 bg-red-600 rounded-md hover:bg-red-700 transition-colors">
@@ -234,10 +237,10 @@ const HomePage = () => {
                   </div>
                 </div>
                 <div className="md:w-1/2 p-6">
-                  <div className="text-sm text-gray-500 mb-1">Wall formwork</div>
+                  <div className="text-sm text-gray-500 mb-1">{t('wallFormwork')}</div>
                   <h3 className="text-xl font-bold mb-2">Alu B</h3>
                   <p className="text-gray-600 mb-4 text-sm">
-                  The AluB system  is a manuportable aluminium formwork solution designed for the production of standard height straight concrete walls. It is particularly suitable for construction sites without cranes or in hard-to-reach areas.
+                  {t('aluBDesc')}
                   </p>
                   <div className="flex justify-end">
                     <a href="/products/AluB" className="inline-flex items-center justify-center w-10 h-10 bg-red-600 rounded-md hover:bg-red-700 transition-colors">
@@ -259,10 +262,10 @@ const HomePage = () => {
                   </div>
                 </div>
                 <div className="md:w-1/2 p-6">
-                  <div className="text-sm text-gray-500 mb-1">Wall formwork</div>
+                  <div className="text-sm text-gray-500 mb-1">{t('wallFormwork')}</div>
                   <h3 className="text-xl font-bold mb-2">StarTec XT</h3>
                   <p className="text-gray-600 mb-4 text-sm">
-                    The StarTec XT formwork combines three anchoring methods thanks to the integrated Combi rod guide.
+                    {t('starTecDesc')}
                   </p>
                   <div className="flex justify-end">
                     <a href="/products/StarTex" className="inline-flex items-center justify-center w-10 h-10 bg-red-600 rounded-md hover:bg-red-700 transition-colors">
@@ -281,7 +284,7 @@ const HomePage = () => {
 
        {/* Projects Section */}
        <div className="container mx-auto px-4 lg:px-8 py-20">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Projects</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">{t('ourProjects')}</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Project 1 */}
           <div className="relative group overflow-hidden rounded-lg">
@@ -290,8 +293,8 @@ const HomePage = () => {
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
               <div className="p-6 w-full">
-                <h3 className="text-xl font-bold text-white mb-2">Modern Office Building</h3>
-                <p className="text-gray-200 mb-4 text-sm">Commercial Construction</p>
+                <h3 className="text-xl font-bold text-white mb-2">{t('modernOffice')}</h3>
+                <p className="text-gray-200 mb-4 text-sm">{t('commercialConstruction')}</p>
                 <a href="/projects/project1" className="inline-flex items-center justify-center w-10 h-10 bg-red-600 rounded-md hover:bg-red-700 transition-colors">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -308,8 +311,8 @@ const HomePage = () => {
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
               <div className="p-6 w-full">
-                <h3 className="text-xl font-bold text-white mb-2">High-Rise Development</h3>
-                <p className="text-gray-200 mb-4 text-sm">Residential Complex</p>
+                <h3 className="text-xl font-bold text-white mb-2">{t('highRise')}</h3>
+                <p className="text-gray-200 mb-4 text-sm">{t('residentialComplex')}</p>
                 <a href="/projects/project2" className="inline-flex items-center justify-center w-10 h-10 bg-red-600 rounded-md hover:bg-red-700 transition-colors">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -326,8 +329,8 @@ const HomePage = () => {
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
               <div className="p-6 w-full">
-                <h3 className="text-xl font-bold text-white mb-2">Contemporary Museum</h3>
-                <p className="text-gray-200 mb-4 text-sm">Cultural Architecture</p>
+                <h3 className="text-xl font-bold text-white mb-2">{t('contemporaryMuseum')}</h3>
+                <p className="text-gray-200 mb-4 text-sm">{t('culturalArchitecture')}</p>
                 <a href="/projects/project3" className="inline-flex items-center justify-center w-10 h-10 bg-red-600 rounded-md hover:bg-red-700 transition-colors">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -344,9 +347,9 @@ const HomePage = () => {
            <div className="flex flex-col md:flex-row">
              {/* Left Column - Contact Text */}
              <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
-               <h2 className="text-3xl font-bold mb-6">Let our team help you choose the right product and service.</h2>
+               <h2 className="text-3xl font-bold mb-6">{t('contactTitle')}</h2>
                <p className="text-gray-700 mb-6">
-                 Speak to one of our MEVA formwork specialists; we can help you with all your formwork needs. Let us help you with your next formwork project.
+                 {t('contactDesc')}
                </p>
                
                {/* Contact Person Info */}
@@ -361,7 +364,7 @@ const HomePage = () => {
                  </div>
                  <div>
                    <h3 className="text-xl font-bold">Jean-Luc Schott</h3>
-                   <p className="text-gray-600 mb-4">Sales Director for French-speaking Switzerland</p>
+                   <p className="text-gray-600 mb-4">{t('salesDirector')}</p>
                    
                    <div className="flex items-center mb-2">
                      <div className="w-5 h-5 mr-2 flex-shrink-0">
@@ -369,7 +372,7 @@ const HomePage = () => {
                          <path d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 464c-114.7 0-208-93.31-208-208S141.3 48 256 48s208 93.31 208 208S370.7 464 256 464zM256 152c-13.25 0-24 10.74-24 24c0 13.25 10.75 24 24 24s24-10.75 24-24C280 162.7 269.3 152 256 152zM296 352h-80C202.8 352 192 341.3 192 328c0-13.25 10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 192 224 192h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 352 296 352z"/>
                        </svg>
                      </div>
-                     <span>Swiss</span>
+                     <span>{t('swiss')}</span>
                    </div>
                    
                    <p className="text-gray-700 mb-1">MEVA Schalungs-Systeme AG</p>
@@ -391,7 +394,7 @@ const HomePage = () => {
                          <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
                        </svg>
                      </div>
-                     <a href="#" className="text-red-600 hover:underline">View LinkedIn profile</a>
+                     <a href="#" className="text-red-600 hover:underline">{t('viewLinkedIn')}</a>
                    </div>
                    
                    <div className="flex items-center">
@@ -400,7 +403,7 @@ const HomePage = () => {
                          <path d="M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z"/>
                        </svg>
                      </div>
-                     <a href="#" className="text-red-600 hover:underline">Send me an email</a>
+                     <a href="#" className="text-red-600 hover:underline">{t('sendEmail')}</a>
                    </div>
                  </div>
                </div>
@@ -413,7 +416,7 @@ const HomePage = () => {
                    <div className="relative">
                      <input 
                        type="text" 
-                       placeholder="First and last name" 
+                       placeholder={t('firstName')} 
                        className="w-full p-3 border border-gray-300 rounded" 
                        required 
                      />
@@ -422,7 +425,7 @@ const HomePage = () => {
                    <div className="relative">
                      <input 
                        type="email" 
-                       placeholder="E-mail address" 
+                       placeholder={t('emailAddress')} 
                        className="w-full p-3 border border-gray-300 rounded" 
                        required 
                      />
@@ -434,7 +437,7 @@ const HomePage = () => {
                    <div className="relative">
                      <input 
                        type="tel" 
-                       placeholder="Phone" 
+                       placeholder={t('phoneNumber')} 
                        className="w-full p-3 border border-gray-300 rounded" 
                        required 
                      />
@@ -442,46 +445,46 @@ const HomePage = () => {
                    </div>
                    <div>
                      <select className="w-full p-3 border border-gray-300 rounded appearance-none bg-white">
-                       <option>Swiss</option>
-                       <option>France</option>
-                       <option>Germany</option>
-                       <option>Other</option>
+                       <option>{t('swiss')}</option>
+                       <option>{t('france')}</option>
+                       <option>{t('germany')}</option>
+                       <option>{t('other')}</option>
                      </select>
                    </div>
                  </div>
                  
                  <div className="relative">
                    <textarea 
-                     placeholder="Your message" 
+                     placeholder={t('yourMessage')} 
                      rows={6} 
                      className="w-full p-3 border border-gray-300 rounded resize-none" 
                    ></textarea>
                  </div>
                  
                  <div className="text-red-600 text-sm">
-                   * These fields are required
+                   {t('requiredFields')}
                  </div>
                  
                  <div className="pt-2">
-                   <p className="text-sm font-medium mb-2">Data protection</p>
+                   <p className="text-sm font-medium mb-2">{t('dataProtection')}</p>
                    <div className="flex items-start mb-4">
                      <input type="checkbox" className="mt-1 mr-2" id="privacy" required />
                      <label htmlFor="privacy" className="text-sm">
-                       I have read and accept the <a href="#" className="text-red-600 hover:underline">privacy policy</a>.
+                       {t('privacyPolicy')} <a href="#" className="text-red-600 hover:underline">privacy policy</a>.
                      </label>
                    </div>
                    
                    <div className="flex items-start mb-4">
                      <input type="checkbox" className="mt-1 mr-2" id="newsletter" />
                      <label htmlFor="newsletter" className="text-sm">
-                       I would like to subscribe to the Newsletter.
+                       {t('newsletter')}
                      </label>
                    </div>
                  </div>
                  
                  <div>
                    <button type="submit" className="bg-red-600 text-white px-8 py-3 font-medium uppercase hover:bg-red-700 transition-colors">
-                     Send a message
+                     {t('sendMessage')}
                    </button>
                  </div>
                </form>

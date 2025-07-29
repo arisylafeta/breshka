@@ -10,10 +10,13 @@ import {
   NavigationMenuLink,
 } from '../components/ui/navigation-menu';
 import styles from './Header.module.css';
+import { useLanguage } from '../contexts/LanguageContext';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { t } = useLanguage();
   
   useEffect(() => {
     console.log('Header mounted with ID:', document.getElementById('main-header')?.id || 'not found');
@@ -75,7 +78,7 @@ const Header = () => {
                   <NavigationMenuItem className={styles.navItem}>
                     <NavigationMenuLink asChild className={`${styles.navLink} no-hover-bg`}>
                       <Link href="/">
-                        <span className={`${styles.navText} font-semibold ${scrolled ? 'text-black' : 'text-white'}`}>Home</span>
+                        <span className={`${styles.navText} font-semibold ${scrolled ? 'text-black' : 'text-white'}`}>{t('home')}</span>
                         <span className={styles.hoverEffect}></span>
                       </Link>
                     </NavigationMenuLink>
@@ -83,7 +86,7 @@ const Header = () => {
                   <NavigationMenuItem className={styles.navItem}>
                     <NavigationMenuLink asChild className={`${styles.navLink} no-hover-bg`}>
                       <Link href="/products">
-                        <span className={`${styles.navText} font-semibold ${scrolled ? 'text-black' : 'text-white'}`}>Products</span>
+                        <span className={`${styles.navText} font-semibold ${scrolled ? 'text-black' : 'text-white'}`}>{t('products')}</span>
                         <span className={styles.hoverEffect}></span>
                       </Link>
                     </NavigationMenuLink>
@@ -91,7 +94,7 @@ const Header = () => {
                   <NavigationMenuItem className={styles.navItem}>
                     <NavigationMenuLink asChild className={`${styles.navLink} no-hover-bg`}>
                       <Link href="/services">
-                        <span className={`${styles.navText} font-semibold ${scrolled ? 'text-black' : 'text-white'}`}>Services</span>
+                        <span className={`${styles.navText} font-semibold ${scrolled ? 'text-black' : 'text-white'}`}>{t('services')}</span>
                         <span className={styles.hoverEffect}></span>
                       </Link>
                     </NavigationMenuLink>
@@ -99,7 +102,7 @@ const Header = () => {
                   <NavigationMenuItem className={styles.navItem}>
                     <NavigationMenuLink asChild className={`${styles.navLink} no-hover-bg`}>
                       <Link href="/contact">
-                        <span className={`${styles.navText} font-semibold ${scrolled ? 'text-black' : 'text-white'}`}>Contact</span>
+                        <span className={`${styles.navText} font-semibold ${scrolled ? 'text-black' : 'text-white'}`}>{t('contact')}</span>
                         <span className={styles.hoverEffect}></span>
                       </Link>
                     </NavigationMenuLink>
@@ -108,12 +111,13 @@ const Header = () => {
               </NavigationMenu>
             </div>
 
-            {/* Right Section: Contact & Social */}
+            {/* Right Section: Contact, Language Switcher & Social */}
             <div className="hidden md:flex flex-1 justify-end items-center space-x-1 lg:space-x-2">
               <a href="tel:+1234567890" className={`flex items-center ${scrolled ? 'text-black hover:text-black/80' : 'text-white hover:text-white/80'} transition-colors`}>
                 <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-                <span className="font-medium text-xs md:text-sm">+1 (234) 567-890</span>
+                <span className="font-medium text-xs md:text-sm">{t('phone')}</span>
               </a>
+              <LanguageSwitcher scrolled={scrolled} />
               <div className="flex items-center space-x-1 lg:space-x-2">
                 {/* Social icons */}
                 <a href="#" className={`${scrolled ? 'text-black hover:text-black/80' : 'text-white hover:text-white/80'} transition-colors`}>
@@ -162,33 +166,33 @@ const Header = () => {
               className="px-4 py-2 text-lg font-medium hover:bg-red-600 hover:text-white rounded-md transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Home
+              {t('home')}
             </Link>
             <Link 
               href="/products" 
               className="px-4 py-2 text-lg font-medium hover:bg-red-600 hover:text-white rounded-md transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Products
+              {t('products')}
             </Link>
             <Link 
               href="/services" 
               className="px-4 py-2 text-lg font-medium hover:bg-red-600 hover:text-white rounded-md transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Services
+              {t('services')}
             </Link>
             <Link 
               href="/contact" 
               className="px-4 py-2 text-lg font-medium hover:bg-red-600 hover:text-white rounded-md transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Contact
+              {t('contact')}
             </Link>
             <div className="pt-2 border-t border-gray-200">
               <a href="tel:+1234567890" className="flex items-center px-4 py-2 text-lg font-medium hover:bg-red-600 hover:text-white rounded-md transition-colors">
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-                +1 (234) 567-890
+                {t('phone')}
               </a>
             </div>
             <div className="flex justify-center space-x-6 pt-2">
