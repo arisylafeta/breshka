@@ -16,7 +16,7 @@ const Footer = () => {
             <div className="mb-6">
               <Image 
                 src="/images/Logo.png" 
-                alt="MEVA Logo" 
+                alt="AlphaTech Logo" 
                 width={150}
                 height={80}
                 className="h-20 w-auto"
@@ -35,10 +35,10 @@ const Footer = () => {
               <li><Link href="/products/AluFix" className="text-gray-400 hover:text-white text-sm">AluFix</Link></li>
               <li><Link href="/products/AluStar" className="text-gray-400 hover:text-white text-sm">AluStar</Link></li>
               <li><Link href="/products/StarTex" className="text-gray-400 hover:text-white text-sm">StarTec XT</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white text-sm">MevaDec</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white text-sm">AluDec</Link></li>
               <li><Link href="#" className="text-gray-400 hover:text-white text-sm">MT 60</Link></li>
               <li><Link href="#" className="text-gray-400 hover:text-white text-sm">MGC-H</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white text-sm">MevaFlex</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white text-sm">AlphaFlex</Link></li>
             </ul>
           </div>
 
@@ -70,13 +70,13 @@ const Footer = () => {
             <div>
               <h3 className="text-sm font-bold mb-4">{t('footerContact')}</h3>
               <ul className="space-y-2">
-                <li><Link href="#" className="text-gray-400 hover:text-white text-sm">{t('mevaFormworkSystems')}</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white text-sm">{t('mevaUK')}</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white text-sm">{t('mevaSpain')}</Link></li>
+                <li><Link href="#" className="text-gray-400 hover:text-white text-sm">{t('alphaTechFormworkSystems')}</Link></li>
+                <li><Link href="#" className="text-gray-400 hover:text-white text-sm">{t('alphaTechUK')}</Link></li>
+                <li><Link href="#" className="text-gray-400 hover:text-white text-sm">{t('alphaTechSpain')}</Link></li>
                 <li><Link href="#" className="text-gray-400 hover:text-white text-sm">{t('international')}</Link></li>
                 <li>
                   <p className="text-gray-400 text-sm">+41 62 769 71 00</p>
-                  <a href="mailto:info@meva.net" className="text-gray-400 hover:text-white text-sm">info@meva.net</a>
+                  <a href="mailto:info@alphatech.net" className="text-gray-400 hover:text-white text-sm">info@alphatech.net</a>
                 </li>
               </ul>
             </div>
@@ -86,7 +86,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-xs text-gray-500 mb-4 md:mb-0">
-            © {new Date().getFullYear()} MEVA. {t('allRightsReserved')} 
+            © {new Date().getFullYear()} AlphaTech. {t('allRightsReserved')} 
             <span className="mx-2">|</span>
             <Link href="#" className="hover:text-white">{t('terms')}</Link>
             <span className="mx-2">|</span>
