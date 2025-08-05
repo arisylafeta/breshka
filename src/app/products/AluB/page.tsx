@@ -1,19 +1,12 @@
 "use client"
 
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import { useLanguage } from '../../../contexts/LanguageContext'
+import { InteractiveImageSwiper } from '../../../components/InteractiveImageSwiper'; // Adjust path if needed
 
 export default function AluBProductPage() {
   const { t } = useLanguage()
-  const [currentImage, setCurrentImage] = useState(1);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentImage(prev => (prev % 3) + 1);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
   return (
     <div>
 {/* Hero Image */}
@@ -52,34 +45,11 @@ export default function AluBProductPage() {
 
         {/* Product Image Carousel */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-          <div className="relative overflow-hidden rounded-lg shadow-lg" style={{ height: '600px' }}>
-            <div className="relative w-full h-full">
-              {[1, 2, 3].map((index) => (
-                <div 
-                  key={index}
-                  className={`absolute inset-0 transition-opacity duration-500 ${currentImage === index ? 'opacity-100' : 'opacity-0'}`}
-                >
-                  <Image 
-                    src="/images/AluB.jpg" 
-                    alt={`AluB Formwork ${index}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-            {/* Navigation Dots */}
-            <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
-              {[1, 2, 3].map((index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentImage(index)}
-                  className={`w-3 h-3 rounded-full ${currentImage === index ? 'bg-white' : 'bg-white/50'}`}
-                  aria-label={`Go to slide ${index}`}
-                />
-              ))}
-            </div>
-          </div>
+            <InteractiveImageSwiper 
+              images={["/images/AluB.jpg", "/images/AluB.jpg", "/images/AluB.jpg"]}
+              cardWidth={600}
+              cardHeight={600}
+            />
           <div className="flex flex-col pt-8">
             <h2 className="text-2xl font-bold mb-6">{t('keyBenefits')}</h2>
             <div className="space-y-6">

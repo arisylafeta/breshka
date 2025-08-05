@@ -4,7 +4,7 @@ import "./globals.css";
 
 // 1. Import your Header and Footer components
 import Header from "../components/Header"; // Make sure this path is correct
-import Footer from "../components/Footer"; // Make sure this path is correct
+import Footer from "../components/Footer";
 import { LanguageProvider } from "../contexts/LanguageContext";
 
 const inter = Inter({ subsets: ["latin"] });
