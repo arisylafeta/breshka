@@ -52,23 +52,23 @@ const HomePage = () => {
        {/* By the Numbers */}
       <div className="container mx-auto px-4 lg:px-8 py-16 border-t border-b border-gray-200">
         <div className="flex flex-col md:flex-row justify-between items-start">
-          {/* 600+ Employees */}
+          {/* Projects */}
           <div className="flex-1 px-8 py-6 relative">
             <h3 className="text-5xl font-normal text-red-600 mb-2">
-              <AnimatedCounter end={600} suffix="+" className="inline-block" />
+              <AnimatedCounter end={250} suffix="+" className="inline-block" />
             </h3>
-            <h4 className="text-lg font-medium text-red-600 mb-3">{t('employees')}</h4>
+            <h4 className="text-lg font-medium text-red-600 mb-3">{t('projects')}</h4>
             <p className="text-sm text-gray-600 leading-relaxed">
-              {t('employeesDesc')}
+              {t('projectsDesc')}
             </p>
             {/* Vertical Red Line */}
             <div className="hidden md:block absolute right-0 top-6 bottom-6 w-px bg-red-600"></div>
           </div>
 
-          {/* 40+ Locations */}
+          {/* Locations */}
           <div className="flex-1 px-8 py-6 relative">
             <h3 className="text-5xl font-normal text-red-600 mb-2">
-              <AnimatedCounter end={40} suffix="+" className="inline-block" />
+              <AnimatedCounter end={15} suffix="+" className="inline-block" />
             </h3>
             <h4 className="text-lg font-medium text-red-600 mb-3">{t('locations')}</h4>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -78,27 +78,27 @@ const HomePage = () => {
             <div className="hidden md:block absolute right-0 top-6 bottom-6 w-px bg-red-600"></div>
           </div>
 
-          {/* 130m Euros */}
+          {/* Experience */}
           <div className="flex-1 px-8 py-6 relative">
             <h3 className="text-5xl font-normal text-red-600 mb-2">
-              <AnimatedCounter end={130} suffix="m" className="inline-block" />
+              <AnimatedCounter end={25} suffix="+" className="inline-block" />
             </h3>
-            <h4 className="text-lg font-medium text-red-600 mb-3">{t('euros')}</h4>
+            <h4 className="text-lg font-medium text-red-600 mb-3">{t('experience')}</h4>
             <p className="text-sm text-gray-600 leading-relaxed">
-              {t('eurosDesc')}
+              {t('experienceDesc')}
             </p>
             {/* Vertical Red Line */}
             <div className="hidden md:block absolute right-0 top-6 bottom-6 w-px bg-red-600"></div>
           </div>
 
-          {/* 8,000+ Clients */}
+          {/* m² Sold */}
           <div className="flex-1 px-8 py-6">
             <h3 className="text-5xl font-normal text-red-600 mb-2">
-              <AnimatedCounter end={8000} suffix="+" className="inline-block" />
+              <AnimatedCounter end={1500000} suffix="" className="inline-block" />
             </h3>
-            <h4 className="text-lg font-medium text-red-600 mb-3">{t('clients')}</h4>
+            <h4 className="text-lg font-medium text-red-600 mb-3">{t('squareMeters')}</h4>
             <p className="text-sm text-gray-600 leading-relaxed">
-              {t('clientsDesc')}
+              {t('squareMetersDesc')}
             </p>
           </div>
         </div>
@@ -283,11 +283,11 @@ const HomePage = () => {
       </div>
 
        {/* Projects Section */}
-       <div className="container mx-auto px-4 lg:px-8 py-20">
+       {/* <div className="container mx-auto px-4 lg:px-8 py-20">
         <h2 className="text-3xl font-bold text-center mb-12">{t('ourProjects')}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> */}
           {/* Project 1 */}
-          <div className="relative group overflow-hidden rounded-lg">
+          {/* <div className="relative group overflow-hidden rounded-lg">
             <div className="aspect-w-16 aspect-h-9 w-full">
               <img src="/images/project1.jpeg" alt="Project 1" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
@@ -302,10 +302,10 @@ const HomePage = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Project 2 */}
-          <div className="relative group overflow-hidden rounded-lg">
+          {/* <div className="relative group overflow-hidden rounded-lg">
             <div className="aspect-w-16 aspect-h-9 w-full">
               <img src="/images/project2.jpeg" alt="Project 2" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
@@ -320,10 +320,10 @@ const HomePage = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Project 3 */}
-          <div className="relative group overflow-hidden rounded-lg">
+          {/* <div className="relative group overflow-hidden rounded-lg">
             <div className="aspect-w-16 aspect-h-9 w-full">
               <img src="/images/project3.jpeg" alt="Project 3" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
@@ -340,7 +340,9 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+
+      
        {/* Contact Form */}
        <div className="bg-gray-100 py-16">
          <div className="container mx-auto px-4 lg:px-8">
@@ -354,16 +356,8 @@ const HomePage = () => {
                
                {/* Contact Person Info */}
                <div className="mt-12 flex items-start">
-                 <div className="mr-6">
-                   <div className="relative">
-                     <div className="w-32 h-40 overflow-hidden">
-                       <img src="/images/person.jpeg" alt="Contact Person" className="w-full h-full object-cover" />
-                     </div>
-                     <div className="absolute top-0 left-0 right-0 h-1 bg-red-600"></div>
-                   </div>
-                 </div>
                  <div>
-                   <h3 className="text-xl font-bold">Jean-Luc Schott</h3>
+                   <h3 className="text-xl font-bold">Norgon Berisha</h3>
                    <p className="text-gray-600 mb-4">{t('salesDirector')}</p>
                    
                    <div className="flex items-center mb-2">

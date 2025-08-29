@@ -9,6 +9,7 @@ import {
   useSpring,
   useTransform,
   MotionValue,
+  AnimatePresence,
 } from 'framer-motion';
 import {
   NavigationMenu,
@@ -84,7 +85,7 @@ const Header = () => {
   const navItems = [
     { href: '/', label: t('home') },
     { href: '/products', label: t('products') },
-    { href: '/services', label: t('services') },
+    // { href: '/services', label: t('services') },
     { href: '/contact', label: t('contact') },
   ];
 
@@ -142,35 +143,83 @@ const Header = () => {
 
             {/* Right Section: Contact, Language Switcher */}
             <div className="hidden md:flex flex-1 justify-end items-center space-x-1 lg:space-x-2">
-              <a href="tel:+1234567890" className={`flex items-center ${scrolled ? 'text-black hover:text-black/80' : 'text-white hover:text-white/80'} transition-colors`}>
+              <a href="tel:+41797757781" className={`flex items-center ${scrolled ? 'text-black hover:text-black/80' : 'text-white hover:text-white/80'} transition-colors`}>
                 <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                 <span className="font-medium text-xs md:text-sm">{t('phone')}</span>
               </a>
               <LanguageSwitcher scrolled={scrolled} />
             </div>
 
-            {/* Mobile Menu Button remains unchanged */}
-            <div className="md:hidden">
-              <button 
-                className="p-5 rounded-md hover:bg-accent" 
-                aria-label="Menu"
+            {/* Mobile Menu Button */}
+            <div className="md:hidden flex items-center">
+              <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-2 text-gray-700 hover:text-gray-900 focus:outline-none transition-transform duration-300 active:scale-95"
+                aria-label="Toggle menu"
               >
-                {/* SVG icons */}
+                {mobileMenuOpen ? (
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                ) : (
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                )}
               </button>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown remains unchanged */}
-      {mobileMenuOpen && (
-        <div className="md:hidden ...">
-          {/* ... mobile menu content */}
-        </div>
-      )}
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+            className="md:hidden bg-white shadow-lg fixed top-20 left-0 right-0 z-50 overflow-hidden"
+          >
+            <motion.div 
+              className="px-4 pt-2 pb-4 space-y-1"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.1 }}
+            >
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 rounded-md"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <div className="pt-4 border-t border-gray-200">
+                <div className="flex items-center px-3 py-2">
+                  <a 
+                    href="tel:+41797757781" 
+                    className="flex items-center text-gray-700 hover:text-gray-900"
+                  >
+                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    <span className="font-medium">{t('phone')}</span>
+                  </a>
+                </div>
+                <div className="px-3 py-2">
+                  <LanguageSwitcher scrolled={true} />
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
-}
+};
 
 export default Header;

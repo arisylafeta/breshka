@@ -20,7 +20,7 @@ const translations = {
     products: 'Products',
     services: 'Services',
     contact: 'Contact',
-    phone: '+1 (234) 567-890',
+    phone: '+41 79 775 7781',
     language: 'Language',
     english: 'English',
     french: 'Français',
@@ -34,18 +34,18 @@ const translations = {
     getQuote: 'Get Quote',
     
     // Stats Section
-    employees: 'Employees',
+    projects: 'Projects',
     locations: 'Locations',
-    euros: 'Euros',
-    clients: 'Clients',
-    employeesDesc: 'Our people are our greatest asset. Their knowledge, expertise and focus on serving our clients to the highest level is what has made MEVA the company it is today.',
-    locationsDesc: 'We have seen substantial growth in recent years, with regional offices and local representatives serving MEVA across the globe.',
-    eurosDesc: 'With our annual sales exceeding €130 million, we continue to re-invest in research and development to deliver innovation in product design.',
-    clientsDesc: 'We are truly humbled by the number of clients that put their trust in us every day to deliver formwork solutions to their specific needs.',
+    experience: 'Experience',
+    squareMeters: 'm² Sold',
+    projectsDesc: 'Successfully completed projects across various sectors including commercial, residential, and industrial construction.',
+    locationsDesc: 'With a growing presence in multiple locations, we bring our expertise to construction sites around the region.',
+    experienceDesc: 'Years of combined experience in delivering high-quality construction solutions with a proven track record.',
+    squareMetersDesc: 'Total area of construction we have completed, showcasing our capacity for large-scale projects.',
     
     // Leadership Message
     leadershipQuote: 'Whatever challenges you face, our extensive technical expertise in formwork allows us to find the best solutions for your needs to ensure smooth progress and deadlines are met. With us, your project is in good hands.',
-    ceoName: 'John Smith',
+    ceoName: 'Norgon Berisha',
     ceoTitle: 'CEO & Founder',
     
     // Services Section
@@ -278,9 +278,9 @@ const translations = {
     contactAddress: 'Address',
     contactAddressValue: '123 Construction Ave, Building City, 10001',
     contactPhone: 'Phone',
-    contactPhoneValue: '+1 (555) 123-4567',
+    contactPhoneValue: '+41 79 775 7781',
     contactEmailLabel: 'Email',
-    contactEmailValue: 'info@breshka.com',
+    contactEmailValue: 'info@alphatechsystemes.com',
     workingHours: 'Working Hours',
     workingHoursWeekdays: 'Monday - Friday: 8:00 AM - 5:00 PM',
     workingHoursWeekends: 'Saturday - Sunday: Closed',
@@ -297,7 +297,7 @@ const translations = {
     products: 'Produits',
     services: 'Services',
     contact: 'Contact',
-    phone: '+1 (234) 567-890',
+    phone: '+41 79 775 7781',
     language: 'Langue',
     english: 'English',
     french: 'Français',
@@ -311,18 +311,18 @@ const translations = {
     getQuote: 'Obtenir un Devis',
     
     // Stats Section
-    employees: 'Employés',
+    projects: 'Projets',
     locations: 'Emplacements',
-    euros: 'Euros',
-    clients: 'Clients',
-    employeesDesc: 'Nos employés sont notre plus grand atout. Leurs connaissances, leur expertise et leur concentration sur le service à nos clients au plus haut niveau font de MEVA l\'entreprise qu\'elle est aujourd\'hui.',
-    locationsDesc: 'Nous avons connu une croissance substantielle ces dernières années, avec des bureaux régionaux et des représentants locaux servant MEVA à travers le monde.',
-    eurosDesc: 'Avec nos ventes annuelles dépassant 130 millions d\'euros, nous continuons à réinvestir dans la recherche et le développement pour offrir l\'innovation dans la conception de produits.',
-    clientsDesc: 'Nous sommes vraiment honorés par le nombre de clients qui nous font confiance chaque jour pour livrer des solutions de coffrage à leurs besoins spécifiques.',
+    experience: 'Expérience',
+    squareMeters: 'm² Vendu',
+    projectsDesc: 'Projets menés à bien dans divers secteurs, notamment la construction commerciale, résidentielle et industrielle.',
+    locationsDesc: 'Avec une présence croissante dans plusieurs endroits, nous apportons notre expertise sur les chantiers de la région.',
+    experienceDesc: 'Années d\'expérience combinée dans la fourniture de solutions de construction de haute qualité avec des références éprouvées.',
+    squareMetersDesc: 'Superficie totale de construction que nous avons réalisée, démontrant notre capacité à gérer des projets d\'envergure.',
     
     // Leadership Message
     leadershipQuote: 'Quels que soient les défis auxquels vous faites face, notre vaste expertise technique en coffrage nous permet de trouver les meilleures solutions pour vos besoins afin d\'assurer un progrès fluide et que les délais soient respectés. Avec nous, votre projet est entre de bonnes mains.',
-    ceoName: 'John Smith',
+    ceoName: 'Norgon Berisha',
     ceoTitle: 'PDG et Fondateur',
     
     // Services Section
@@ -587,9 +587,9 @@ const translations = {
     contactAddress: 'Adresse',
     contactAddressValue: '123 Avenue de la Construction, Ville Bâtiment, 10001',
     contactPhone: 'Téléphone',
-    contactPhoneValue: '+1 (555) 123-4567',
+    contactPhoneValue: '+41 79 775 7781',
     contactEmailLabel: 'E-mail',
-    contactEmailValue: 'info@breshka.com',
+    contactEmailValue: 'info@alphatechsystemes.com',
     workingHours: 'Heures d\'ouverture',
     workingHoursWeekdays: 'Lundi - Vendredi : 8h00 - 17h00',
     workingHoursWeekends: 'Samedi - Dimanche : Fermé'
@@ -600,7 +600,7 @@ const translations = {
     products: 'Produkte',
     services: 'Dienstleistungen',
     contact: 'Kontakt',
-    phone: '+1 (234) 567-890',
+    phone: '+41 79 775 7781',
     language: 'Sprache',
     english: 'English',
     french: 'Français',
@@ -614,18 +614,18 @@ const translations = {
     getQuote: 'Angebot Erhalten',
     
     // Stats Section
-    employees: 'Mitarbeiter',
+    projects: 'Projekte',
     locations: 'Standorte',
-    euros: 'Euro',
-    clients: 'Kunden',
-    employeesDesc: 'Unsere Mitarbeiter sind unser größtes Kapital. Ihr Wissen, ihre Expertise und ihr Fokus darauf, unsere Kunden auf höchstem Niveau zu bedienen, haben MEVA zu dem Unternehmen gemacht, das es heute ist.',
-    locationsDesc: 'Wir haben in den letzten Jahren ein erhebliches Wachstum erlebt, mit regionalen Büros und lokalen Vertretern, die MEVA weltweit bedienen.',
-    eurosDesc: 'Mit unserem Jahresumsatz von über 130 Millionen Euro investieren wir weiterhin in Forschung und Entwicklung, um Innovation im Produktdesign zu liefern.',
-    clientsDesc: 'Wir sind wirklich demütig angesichts der Anzahl von Kunden, die uns jeden Tag ihr Vertrauen schenken, um Schalungslösungen für ihre spezifischen Bedürfnisse zu liefern.',
+    experience: 'Erfahrung',
+    squareMeters: 'm² Verkauft',
+    projectsDesc: 'Erfolgreich abgeschlossene Projekte in verschiedenen Bereichen, einschließlich gewerblicher, gewerblicher und industrieller Bauvorhaben.',
+    locationsDesc: 'Mit wachsender Präsenz an mehreren Standorten bringen wir unser Know-how auf Baustellen in der Region.',
+    experienceDesc: 'Jahre kombinierte Erfahrung in der Bereitstellung hochwertiger Baulösungen mit nachgewiesener Erfolgsbilanz.',
+    squareMetersDesc: 'Gesamtfläche der von uns fertiggestellten Bauarbeiten, die unsere Kapazität für Großprojekte zeigt.',
     
     // Leadership Message
     leadershipQuote: 'Welchen Herausforderungen Sie auch gegenüberstehen, unsere umfassende technische Expertise in der Schalung ermöglicht es uns, die besten Lösungen für Ihre Bedürfnisse zu finden, um einen reibungslosen Fortschritt zu gewährleisten und Termine einzuhalten. Bei uns ist Ihr Projekt in guten Händen.',
-    ceoName: 'John Smith',
+    ceoName: 'Norgon Berisha',
     ceoTitle: 'CEO & Gründer',
     
     // Services Section
@@ -890,9 +890,9 @@ const translations = {
     contactAddress: 'Adresse',
     contactAddressValue: '123 Baustraße, Baustadt, 10001',
     contactPhone: 'Telefon',
-    contactPhoneValue: '+1 (555) 123-4567',
+    contactPhoneValue: '+41 79 775 7781',
     contactEmailLabel: 'E-Mail',
-    contactEmailValue: 'info@breshka.com',
+    contactEmailValue: 'info@alphatechsystemes.com',
     workingHours: 'Öffnungszeiten',
     workingHoursWeekdays: 'Montag - Freitag: 8:00 - 17:00 Uhr',
     workingHoursWeekends: 'Samstag - Sonntag: Geschlossen'
