@@ -20,17 +20,16 @@ const translations = {
     products: 'Products',
     services: 'Services',
     contact: 'Contact',
-    phone: '+41 79 775 7781',
+    phone: '+41 79 775 77 81 | +41 21 991 33 33',
     language: 'Language',
     english: 'English',
     french: 'Français',
     german: 'Deutsch',
     
     // Hero Section
-    heroTitle: 'Premium Metal Building',
+    heroTitle: 'Premium Metal Building ',
     heroTitleSpan: 'Solutions',
     heroDescription: 'Engineering excellence in steel construction. From industrial warehouses to commercial complexes, we deliver durable, cost-effective metal building solutions that stand the test of time.',
-    viewProjects: 'View Our Projects',
     getQuote: 'Get Quote',
     
     // Stats Section
@@ -278,11 +277,11 @@ const translations = {
     contactAddress: 'Address',
     contactAddressValue: '1180 Rolle, Switzerland',
     contactPhone: 'Phone',
-    contactPhoneValue: '+41 79 775 7781',
+    contactPhoneValue: '+41 79 775 77 81 | +41 21 991 33 33',
     contactEmailLabel: 'Email',
     contactEmailValue: 'info@alphatechsystemes.com',
     workingHours: 'Working Hours',
-    workingHoursWeekdays: 'Monday - Friday: 8:00 AM - 5:00 PM',
+    workingHoursWeekdays: 'Monday - Friday: 8:00 AM - 18:00 PM',
     workingHoursWeekends: 'Saturday - Sunday: Closed',
     
     // Countries
@@ -297,7 +296,7 @@ const translations = {
     products: 'Produits',
     services: 'Services',
     contact: 'Contact',
-    phone: '+41 79 775 7781',
+    phone: '+41 79 775 77 81 | +41 21 991 33 33',
     language: 'Langue',
     english: 'English',
     french: 'Français',
@@ -307,7 +306,6 @@ const translations = {
     heroTitle: 'Solutions de Construction',
     heroTitleSpan: 'Métallique Premium',
     heroDescription: 'Excellence en ingénierie dans la construction en acier. Des entrepôts industriels aux complexes commerciaux, nous livrons des solutions de bâtiments métalliques durables et rentables qui résistent à l\'épreuve du temps.',
-    viewProjects: 'Voir Nos Projets',
     getQuote: 'Obtenir un Devis',
     
     // Stats Section
@@ -587,7 +585,7 @@ const translations = {
     contactAddress: 'Adresse',
     contactAddressValue: '123 Avenue de la Construction, Ville Bâtiment, 10001',
     contactPhone: 'Téléphone',
-    contactPhoneValue: '+41 79 775 7781',
+    contactPhoneValue: '+41 79 775 77 81 | +41 21 991 33 33',
     contactEmailLabel: 'E-mail',
     contactEmailValue: 'info@alphatechsystemes.com',
     workingHours: 'Heures d\'ouverture',
@@ -600,7 +598,7 @@ const translations = {
     products: 'Produkte',
     services: 'Dienstleistungen',
     contact: 'Kontakt',
-    phone: '+41 79 775 7781',
+    phone: '+41 79 775 77 81 | +41 21 991 33 33',
     language: 'Sprache',
     english: 'English',
     french: 'Français',
@@ -610,7 +608,6 @@ const translations = {
     heroTitle: 'Premium Metallbau',
     heroTitleSpan: 'Lösungen',
     heroDescription: 'Ingenieurexzellenz im Stahlbau. Von Industrielagern bis hin zu Gewerbeanlagen liefern wir langlebige, kosteneffektive Metallbaulösungen, die der Zeit standhalten.',
-    viewProjects: 'Unsere Projekte Ansehen',
     getQuote: 'Angebot Erhalten',
     
     // Stats Section
@@ -890,11 +887,11 @@ const translations = {
     contactAddress: 'Adresse',
     contactAddressValue: '123 Baustraße, Baustadt, 10001',
     contactPhone: 'Telefon',
-    contactPhoneValue: '+41 79 775 7781',
+    contactPhoneValue: '+41 79 775 77 81 | +41 21 991 33 33',
     contactEmailLabel: 'E-Mail',
     contactEmailValue: 'info@alphatechsystemes.com',
     workingHours: 'Öffnungszeiten',
-    workingHoursWeekdays: 'Montag - Freitag: 8:00 - 17:00 Uhr',
+    workingHoursWeekdays: 'Montag - Freitag: 8:00 - 18:00',
     workingHoursWeekends: 'Samstag - Sonntag: Geschlossen'
   }
 };

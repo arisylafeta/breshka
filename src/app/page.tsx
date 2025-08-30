@@ -5,6 +5,7 @@ import Image from 'next/image'
 import MessageImage from "@/components/MessageImage";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { useLanguage } from '@/contexts/LanguageContext';
+import Link from 'next/link';
 
 const HomePage = () => {
   const { t } = useLanguage();
@@ -37,13 +38,10 @@ const HomePage = () => {
               <p className="text-xl font-bold text-white mb-8 leading-relaxed">
                 {t('heroDescription')}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-3 bg-white text-zinc-900 rounded-lg font-medium hover:bg-zinc-100 transition-colors">
-                  {t('viewProjects')}
-                </button>
-                <button className="px-8 py-3 border-2 border-white text-white rounded-lg font-medium hover:bg-white/10 transition-colors">
+              <div className="flex flex-col sm:flex-row gap-4r">
+                <Link href="/contact" className="px-8 py-3 border-2 border-white text-white rounded-lg font-medium hover:bg-white/10 transition-colors inline-flex items-center justify-center">
                   {t('getQuote')}
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -55,7 +53,7 @@ const HomePage = () => {
           {/* Projects */}
           <div className="flex-1 px-8 py-6 relative">
             <h3 className="text-5xl font-normal text-red-600 mb-2">
-              <AnimatedCounter end={250} suffix="+" className="inline-block" />
+              <AnimatedCounter end={90} suffix="+" className="inline-block" />
             </h3>
             <h4 className="text-lg font-medium text-red-600 mb-3">{t('projects')}</h4>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -68,7 +66,7 @@ const HomePage = () => {
           {/* Locations */}
           <div className="flex-1 px-8 py-6 relative">
             <h3 className="text-5xl font-normal text-red-600 mb-2">
-              <AnimatedCounter end={15} suffix="+" className="inline-block" />
+              <AnimatedCounter end={5} suffix="+" className="inline-block" />
             </h3>
             <h4 className="text-lg font-medium text-red-600 mb-3">{t('locations')}</h4>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -81,7 +79,7 @@ const HomePage = () => {
           {/* Experience */}
           <div className="flex-1 px-8 py-6 relative">
             <h3 className="text-5xl font-normal text-red-600 mb-2">
-              <AnimatedCounter end={25} suffix="+" className="inline-block" />
+              <AnimatedCounter end={7} suffix="+" className="inline-block" />
             </h3>
             <h4 className="text-lg font-medium text-red-600 mb-3">{t('experience')}</h4>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -94,7 +92,7 @@ const HomePage = () => {
           {/* m² Sold */}
           <div className="flex-1 px-8 py-6">
             <h3 className="text-5xl font-normal text-red-600 mb-2">
-              <AnimatedCounter end={1500000} suffix="" className="inline-block" />
+              <AnimatedCounter end={250000} suffix="" className="inline-block" />
             </h3>
             <h4 className="text-lg font-medium text-red-600 mb-3">{t('squareMeters')}</h4>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -233,7 +231,7 @@ const HomePage = () => {
               <div className="flex flex-col md:flex-row">
                 <div className="md:w-1/2">
                   <div className="relative h-48 md:h-full overflow-hidden">
-                    <img src="/images/AluB.jpg" alt="AluB Formwork" className="w-full h-full object-cover" />
+                    <img src="/images/AluB.png" alt="AluB Formwork" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div className="md:w-1/2 p-6">
@@ -258,17 +256,17 @@ const HomePage = () => {
               <div className="flex flex-col md:flex-row">
                 <div className="md:w-1/2">
                   <div className="relative h-48 md:h-full overflow-hidden">
-                    <img src="/images/StarTex.jpg" alt="StarTec XT Formwork" className="w-full h-full object-cover" />
+                    <img src="/images/aluBMax.png" alt="StarTec XT Formwork" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div className="md:w-1/2 p-6">
                   <div className="text-sm text-gray-500 mb-1">{t('wallFormwork')}</div>
-                  <h3 className="text-xl font-bold mb-2">StarTec XT</h3>
+                  <h3 className="text-xl font-bold mb-2">AluB Max</h3>
                   <p className="text-gray-600 mb-4 text-sm">
                     {t('starTecDesc')}
                   </p>
                   <div className="flex justify-end">
-                    <a href="/products/StarTex" className="inline-flex items-center justify-center w-10 h-10 bg-red-600 rounded-md hover:bg-red-700 transition-colors">
+                    <a href="/products/AluBMax" className="inline-flex items-center justify-center w-10 h-10 bg-red-600 rounded-md hover:bg-red-700 transition-colors">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
@@ -369,7 +367,7 @@ const HomePage = () => {
                       <span>{t('swiss')}</span>
                     </div>
                     
-                    <p className="text-gray-700 mb-1">MEVA Schalungs-Systeme AG</p>
+                    <p className="text-gray-700 mb-1">AlphaTech Systemes SA</p>
                     <p className="text-gray-700 mb-4">1180 Rolle, Switzerland</p>
                     
                     <div className="flex items-center mb-2">

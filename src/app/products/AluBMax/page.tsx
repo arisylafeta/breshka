@@ -17,15 +17,15 @@ export default function StarTecXTProductPage() {
 {/* Hero Image */}
 <div className="relative h-[400px] md:h-[500px] w-full">
   <Image
-    src="/images/StarTex.jpg"
-    alt="StarTec XT Formwork"
+    src="/images/aluBMax.png"
+    alt="AluB Max Formwork"
     priority
     className="object-cover"
     fill
   />
   <div className="absolute inset-0 bg-opacity-40 flex items-center justify-center">
     <div className="text-center text-white px-4">
-      <h1 className="text-4xl md:text-6xl font-bold mb-4">StarTec XT</h1>
+      <h1 className="text-4xl md:text-6xl font-bold mb-4">AluB Max</h1>
       <p className="text-xl md:text-2xl max-w-2xl mx-auto">
         Versatile. Robust. Efficient. The triple anchoring formwork system for demanding projects.
       </p>
@@ -41,10 +41,10 @@ export default function StarTecXTProductPage() {
           <div className="flex items-center mb-2">
             <span className="text-sm text-gray-500">Wall formwork</span>
           </div>
-          <h1 className="text-4xl font-bold mb-4">StarTec XT</h1>
+          <h1 className="text-4xl font-bold mb-4">AluB Max</h1>
           <div className="w-20 h-1 bg-red-600 mb-6"></div>
           <p className="text-xl text-gray-700 max-w-full">
-            The StarTec XT formwork combines three anchoring methods thanks to the integrated Combi rod guide, offering exceptional versatility and efficiency for your construction projects.
+            The AluB Max formwork combines three anchoring methods thanks to the integrated Combi rod guide, offering exceptional versatility and efficiency for your construction projects.
           </p>
         </div>
 
@@ -58,8 +58,8 @@ export default function StarTecXTProductPage() {
                   className={`absolute inset-0 transition-opacity duration-500 ${currentImage === index ? 'opacity-100' : 'opacity-0'}`}
                 >
                   <Image 
-                    src="/images/StarTex.jpg" 
-                    alt={`StarTec XT Formwork ${index}`}
+                    src="/images/aluBMax.png" 
+                    alt={`AluB Max Formwork ${index}`}
                     fill
                     className="object-cover"
                   />
@@ -208,8 +208,8 @@ export default function StarTecXTProductPage() {
         <div className="bg-gray-100 w-screen relative left-1/2 right-1/2 -mx-[50vw] py-12 my-16">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="text-center">
-              <h3 className="text-2xl font-bold mb-2">Interested in StarTec XT for your project?</h3>
-              <p className="text-gray-600 mb-6">Contact our team for a quote or to learn more about how StarTec XT can benefit your construction project.</p>
+              <h3 className="text-2xl font-bold mb-2">Interested in AluB Max for your project?</h3>
+              <p className="text-gray-600 mb-6">Contact our team for a quote or to learn more about how AluB Max can benefit your construction project.</p>
               <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 transition-colors">
                 Contact Us
               </a>

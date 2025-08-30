@@ -134,7 +134,7 @@ const ProductsPage = () => {
           <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
             <div className="relative h-64 overflow-hidden">
               <Image 
-                src="/images/AluB.jpg" 
+                src="/images/AluB.png" 
                 alt="AluB Formwork" 
                 className="w-full h-full object-cover"
                 width={500}
@@ -164,8 +164,8 @@ const ProductsPage = () => {
           <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
             <div className="relative h-64 overflow-hidden">
               <Image 
-                src="/images/StarTex.jpg" 
-                alt="StarTec XT Formwork" 
+                src="/images/aluBMax.png" 
+                alt="AluB Max Formwork" 
                 className="w-full h-full object-cover"
                 width={500}
                 height={300}
@@ -174,13 +174,13 @@ const ProductsPage = () => {
             </div>
             <div className="p-6">
               <div className="text-sm text-gray-500 mb-1">{t('productsWallFormwork')}</div>
-              <h3 className="text-2xl font-bold mb-4">StarTec XT</h3>
+              <h3 className="text-2xl font-bold mb-4">AluB Max</h3>
               <p className="text-gray-600 mb-6 h-24 overflow-hidden">
                 {t('starTecXTDesc')}
               </p>
               <div className="flex justify-between items-center">
                 <span className="text-sm font-medium text-gray-500">{t('tripleAnchoringSystem')}</span>
-                <a href="/products/StarTex" className="inline-flex items-center justify-center px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors">
+                <a href="/products/AluBMax" className="inline-flex items-center justify-center px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors">
                   {t('viewDetails')}
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -210,7 +210,7 @@ const ProductsPage = () => {
                   <th className="py-4 px-6 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">{t('features')}</th>
                   <th className="py-4 px-6 text-center text-sm font-medium text-gray-500 uppercase tracking-wider">AluFix</th>
                   <th className="py-4 px-6 text-center text-sm font-medium text-gray-500 uppercase tracking-wider">AluStar</th>
-                  <th className="py-4 px-6 text-center text-sm font-medium text-gray-500 uppercase tracking-wider">StarTec XT</th>
+                  <th className="py-4 px-6 text-center text-sm font-medium text-gray-500 uppercase tracking-wider">AluB Max</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">

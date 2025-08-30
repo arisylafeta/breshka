@@ -108,7 +108,7 @@ export default function ServicesPage() {
           <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
             <div className="h-48 relative">
               <Image 
-                src="/images/StarTex.jpg" 
+                src="/images/aluBMax.png" 
                 alt="Concrete Works" 
                 fill
                 className="object-cover"

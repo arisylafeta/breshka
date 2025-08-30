@@ -47,7 +47,7 @@ const Footer = () => {
           <AnimatedContainer delay={0.1} className="md:col-span-1">
             <div className="mb-6">
               <Image 
-                src="/images/Logo.png" 
+                src="/images/Logo-white.png" 
                 alt="AlphaTech Logo" 
                 width={150}
                 height={80}
@@ -66,7 +66,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link href="/products/AlphaN" className="text-gray-400 hover:text-white text-sm transition-all duration-300">AluFix</Link></li>
               <li><Link href="/products/AluB" className="text-gray-400 hover:text-white text-sm transition-all duration-300">AluStar</Link></li>
-              <li><Link href="/products/StarTex" className="text-gray-400 hover:text-white text-sm transition-all duration-300">StarTec XT</Link></li>
+              <li><Link href="/products/AluBMax" className="text-gray-400 hover:text-white text-sm transition-all duration-300">AluB Max</Link></li>
               {/* <li><Link href="#" className="text-gray-400 hover:text-white text-sm transition-all duration-300">AluDec</Link></li>
               <li><Link href="#" className="text-gray-400 hover:text-white text-sm transition-all duration-300">MT 60</Link></li>
               <li><Link href="#" className="text-gray-400 hover:text-white text-sm transition-all duration-300">MGC-H</Link></li>
@@ -113,7 +113,7 @@ const Footer = () => {
                     <svg className="w-4 h-4 text-gray-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                     </svg>
-                    <a href="tel:+41627697100" className="text-gray-400 hover:text-white text-sm transition-all duration-300">+41 62 769 71 00</a>
+                    <a href="tel:+41627697100" className="text-gray-400 hover:text-white text-sm transition-all duration-300">+41 79 775 77 81  | +41 21 991 33 33</a>
                   </li>
                   <li className="flex items-center">
                     <svg className="w-4 h-4 text-gray-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

@@ -10,8 +10,11 @@ import { LanguageProvider } from "../contexts/LanguageContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Alpha Tech",
-  description: "Replicated from a screenshot",
+  title: "AlphaTech Systemes SA",
+  description: "Formwork Systems for Construction",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({

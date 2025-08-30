@@ -105,7 +105,7 @@ const Header = () => {
               <Link href="/" className="flex-shrink-0">
                 <Image 
                   src="/images/Logo.png" 
-                  alt="Breshka Logo" 
+                  alt="AlphaTech Logo" 
                   width={120}
                   height={60}
                   className="h-12 md:h-14 lg:h-16 w-auto transition-all duration-300"

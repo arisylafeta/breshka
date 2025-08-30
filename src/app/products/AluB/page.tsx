@@ -12,7 +12,7 @@ export default function AluBProductPage() {
 {/* Hero Image */}
 <div className="relative h-[400px] md:h-[500px] w-full">
   <Image
-    src="/images/AluB.jpg"
+    src="/images/AluB.png"
     alt="AluB Formwork"
     priority
     className="object-cover"
@@ -46,7 +46,7 @@ export default function AluBProductPage() {
         {/* Product Image Carousel */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
             <InteractiveImageSwiper 
-              images={["/images/AluB.jpg", "/images/AluB.jpg", "/images/AluB.jpg"]}
+              images={["/images/AluB.png", "/images/AluB.png", "/images/AluB.png"]}
               cardWidth={600}
               cardHeight={600}
             />
@@ -243,7 +243,7 @@ export default function AluBProductPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                 <div className="h-64 overflow-hidden">
                   <Image 
-                    src="/images/AluB.jpg" 
+                    src="/images/AlphaN.jpg" 
                     alt="AluFix Formwork" 
                     width={400}
                     height={300}
@@ -262,7 +262,7 @@ export default function AluBProductPage() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                 <div className="h-64 overflow-hidden">
                   <Image 
-                    src="/images/AluB.jpg" 
+                    src="/images/AluB.png" 
                     alt="Plyform System" 
                     width={400}
                     height={300}
