@@ -41,7 +41,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white py-12">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           
           {/* Logo and Company Description */}
           <AnimatedContainer delay={0.1} className="md:col-span-1">
@@ -66,7 +66,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link href="/products/AlphaN" className="text-gray-400 hover:text-white text-sm transition-all duration-300">AluFix</Link></li>
               <li><Link href="/products/AluB" className="text-gray-400 hover:text-white text-sm transition-all duration-300">AluStar</Link></li>
-              <li><Link href="/products/AluBMax" className="text-gray-400 hover:text-white text-sm transition-all duration-300">AluB Max</Link></li>
+              <li><Link href="/products/StarTex" className="text-gray-400 hover:text-white text-sm transition-all duration-300">StarTec XT</Link></li>
               {/* <li><Link href="#" className="text-gray-400 hover:text-white text-sm transition-all duration-300">AluDec</Link></li>
               <li><Link href="#" className="text-gray-400 hover:text-white text-sm transition-all duration-300">MT 60</Link></li>
               <li><Link href="#" className="text-gray-400 hover:text-white text-sm transition-all duration-300">MGC-H</Link></li>
@@ -89,17 +89,8 @@ const Footer = () => {
           </AnimatedContainer> */}
 
           {/* Tools & Contact */}
-          <AnimatedContainer delay={0.4} className="md:col-span-2">
+          <AnimatedContainer delay={0.4} className="md:col-span-1">
             <div className="flex flex-col md:flex-row gap-12">
-              <div className="flex-1">
-                <h3 className="text-sm font-bold mb-4">{t('tools')}</h3>
-                <ul className="space-y-2">
-                  <li><Link href="#" className="text-gray-400 hover:text-white text-sm transition-all duration-300">{t('downloads')}</Link></li>
-                  <li><Link href="#" className="text-gray-400 hover:text-white text-sm transition-all duration-300">{t('bimTools')}</Link></li>
-                  <li><Link href="#" className="text-gray-400 hover:text-white text-sm transition-all duration-300">{t('wallThicknessCalculator')}</Link></li>
-                  <li><Link href="#" className="text-gray-400 hover:text-white text-sm transition-all duration-300">{t('columnFormsCalculator')}</Link></li>
-                </ul>
-              </div>
               <div className="flex-1">
                 <h3 className="text-sm font-bold mb-4">{t('footerContact')}</h3>
                 <ul className="space-y-3">
@@ -113,7 +104,7 @@ const Footer = () => {
                     <svg className="w-4 h-4 text-gray-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                     </svg>
-                    <a href="tel:+41627697100" className="text-gray-400 hover:text-white text-sm transition-all duration-300">+41 79 775 77 81  | +41 21 991 33 33</a>
+                    <a href="tel:+41627697100" className="text-gray-400 hover:text-white text-sm transition-all duration-300">+41 62 769 71 00</a>
                   </li>
                   <li className="flex items-center">
                     <svg className="w-4 h-4 text-gray-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -143,12 +134,6 @@ const Footer = () => {
           <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
             <div className="text-xs text-gray-500 mb-4 md:mb-0">
               © {new Date().getFullYear()} AlphaTech. {t('allRightsReserved')} 
-              <span className="mx-2">|</span>
-              <Link href="#" className="hover:text-white transition-all duration-300">{t('terms')}</Link>
-              <span className="mx-2">|</span>
-              <Link href="#" className="hover:text-white transition-all duration-300">{t('legalNotice')}</Link>
-              <span className="mx-2">|</span>
-              <Link href="#" className="hover:text-white transition-all duration-300">{t('privacyPolicyFooter')}</Link>
             </div>
             <div className="flex space-x-4">
               <span className="text-xs text-gray-500">{t('visitSocialMedia')}</span>

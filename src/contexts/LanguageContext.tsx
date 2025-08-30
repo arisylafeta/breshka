@@ -1,6 +1,20 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { nav } from '../data/translations/nav';
+import { hero } from '../data/translations/hero';
+import { stats } from '../data/translations/stats';
+import { leadership } from '../data/translations/leadership';
+import { services } from '../data/translations/services';
+import { productsHome } from '../data/translations/productsHome';
+import { projects } from '../data/translations/projects';
+import { contactSection } from '../data/translations/contactSection';
+import { footer } from '../data/translations/footer';
+import { contactForm } from '../data/translations/contactForm';
+import { productsPage } from '../data/translations/productsPage';
+import { alphaNProductPage } from '../data/translations/alphaNProductPage';
+import { aluBProductPage } from '../data/translations/aluBProductPage';
+import { aluBMaxProductPage } from '../data/translations/aluBMaxProductPage';
 
 export type Language = 'en' | 'fr' | 'de';
 
@@ -13,7 +27,7 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 // Translation data
-const translations = {
+const legacyTranslations = {
   en: {
     // Navigation
     home: 'Home',
@@ -56,6 +70,9 @@ const translations = {
     repairDesc: 'We take care of maintaining the value of your formwork. Our service includes cleaning, panel replacement, and repairs, all the way to complete regeneration.',
     onsiteAssistance: 'On-site assistance',
     onsiteDesc: 'Do you need training for formwork installation or maintenance? Do you have a project and need advice? Our team is here to support you.',
+    
+    // Services Page
+    whatWeOffer: 'What we offer',
     
     // Products Section
     popularProducts: 'Popular Products',
@@ -895,6 +912,61 @@ const translations = {
     workingHoursWeekends: 'Samstag - Sonntag: Geschlossen'
   }
 };
+
+// Merge modular translations with any remaining legacy entries per language.
+const translations = {
+  en: {
+    ...legacyTranslations.en,
+    ...nav.en,
+    ...hero.en,
+    ...stats.en,
+    ...leadership.en,
+    ...services.en,
+    ...productsHome.en,
+    ...projects.en,
+    ...contactSection.en,
+    ...footer.en,
+    ...contactForm.en,
+    ...productsPage.en,
+    ...alphaNProductPage.en,
+    ...aluBProductPage.en,
+    ...aluBMaxProductPage.en,
+  },
+  fr: {
+    ...legacyTranslations.fr,
+    ...nav.fr,
+    ...hero.fr,
+    ...stats.fr,
+    ...leadership.fr,
+    ...services.fr,
+    ...productsHome.fr,
+    ...projects.fr,
+    ...contactSection.fr,
+    ...footer.fr,
+    ...contactForm.fr,
+    ...productsPage.fr,
+    ...alphaNProductPage.fr,
+    ...aluBProductPage.fr,
+    ...aluBMaxProductPage.fr,
+  },
+  de: {
+    ...legacyTranslations.de,
+    ...nav.de,
+    ...hero.de,
+    ...stats.de,
+    ...leadership.de,
+    ...services.de,
+    ...productsHome.de,
+    ...projects.de,
+    ...contactSection.de,
+    ...footer.de,
+    ...contactForm.de,
+    ...productsPage.de,
+    ...alphaNProductPage.de,
+    ...aluBProductPage.de,
+    ...aluBMaxProductPage.de,
+  },
+} as const;
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [language, setLanguageState] = useState<Language>('en');

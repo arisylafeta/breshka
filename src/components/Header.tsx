@@ -85,6 +85,7 @@ const Header = () => {
   const navItems = [
     { href: '/', label: t('home') },
     { href: '/products', label: t('products') },
+    { href: '/accessories', label: t('accessories') },
     // { href: '/services', label: t('services') },
     { href: '/contact', label: t('contact') },
   ];
@@ -115,21 +116,21 @@ const Header = () => {
             </div>
 
             {/* Center Section: Navigation with Mouse-Chasing Effect */}
-            <div className="hidden md:flex flex-1 justify-center">
+            <div className="hidden xl:flex flex-1 justify-center">
               <NavigationMenu>
                 <motion.div
                   // Event listeners to track and reset mouse position
                   onMouseMove={(e) => mouseX.set(e.pageX)}
                   onMouseLeave={() => mouseX.set(Infinity)}
                 >
-                  <NavigationMenuList className="space-x-12 lg:space-x-12 xl:space-x-12">
+                  <NavigationMenuList className="space-x-8 lg:space-x-12 xl:space-x-14">
                     {navItems.map((item) => (
                       <NavigationMenuItem key={item.href} className={styles.navItem}>
                         {/* Each item is wrapped in the animation component */}
                         <AnimatedNavItem mouseX={mouseX}>
-                          <NavigationMenuLink asChild className={`${styles.navLink} no-hover-bg`}>
+                          <NavigationMenuLink asChild className={`${styles.navLink} no-hover-bg px-2 py-1 rounded-md`}>
                             <Link href={item.href}>
-                              <span className={`${styles.navText} font-semibold ${scrolled ? 'text-black' : 'text-white'}`}>{item.label}</span>
+                              <span className={`${styles.navText} font-semibold text-sm md:text-base lg:text-lg ${scrolled ? 'text-black' : 'text-white'}`}>{item.label}</span>
                               <span className={styles.hoverEffect}></span>
                             </Link>
                           </NavigationMenuLink>
@@ -142,16 +143,21 @@ const Header = () => {
             </div>
 
             {/* Right Section: Contact, Language Switcher */}
-            <div className="hidden md:flex flex-1 justify-end items-center space-x-1 lg:space-x-2">
-              <a href="tel:+41797757781" className={`flex items-center ${scrolled ? 'text-black hover:text-black/80' : 'text-white hover:text-white/80'} transition-colors`}>
-                <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-                <span className="font-medium text-xs md:text-sm">{t('phone')}</span>
+            <div className="hidden xl:flex flex-1 justify-end items-center space-x-1 lg:space-x-2">
+              <a
+                href="tel:+41797757781"
+                title={t('phone')}
+                aria-label={t('phone')}
+                className={`flex items-center ${scrolled ? 'text-black hover:text-black/80' : 'text-white hover:text-white/80'} transition-colors`}
+              >
+                <svg className="w-5 h-5 mr-0 lg:mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                <span className="hidden lg:inline font-medium text-sm">{t('phone')}</span>
               </a>
               <LanguageSwitcher scrolled={scrolled} />
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="md:hidden flex items-center">
+            <div className="xl:hidden flex items-center">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-2 text-gray-700 hover:text-gray-900 focus:outline-none transition-transform duration-300 active:scale-95"
@@ -180,7 +186,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ type: 'spring', damping: 30, stiffness: 400 }}
-            className="md:hidden bg-white shadow-lg fixed top-20 left-0 right-0 z-50 overflow-hidden"
+            className="xl:hidden bg-white shadow-lg fixed top-20 left-0 right-0 z-50 overflow-hidden"
           >
             <motion.div 
               className="px-4 pt-2 pb-4 space-y-1"

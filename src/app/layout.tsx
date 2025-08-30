@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "AlphaTech Systemes SA",
   description: "Formwork Systems for Construction",
   icons: {
-    icon: "/icon.png",
+    icon: "/images/icon.png",
   },
 };
 

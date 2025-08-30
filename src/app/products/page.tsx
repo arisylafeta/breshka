@@ -120,7 +120,7 @@ const ProductsPage = () => {
               </p>
               <div className="flex justify-between items-center">
                 <span className="text-sm font-medium text-gray-500">{t('aluminumConstruction')}</span>
-                <a href="/products/AlphaN" className="inline-flex items-center justify-center px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors">
+                <a href="/products/alpha-n" className="inline-flex items-center justify-center px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors">
                   {t('viewDetails')}
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -150,7 +150,7 @@ const ProductsPage = () => {
               </p>
               <div className="flex justify-between items-center">
                 <span className="text-sm font-medium text-gray-500">{t('universalApplication')}</span>
-                <a href="/products/AluB" className="inline-flex items-center justify-center px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors">
+                <a href="/products/alub" className="inline-flex items-center justify-center px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors">
                   {t('viewDetails')}
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -180,7 +180,7 @@ const ProductsPage = () => {
               </p>
               <div className="flex justify-between items-center">
                 <span className="text-sm font-medium text-gray-500">{t('tripleAnchoringSystem')}</span>
-                <a href="/products/AluBMax" className="inline-flex items-center justify-center px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors">
+                <a href="/products/alub-max" className="inline-flex items-center justify-center px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors">
                   {t('viewDetails')}
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
