@@ -10,7 +10,8 @@ function normalizeSlug(input: string): ProductSlug | null {
   return (['alpha-n','alub','alub-max'] as ProductSlug[]).includes(lower as ProductSlug) ? (lower as ProductSlug) : null
 }
 
-export default function ProductPage({ params }: { params: { product: string } }) {
+export default async function ProductPage(props: { params: Promise<{ product: string }> }) {
+  const params = await props.params;
   const normalized = normalizeSlug(params.product)
   if (!normalized) return notFound()
 

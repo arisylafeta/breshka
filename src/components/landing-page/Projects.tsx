@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Projects = () => {
@@ -12,8 +13,14 @@ const Projects = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Project 1 */}
         <div className="relative group overflow-hidden rounded-lg">
-          <div className="aspect-w-16 aspect-h-9 w-full">
-            <img src="/images/project1.jpeg" alt="Project 1" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          <div className="relative aspect-w-16 aspect-h-9 w-full">
+            <Image
+              src="/images/project1.jpeg"
+              alt="Project 1"
+              fill
+              sizes="(min-width: 768px) 33vw, 100vw"
+              className="object-cover transition-transform duration-500 group-hover:scale-110"
+            />
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
             <div className="p-6 w-full">
@@ -30,8 +37,14 @@ const Projects = () => {
 
         {/* Project 2 */}
         <div className="relative group overflow-hidden rounded-lg">
-          <div className="aspect-w-16 aspect-h-9 w-full">
-            <img src="/images/project2.jpeg" alt="Project 2" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          <div className="relative aspect-w-16 aspect-h-9 w-full">
+            <Image
+              src="/images/project2.jpeg"
+              alt="Project 2"
+              fill
+              sizes="(min-width: 768px) 33vw, 100vw"
+              className="object-cover transition-transform duration-500 group-hover:scale-110"
+            />
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
             <div className="p-6 w-full">
@@ -48,8 +61,14 @@ const Projects = () => {
 
         {/* Project 3 */}
         <div className="relative group overflow-hidden rounded-lg">
-          <div className="aspect-w-16 aspect-h-9 w-full">
-            <img src="/images/project3.jpeg" alt="Project 3" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          <div className="relative aspect-w-16 aspect-h-9 w-full">
+            <Image
+              src="/images/project3.jpeg"
+              alt="Project 3"
+              fill
+              sizes="(min-width: 768px) 33vw, 100vw"
+              className="object-cover transition-transform duration-500 group-hover:scale-110"
+            />
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
             <div className="p-6 w-full">

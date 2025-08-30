@@ -1,13 +1,11 @@
 "use client"
 
-import React, { useState } from 'react'
-import Image from 'next/image'
+import React from 'react'
 import { useLanguage } from '../../contexts/LanguageContext'
+import FeaturedProducts from '../../components/landing-page/FeaturedProducts'
 
 const ProductsPage = () => {
   const { t } = useLanguage()
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
-  const [selectedCategory, setSelectedCategory] = useState(t('allProducts'))
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section with Background Image */}
@@ -26,171 +24,8 @@ const ProductsPage = () => {
         </div>
       </div>
 
-      {/* Product Filter Section */}
-      <div className="bg-gray-100 py-6">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-            {/* Product Filter Dropdown */}
-            <div className="relative w-full md:w-64 mb-4 md:mb-0">
-              <button 
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="w-full flex items-center justify-between bg-white border border-gray-300 rounded-md px-4 py-2 text-gray-800 focus:outline-none"
-              >
-                <span>{selectedCategory}</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className={`h-5 w-5 transition-transform ${isDropdownOpen ? 'transform rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              
-              {isDropdownOpen && (
-                <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg">
-                  <ul className="py-1">
-                    {[
-                      t('allProducts'),
-                      t('productsWallFormwork'),
-                      t('columnFormwork'),
-                      t('showeringTower'),
-                      t('accessPlatforms'),
-                      t('accessories')
-                    ].map((category) => (
-                      <li key={category}>
-                        <button
-                          onClick={() => {
-                            setSelectedCategory(category)
-                            setIsDropdownOpen(false)
-                          }}
-                          className={`w-full text-left px-4 py-2 hover:bg-gray-100 ${selectedCategory === category ? 'font-medium bg-gray-50' : ''}`}
-                        >
-                          {category}
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </div>
-            
-            {/* Filter Options */}
-            <div className="flex flex-wrap gap-4">
-              <div className="flex items-center">
-                <input type="checkbox" id="available" className="h-4 w-4 text-red-600" />
-                <label htmlFor="available" className="ml-2 text-sm text-gray-700">{t('availableRental')}</label>
-              </div>
-              <div className="flex items-center">
-                <input type="checkbox" id="crane" className="h-4 w-4 text-red-600" />
-                <label htmlFor="crane" className="ml-2 text-sm text-gray-700">{t('craneIndependent')}</label>
-              </div>
-              <div className="flex items-center">
-                <input type="checkbox" id="heavy" className="h-4 w-4 text-red-600" />
-                <label htmlFor="heavy" className="ml-2 text-sm text-gray-700">{t('heavyFormwork')}</label>
-              </div>
-              <div className="flex items-center">
-                <input type="checkbox" id="single" className="h-4 w-4 text-red-600" />
-                <label htmlFor="single" className="ml-2 text-sm text-gray-700">{t('singleSidedFormwork')}</label>
-              </div>
-              <div className="flex items-center">
-                <input type="checkbox" id="hydraulic" className="h-4 w-4 text-red-600" />
-                <label htmlFor="hydraulic" className="ml-2 text-sm text-gray-700">{t('hydraulicClimber')}</label>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Products Grid */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {/* AluFix Product Card */}
-          <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
-            <div className="relative h-64 overflow-hidden">
-              <Image 
-                src="/images/AlphaN.jpg" 
-                alt="Alpha N Formwork" 
-                className="w-full h-full object-cover"
-                width={500}
-                height={300}
-              />
-              <div className="absolute top-0 left-0 w-full h-1 bg-red-600"></div>
-            </div>
-            <div className="p-6">
-              <div className="text-sm text-gray-500 mb-1">{t('productsWallFormwork')}</div>
-              <h3 className="text-2xl font-bold mb-4">Alpha N</h3>
-              <p className="text-gray-600 mb-6 h-24 overflow-hidden">
-              {t('productsAlphaNDesc')}
-              </p>
-              <div className="flex justify-between items-center">
-                <span className="text-sm font-medium text-gray-500">{t('aluminumConstruction')}</span>
-                <a href="/products/alpha-n" className="inline-flex items-center justify-center px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors">
-                  {t('viewDetails')}
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* AluStar Product Card */}
-          <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
-            <div className="relative h-64 overflow-hidden">
-              <Image 
-                src="/images/AluB.png" 
-                alt="AluB Formwork" 
-                className="w-full h-full object-cover"
-                width={500}
-                height={300}
-              />
-              <div className="absolute top-0 left-0 w-full h-1 bg-red-600"></div>
-            </div>
-            <div className="p-6">
-              <div className="text-sm text-gray-500 mb-1">{t('productsWallFormwork')}</div>
-              <h3 className="text-2xl font-bold mb-4">AluB</h3>
-              <p className="text-gray-600 mb-6 h-24 overflow-hidden">
-                {t('productsAluBDesc')}
-              </p>
-              <div className="flex justify-between items-center">
-                <span className="text-sm font-medium text-gray-500">{t('universalApplication')}</span>
-                <a href="/products/alub" className="inline-flex items-center justify-center px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors">
-                  {t('viewDetails')}
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* StarTec XT Product Card */}
-          <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
-            <div className="relative h-64 overflow-hidden">
-              <Image 
-                src="/images/aluBMax.png" 
-                alt="AluB Max Formwork" 
-                className="w-full h-full object-cover"
-                width={500}
-                height={300}
-              />
-              <div className="absolute top-0 left-0 w-full h-1 bg-red-600"></div>
-            </div>
-            <div className="p-6">
-              <div className="text-sm text-gray-500 mb-1">{t('productsWallFormwork')}</div>
-              <h3 className="text-2xl font-bold mb-4">AluB Max</h3>
-              <p className="text-gray-600 mb-6 h-24 overflow-hidden">
-                {t('starTecXTDesc')}
-              </p>
-              <div className="flex justify-between items-center">
-                <span className="text-sm font-medium text-gray-500">{t('tripleAnchoringSystem')}</span>
-                <a href="/products/alub-max" className="inline-flex items-center justify-center px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors">
-                  {t('viewDetails')}
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Featured Products (cards) */}
+      <FeaturedProducts title="" />
 
       {/* Product Comparison Section */}
       <div className="bg-gray-50 dark:bg-zinc-900 py-20">
