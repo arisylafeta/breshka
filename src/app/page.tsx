@@ -365,15 +365,14 @@ const HomePage = () => {
                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="text-red-600 fill-current">
                          <path d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 464c-114.7 0-208-93.31-208-208S141.3 48 256 48s208 93.31 208 208S370.7 464 256 464zM256 152c-13.25 0-24 10.74-24 24c0 13.25 10.75 24 24 24s24-10.75 24-24C280 162.7 269.3 152 256 152zM296 352h-80C202.8 352 192 341.3 192 328c0-13.25 10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 192 224 192h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 352 296 352z"/>
                        </svg>
-                     </div>
-                     <span>{t('swiss')}</span>
-                   </div>
-                   
-                   <p className="text-gray-700 mb-1">MEVA Schalungs-Systeme AG</p>
-                   <p className="text-gray-700 mb-1">Route 26 of the Chocolatière</p>
-                   <p className="text-gray-700 mb-4">1026 Echandens</p>
-                   
-                   <div className="flex items-center mb-2">
+                     </div>  
+                      <span>{t('swiss')}</span>
+                    </div>
+                    
+                    <p className="text-gray-700 mb-1">MEVA Schalungs-Systeme AG</p>
+                    <p className="text-gray-700 mb-4">1180 Rolle, Switzerland</p>
+                    
+                    <div className="flex items-center mb-2">
                      <div className="w-5 h-5 mr-2 flex-shrink-0 text-red-600">
                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="fill-current">
                          <path d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z"/>

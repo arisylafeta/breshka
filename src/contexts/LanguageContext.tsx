@@ -76,13 +76,13 @@ const translations = {
     
     // Contact Section
     contactTitle: 'Let our team help you choose the right product and service.',
-    contactDesc: 'Speak to one of our MEVA formwork specialists; we can help you with all your formwork needs. Let us help you with your next formwork project.',
+    contactDesc: 'Speak to one of our AlphaTechSystems formwork specialists; we can help you with all your formwork needs. Let us help you with your next formwork project.',
     salesDirector: 'Sales Director for French-speaking Switzerland',
     viewLinkedIn: 'View LinkedIn profile',
     sendEmail: 'Send me an email',
     
     // Footer translations
-    companyDescription: 'Specialists in the manufacture and sale of formwork equipment. AlphaTech is a family-owned company with an international reach. With 40+ years worldwide, we are proud of the confidence put in more than 40 countries. The headquarters is located in Haiterbach, Germany. Be the first. Build smart.',
+    companyDescription: 'Specialists in the manufacture and sale of formwork equipment. AlphaTech is a family-owned company with an international reach. With 40+ years worldwide, we are proud of the confidence put in more than 40 countries. The headquarters is located in Rolle, Switzerland. Be the first. Build smart.',
     footerPopularProducts: 'Popular Products',
     alphaTechServices: 'AlphaTech Services',
     footerRental: 'Rental',
@@ -276,7 +276,7 @@ const translations = {
     contactFormSend: 'Send Message',
     contactInformation: 'Contact Information',
     contactAddress: 'Address',
-    contactAddressValue: '123 Construction Ave, Building City, 10001',
+    contactAddressValue: '1180 Rolle, Switzerland',
     contactPhone: 'Phone',
     contactPhoneValue: '+41 79 775 7781',
     contactEmailLabel: 'Email',
@@ -353,7 +353,7 @@ const translations = {
     
     // Contact Section
     contactTitle: 'Laissez notre équipe vous aider à choisir le bon produit et service.',
-    contactDesc: 'Parlez à l\'un de nos spécialistes en coffrage MEVA ; nous pouvons vous aider avec tous vos besoins en coffrage. Laissez-nous vous aider avec votre prochain projet de coffrage.',
+    contactDesc: 'Parlez à l\'un de nos spécialistes en coffrage AlphaTechSystems ; nous pouvons vous aider avec tous vos besoins en coffrage. Laissez-nous vous aider avec votre prochain projet de coffrage.',
     salesDirector: 'Directeur des Ventes pour la Suisse Romande',
     viewLinkedIn: 'Voir le profil LinkedIn',
     sendEmail: 'Envoyez-moi un email',
@@ -385,9 +385,9 @@ const translations = {
     wallThicknessCalculator: 'Calculateur de pression d\'épaisseur de mur',
     columnFormsCalculator: 'Calculateur pour formes de colonnes de support',
     footerContact: 'Contact',
-    mevaFormworkSystems: 'MEVA Formwork Systems Ltd',
-    mevaUK: 'MEVA UK',
-    mevaSpain: 'MEVA Spain',
+    alphaTechFormworkSystems: 'AlphaTech Formwork Systems Ltd',
+    alphaTechUK: 'AlphaTech UK',
+    alphaTechSpain: 'AlphaTech Spain',
     international: 'International',
     allRightsReserved: 'Tous droits réservés.',
     terms: 'Conditions',
@@ -656,7 +656,7 @@ const translations = {
     
     // Contact Section
     contactTitle: 'Lassen Sie unser Team Ihnen helfen, das richtige Produkt und den richtigen Service zu wählen.',
-    contactDesc: 'Sprechen Sie mit einem unserer MEVA-Schalungsspezialisten; wir können Ihnen bei allen Ihren Schalungsbedürfnissen helfen. Lassen Sie uns Ihnen bei Ihrem nächsten Schalungsprojekt helfen.',
+    contactDesc: 'Sprechen Sie mit einem unserer AlphaTechSystems-Schalungsspezialisten; wir können Ihnen bei allen Ihren Schalungsbedürfnissen helfen. Lassen Sie uns Ihnen bei Ihrem nächsten Schalungsprojekt helfen.',
     salesDirector: 'Verkaufsleiter für die französischsprachige Schweiz',
     viewLinkedIn: 'LinkedIn-Profil anzeigen',
     sendEmail: 'Senden Sie mir eine E-Mail',
@@ -673,7 +673,7 @@ const translations = {
     sendMessage: 'Nachricht senden',
     
     // Footer translations
-    companyDescription: 'Spezialisten in der Herstellung und dem Verkauf von Schalungsausrüstung. AlphaTech ist ein Familienunternehmen mit internationaler Reichweite. Mit über 40 Jahren weltweit sind wir stolz auf das Vertrauen in mehr als 40 Ländern. Der Hauptsitz befindet sich in Haiterbach, Deutschland. Seien Sie die Ersten. Bauen Sie intelligent.',
+    companyDescription: 'Specialisten in der Herstellung und dem Verkauf von Schalungsausrüstung. AlphaTech ist ein Familienunternehmen mit internationaler Reichweite. Mit über 40 Jahren weltweit sind wir stolz auf das Vertrauen in mehr als 40 Ländern. Der Hauptsitz befindet sich in Haiterbach, Deutschland. Seien Sie die Ersten. Bauen Sie intelligent.',
     footerPopularProducts: 'Beliebte Produkte',
     alphaTechServices: 'AlphaTech Services',
     footerRental: 'Vermietung',
@@ -688,9 +688,9 @@ const translations = {
     wallThicknessCalculator: 'Wanddicken-Druckrechner',
     columnFormsCalculator: 'Rechner für Stützenschalungen',
     footerContact: 'Kontakt',
-    mevaFormworkSystems: 'MEVA Formwork Systems Ltd',
-    mevaUK: 'MEVA UK',
-    mevaSpain: 'MEVA Spain',
+    alphaTechFormworkSystems: 'AlphaTech Formwork Systems Ltd',
+    alphaTechUK: 'AlphaTech UK',
+    alphaTechSpain: 'AlphaTech Spain',
     international: 'International',
     allRightsReserved: 'Alle Rechte vorbehalten.',
     terms: 'Bedingungen',

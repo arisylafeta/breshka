@@ -4,13 +4,13 @@ import Image from 'next/image';
 const testimonialItems = [
     {
       imgSrc: 'https://picsum.photos/seed/news/300/200',
-      title: 'MEVA News',
-      text: 'The latest news and press releases from the MEVA Group.',
+      title: 'AlphaTech News',
+      text: 'The latest news and press releases from the AlphaTech Group.',
     },
     {
       imgSrc: 'https://picsum.photos/seed/press/300/200',
-      title: 'Formwork Press',
-      text: 'Current articles from the trade press about MEVA.',
+      title: 'AlphaTech Press',
+      text: 'Current articles from the trade press about AlphaTech.',
     },
     {
       imgSrc: 'https://picsum.photos/seed/surfaces/300/200',
