@@ -8,7 +8,8 @@ export const productConfigs: Record<ProductSlug, ProductPageConfig> = {
     heroImage: '/images/AlphaN.jpg',
     heroDescKey: 'alphaNHeroDesc',
     productDescKey: 'alphaNProductDesc',
-    carouselImages: ['/images/AlphaN.jpg', '/images/AlphaN.jpg', '/images/AlphaN.jpg'],
+    carouselImages: ['/video.mp4', '/images/AlphaN.jpg'],
+    useCarousel: true,
     detailsTitleKey: 'details',
     details: [
       { titleKey: 'qualityFacingConcrete', descKey: 'qualityFacingDesc' },

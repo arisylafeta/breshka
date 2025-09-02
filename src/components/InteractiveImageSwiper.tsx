@@ -3,6 +3,8 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import Image from 'next/image';
 
+const isVideo = (src: string) => /\.(mp4|webm|ogg)(\?.*)?$/i.test(src);
+
 interface SwiperProps {
   images: string[];
   cardWidth?: number;
@@ -183,14 +185,27 @@ export const InteractiveImageSwiper: React.FC<SwiperProps> = ({
                        rotate(var(--swipe-rotate, 0deg))`
           } as React.CSSProperties}
         >
-          <Image
-            src={images[originalIndex]}
-            alt={`Swiper image ${originalIndex + 1}`}
-            fill
-            className="object-contain pointer-events-none bg-white"
-            draggable={false}
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
+          {isVideo(images[originalIndex]) ? (
+            <video
+              src={images[originalIndex]}
+              className="absolute inset-0 w-full h-full object-contain pointer-events-none bg-black"
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls={false}
+              preload="metadata"
+            />
+          ) : (
+            <Image
+              src={images[originalIndex]}
+              alt={`Swiper image ${originalIndex + 1}`}
+              fill
+              className="object-contain pointer-events-none bg-white"
+              draggable={false}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          )}
         </article>
       ))}
       {/* Controls overlay */}

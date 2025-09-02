@@ -22,7 +22,9 @@ const accessoriesItems: AccessoryItem[] = [
   { img: '/accessories/7.png', titleKey: 'accTieRodTitle', descKey: 'accTieRodDesc' },
   { img: '/accessories/8.png', titleKey: 'accDieBF120Title', descKey: 'accDieBF120Desc' },
   { img: '/accessories/9.png', titleKey: 'accTurnbuckleTitle', descKey: 'accTurnbuckleDesc' },
-  { img: '/accessories/10.png', titleKey: 'accTransportHookBF120Title', descKey: 'accTransportHookBF120Desc' },
+  { img: '/accessories/11.jpeg', titleKey: 'accTransportHookBF120Title', descKey: 'accTransportHookBF120Desc' },
+  { img: '/accessories/12.png', titleKey: 'accDoubleEntryForkTitle', descKey: 'accDoubleEntryForkDesc' },
+  { img: '/accessories/13.jpeg', titleKey: 'accEdgeFormworkSupportTitle', descKey: 'accEdgeFormworkSupportDesc' },
 ];
 
 const Card: React.FC<{ item: AccessoryItem; t: (k: string) => string }>

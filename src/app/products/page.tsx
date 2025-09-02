@@ -9,7 +9,7 @@ const ProductsPage = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section with Background Image */}
-      <div className="relative py-32 bg-cover bg-center" style={{ backgroundImage: 'url(/images/Products.jpg)' }}>
+      <div className="relative py-32 bg-cover bg-center" style={{ backgroundImage: 'url(/images/products.jpeg)' }}>
         {/* Dark overlay for better text visibility */}
         <div className="absolute inset-0 bg-black/60"></div>
         
@@ -52,7 +52,7 @@ const ProductsPage = () => {
                 <tr>
                   <td className="py-4 px-6 text-sm font-medium text-gray-900">{t('material')}</td>
                   <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('materialSpec')}</td>
-                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('materialStandardValue')}</td>
+                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('materialAluminum')}</td>
                   <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('materialStandardValue')}</td>
                 </tr>
                 <tr>

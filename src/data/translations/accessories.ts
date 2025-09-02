@@ -34,6 +34,12 @@ export const accessories = {
     accTransportHookBF120Title: 'BF 120 Transport Hook',
     accTransportHookBF120Desc: 'Ensures safe and efficient lifting and transport of formwork panels.',
 
+    accDoubleEntryForkTitle: 'Double-entry Fork for External Prop',
+    accDoubleEntryForkDesc: '80x160 mm — Ø 32 mm.',
+
+    accEdgeFormworkSupportTitle: 'Formwork Edge Support',
+    accEdgeFormworkSupportDesc: 'For slab edge protection/rim formwork — with clamp and support.',
+
     // Applications
     accessoriesApplicationsTitle: 'Application Examples',
     accessoriesApp1Title: 'Panel Assembly',
@@ -78,6 +84,12 @@ export const accessories = {
     accTransportHookBF120Title: 'Crochet de Transport BF 120',
     accTransportHookBF120Desc: 'Assure un transport sûr et efficace des panneaux de coffrage.',
 
+    accDoubleEntryForkTitle: 'Fourche double entrée pour étai extérieur',
+    accDoubleEntryForkDesc: '80x160 mm — Ø 32 mm.',
+
+    accEdgeFormworkSupportTitle: 'Support de coffrage',
+    accEdgeFormworkSupportDesc: 'Pour protection des bords/coffrage de rive de dalle — avec fixation et support.',
+
     // Applications
     accessoriesApplicationsTitle: "Exemples d'Application",
     accessoriesApp1Title: 'Assemblage de Panneaux',
@@ -121,6 +133,12 @@ export const accessories = {
 
     accTransportHookBF120Title: 'BF 120 Transporthaken',
     accTransportHookBF120Desc: 'Gewährleistet sicheres und effizientes Heben und Transportieren von Schalungstafeln.',
+
+    accDoubleEntryForkTitle: 'Doppelgabel für Außenstütze',
+    accDoubleEntryForkDesc: '80×160 mm — Ø 32 mm.',
+
+    accEdgeFormworkSupportTitle: 'Schalungsrand-Halter',
+    accEdgeFormworkSupportDesc: 'Für Schutz der Plattenkanten/Randschalung — mit Befestigung und Auflage.',
 
     // Applications
     accessoriesApplicationsTitle: 'Anwendungsbeispiele',
