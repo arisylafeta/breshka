@@ -28,6 +28,7 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 // Translation data
+/* BEGIN removed legacy translations (will be deleted after audit)
 const legacyTranslations = {
   en: {
     // Navigation
@@ -293,7 +294,7 @@ const legacyTranslations = {
     contactFormSend: 'Send Message',
     contactInformation: 'Contact Information',
     contactAddress: 'Address',
-    contactAddressValue: '1180 Rolle, Switzerland',
+    contactAddressValue: 'Chemin des Vernes 5, 1180 Rolle, Switzerland',
     contactPhone: 'Phone',
     contactPhoneValue: '+41 79 775 77 81 | +41 21 991 33 33',
     contactEmailLabel: 'Email',
@@ -601,7 +602,7 @@ const legacyTranslations = {
     contactFormSend: 'Envoyer le message',
     contactInformation: 'Informations de contact',
     contactAddress: 'Adresse',
-    contactAddressValue: '123 Avenue de la Construction, Ville Bâtiment, 10001',
+    contactAddressValue: 'Chemin des Vernes 5, 1180 Rolle, Switzerland',
     contactPhone: 'Téléphone',
     contactPhoneValue: '+41 79 775 77 81 | +41 21 991 33 33',
     contactEmailLabel: 'E-mail',
@@ -913,11 +914,11 @@ const legacyTranslations = {
     workingHoursWeekends: 'Samstag - Sonntag: Geschlossen'
   }
 };
+END removed legacy translations */
 
-// Merge modular translations with any remaining legacy entries per language.
+// Merge modular translations only (legacy removed).
 const translations = {
   en: {
-    ...legacyTranslations.en,
     ...nav.en,
     ...hero.en,
     ...stats.en,
@@ -935,7 +936,6 @@ const translations = {
     ...accessories.en,
   },
   fr: {
-    ...legacyTranslations.fr,
     ...nav.fr,
     ...hero.fr,
     ...stats.fr,
@@ -953,7 +953,6 @@ const translations = {
     ...accessories.fr,
   },
   de: {
-    ...legacyTranslations.de,
     ...nav.de,
     ...hero.de,
     ...stats.de,

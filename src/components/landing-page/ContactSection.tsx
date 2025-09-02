@@ -69,7 +69,7 @@ const ContactSection = () => {
                 </div>
 
                 <p className="text-gray-700 mb-1">AlphaTech Systemes SA</p>
-                <p className="text-gray-700 mb-4">1180 Rolle, Switzerland</p>
+                <p className="text-gray-700 mb-4">Chemin des Vernes 5,1180 Rolle, Switzerland</p>
 
                 <div className="flex items-center mb-2">
                   <div className="w-5 h-5 mr-2 flex-shrink-0 text-red-600">

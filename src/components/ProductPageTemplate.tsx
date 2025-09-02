@@ -3,6 +3,7 @@
 import React from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
 import { InteractiveImageSwiper } from './InteractiveImageSwiper'
+import Image from 'next/image'
 import FeaturedProducts from './landing-page/FeaturedProducts'
 
 export type TechSpecRow = { labelKey: string; valueKey: string }
@@ -15,6 +16,7 @@ export type ProductPageConfig = {
   heroDescKey: string
   productDescKey: string
   carouselImages: string[]
+  useCarousel?: boolean
   detailsTitleKey?: string
   details?: DetailItem[]
   techSpecsTitleKey?: string
@@ -50,12 +52,24 @@ const ProductPageTemplate: React.FC<{ config: ProductPageConfig }> = ({ config }
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
-            <InteractiveImageSwiper
-              images={config.carouselImages}
-              cardWidth={720}
-              cardHeight={480}
-              className="mx-auto"
-            />
+            {config.useCarousel && config.carouselImages && config.carouselImages.length > 0 ? (
+              <InteractiveImageSwiper
+                images={config.carouselImages}
+                cardWidth={720}
+                cardHeight={480}
+                className="mx-auto"
+              />
+            ) : (
+              <div className="relative w-full max-w-[720px] h-[480px] mx-auto rounded-xl overflow-hidden shadow">
+                <Image
+                  src={config.carouselImages?.[0] ?? config.heroImage}
+                  alt={`${config.title} image`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+            )}
           </div>
           {config.details && config.details.length > 0 && (
             <div>
@@ -129,10 +143,12 @@ const ProductPageTemplate: React.FC<{ config: ProductPageConfig }> = ({ config }
             {config.applications.map((app, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition p-6"
+                className="group relative rounded-xl border border-gray-200 bg-gradient-to-br from-gray-50 to-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-red-200"
               >
-                <h3 className="text-lg font-semibold mb-2">{t(app.titleKey)}</h3>
-                <p className="text-gray-600 leading-relaxed">{t(app.descKey)}</p>
+                <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-transparent via-red-500/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <h3 className="text-lg font-semibold">{t(app.titleKey)}</h3>
+                <div className="mt-2 h-px w-12 bg-gradient-to-r from-red-500 to-red-400 transition-all duration-300 group-hover:w-20 group-hover:from-red-600 group-hover:to-red-500" />
+                <p className="mt-3 text-gray-600 leading-relaxed">{t(app.descKey)}</p>
               </div>
             ))}
           </div>
@@ -140,7 +156,7 @@ const ProductPageTemplate: React.FC<{ config: ProductPageConfig }> = ({ config }
       )}
 
       {/* Similar Products */}
-      <FeaturedProducts title="Similar Products" />
+      <FeaturedProducts title={t('youMightAlsoLike')} />
 
       {/* CTA */}
       <div className="bg-gray-100 w-screen relative left-1/2 right-1/2 -mx-[50vw] py-12 my-16">

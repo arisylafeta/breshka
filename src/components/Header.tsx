@@ -90,6 +90,12 @@ const Header = () => {
     { href: '/contact', label: t('contact') },
   ];
 
+  // Get phone numbers from separate translation keys; fallback-safe (ignore missing keys)
+  const phoneNumberKeys = ['phone1', 'phone2'] as const;
+  const phoneNumbers = phoneNumberKeys
+    .map((k) => t(k))
+    .filter((v) => v && v !== 'phone1' && v !== 'phone2');
+
   return (
     <header 
       id="main-header"
@@ -143,16 +149,22 @@ const Header = () => {
             </div>
 
             {/* Right Section: Contact, Language Switcher */}
-            <div className="hidden xl:flex flex-1 justify-end items-center space-x-1 lg:space-x-2">
-              <a
-                href="tel:+41797757781"
-                title={t('phone')}
-                aria-label={t('phone')}
-                className={`flex items-center ${scrolled ? 'text-black hover:text-black/80' : 'text-white hover:text-white/80'} transition-colors`}
-              >
-                <svg className="w-5 h-5 mr-0 lg:mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-                <span className="hidden lg:inline font-medium text-sm">{t('phone')}</span>
-              </a>
+            <div className="hidden xl:flex flex-1 justify-end items-center space-x-3">
+              <div className={`flex items-center ${scrolled ? 'text-black' : 'text-white'}`}>
+                <svg className="w-4 h-4 mr-1 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                <div className="flex flex-col leading-tight text-xs">
+                  {phoneNumbers.map((num, idx) => (
+                    <a
+                      key={idx}
+                      href={`tel:${num.replace(/\s+/g, '')}`}
+                      className={`${scrolled ? 'hover:text-black/80' : 'hover:text-white/80'} transition-colors`}
+                      aria-label={`Call ${num}`}
+                    >
+                      {num}
+                    </a>
+                  ))}
+                </div>
+              </div>
               <LanguageSwitcher scrolled={scrolled} />
             </div>
 
@@ -186,7 +198,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ type: 'spring', damping: 30, stiffness: 400 }}
-            className="xl:hidden bg-white shadow-lg fixed top-20 left-0 right-0 z-50 overflow-hidden"
+            className="xl:hidden bg-white shadow-lg fixed top-20 left-0 right-0 z-50 overflow-visible"
           >
             <motion.div 
               className="px-4 pt-2 pb-4 space-y-1"
@@ -206,15 +218,21 @@ const Header = () => {
               ))}
               <div className="pt-4 border-t border-gray-200">
                 <div className="flex items-center px-3 py-2">
-                  <a 
-                    href="tel:+41797757781" 
-                    className="flex items-center text-gray-700 hover:text-gray-900"
-                  >
-                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    <span className="font-medium">{t('phone')}</span>
-                  </a>
+                  <svg className="w-5 h-5 mr-2 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  <div className="flex flex-col text-gray-700">
+                    {phoneNumbers.map((num, idx) => (
+                      <a
+                        key={idx}
+                        href={`tel:${num.replace(/\s+/g, '')}`}
+                        className="py-0.5 hover:text-gray-900"
+                        aria-label={`Call ${num}`}
+                      >
+                        {num}
+                      </a>
+                    ))}
+                  </div>
                 </div>
                 <div className="px-3 py-2">
                   <LanguageSwitcher scrolled={true} />

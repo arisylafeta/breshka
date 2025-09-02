@@ -1,6 +1,7 @@
 export const services = {
   en: {
     // Services Section
+    whatWeOffer: 'What we offer',
     rental: 'Rental',
     rentalDesc: 'Our products are available for purchase directly or for rental through our partners. We also stock all the spare parts and accessories you may need.',
     technicalKnowHow: 'Technical know-how',
@@ -12,6 +13,7 @@ export const services = {
   },
   fr: {
     // Services Section
+    whatWeOffer: 'Ce que nous offrons',
     rental: 'Location',
     rentalDesc: 'Nos produits sont disponibles à l\'achat directement ou à la location par l\'intermédiaire de nos partenaires. Nous stockons également toutes les pièces de rechange et accessoires dont vous pourriez avoir besoin.',
     technicalKnowHow: 'Savoir-faire technique',
@@ -23,6 +25,7 @@ export const services = {
   },
   de: {
     // Services Section
+    whatWeOffer: 'Was wir anbieten',
     rental: 'Vermietung',
     rentalDesc: 'Unsere Produkte sind direkt zum Kauf oder zur Miete über unsere Partner verfügbar. Wir lagern auch alle Ersatzteile und Zubehörteile, die Sie benötigen könnten.',
     technicalKnowHow: 'Technisches Know-how',

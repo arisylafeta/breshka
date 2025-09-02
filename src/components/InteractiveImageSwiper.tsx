@@ -110,6 +110,23 @@ export const InteractiveImageSwiper: React.FC<SwiperProps> = ({
     if (card) card.style.transition = 'none';
   }, [getActiveCard]);
 
+  // Navigation helpers for buttons/dots
+  const next = useCallback(() => {
+    setCardOrder(prev => (prev.length ? [...prev.slice(1), prev[0]] : prev));
+  }, []);
+
+  const prev = useCallback(() => {
+    setCardOrder(prev => (prev.length ? [prev[prev.length - 1], ...prev.slice(0, -1)] : prev));
+  }, []);
+
+  const goToIndex = useCallback((targetOriginalIndex: number) => {
+    setCardOrder(prev => {
+      const pos = prev.indexOf(targetOriginalIndex);
+      if (pos <= 0) return prev;
+      return [...prev.slice(pos), ...prev.slice(0, pos)];
+    });
+  }, []);
+
   useEffect(() => {
     const cardStackElement = cardStackRef.current;
     if (!cardStackElement) return;
@@ -170,12 +187,54 @@ export const InteractiveImageSwiper: React.FC<SwiperProps> = ({
             src={images[originalIndex]}
             alt={`Swiper image ${originalIndex + 1}`}
             fill
-            className="object-cover pointer-events-none"
+            className="object-contain pointer-events-none bg-white"
             draggable={false}
             sizes="(max-width: 768px) 100vw, 50vw"
           />
         </article>
       ))}
+      {/* Controls overlay */}
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-between px-2">
+        <button
+          type="button"
+          aria-label="Previous image"
+          className="pointer-events-auto z-10 inline-flex items-center justify-center rounded-full bg-white/80 hover:bg-white shadow px-3 py-2 text-gray-800"
+          onPointerDown={(e) => e.stopPropagation()}
+          onClick={(e) => { e.stopPropagation(); prev(); }}
+        >
+          {/* Left chevron */}
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
+            <path fillRule="evenodd" d="M12.707 15.707a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414l5-5a1 1 0 111.414 1.414L8.414 10l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
+          </svg>
+        </button>
+        <button
+          type="button"
+          aria-label="Next image"
+          className="pointer-events-auto z-10 inline-flex items-center justify-center rounded-full bg-white/80 hover:bg-white shadow px-3 py-2 text-gray-800"
+          onPointerDown={(e) => e.stopPropagation()}
+          onClick={(e) => { e.stopPropagation(); next(); }}
+        >
+          {/* Right chevron */}
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
+            <path fillRule="evenodd" d="M7.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 11-1.414-1.414L11.586 10 7.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+          </svg>
+        </button>
+      </div>
+      {/* Dots */}
+      <div className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+        {images.map((_, originalIdx) => {
+          const isActive = cardOrder[0] === originalIdx;
+          return (
+            <button
+              key={`dot-${originalIdx}`}
+              aria-label={`Go to image ${originalIdx + 1}`}
+              className={`pointer-events-auto h-2.5 w-2.5 rounded-full transition ${isActive ? 'bg-white ring-2 ring-red-600' : 'bg-white/60 hover:bg-white'}`}
+              onPointerDown={(e) => e.stopPropagation()}
+              onClick={(e) => { e.stopPropagation(); goToIndex(originalIdx); }}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };

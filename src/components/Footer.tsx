@@ -64,9 +64,9 @@ const Footer = () => {
           <AnimatedContainer delay={0.2} className="md:col-span-1">
             <h3 className="text-sm font-bold mb-4">{t('footerPopularProducts')}</h3>
             <ul className="space-y-2">
-              <li><Link href="/products/AlphaN" className="text-gray-400 hover:text-white text-sm transition-all duration-300">AluFix</Link></li>
-              <li><Link href="/products/AluB" className="text-gray-400 hover:text-white text-sm transition-all duration-300">AluStar</Link></li>
-              <li><Link href="/products/StarTex" className="text-gray-400 hover:text-white text-sm transition-all duration-300">StarTec XT</Link></li>
+              <li><Link href="/products/AlphaN" className="text-gray-400 hover:text-white text-sm transition-all duration-300">Alpha N</Link></li>
+              <li><Link href="/products/AluB" className="text-gray-400 hover:text-white text-sm transition-all duration-300">Alu B</Link></li>
+              <li><Link href="/products/AluBMax" className="text-gray-400 hover:text-white text-sm transition-all duration-300">Alu BMax</Link></li>
               {/* <li><Link href="#" className="text-gray-400 hover:text-white text-sm transition-all duration-300">AluDec</Link></li>
               <li><Link href="#" className="text-gray-400 hover:text-white text-sm transition-all duration-300">MT 60</Link></li>
               <li><Link href="#" className="text-gray-400 hover:text-white text-sm transition-all duration-300">MGC-H</Link></li>
@@ -98,7 +98,7 @@ const Footer = () => {
                     <svg className="w-4 h-4 text-gray-400 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                     </svg>
-                    <span className="text-gray-400 text-sm">1180 Rolle, Switzerland</span>
+                    <span className="text-gray-400 text-sm">Chemin des Vernes 5, 1180 Rolle, Switzerland</span>
                   </li>
                   <li className="flex items-center">
                     <svg className="w-4 h-4 text-gray-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

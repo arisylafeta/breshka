@@ -31,19 +31,19 @@ const FeaturedProducts: React.FC<{ title?: string }> = ({ title }) => {
           <ProductCard
             href="/products/alub"
             imageSrc="/images/AluB.png"
-            imageAlt="AluB Formwork"
+            imageAlt="Alu B Formwork"
             title="Alu B"
             categoryKey="wallFormwork"
             descKey="aluBDesc"
           />
 
           <ProductCard
-            href="/products/alub-max"
+            href="/products/alu-bmax"
             imageSrc="/images/aluBMax.png"
-            imageAlt="AluB Max Formwork"
-            title="AluB Max"
+            imageAlt="Alu BMax Formwork"
+            title="Alu BMax"
             categoryKey="wallFormwork"
-            descKey="starTecDesc"
+            descKey="aluBMaxDesc"
           />
         </div>
       </div>

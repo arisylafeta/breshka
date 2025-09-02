@@ -6,8 +6,8 @@ function normalizeSlug(input: string): ProductSlug | null {
   const lower = input.toLowerCase()
   if (lower === 'alpha-n' || lower === 'alphan' || lower === 'alpha_n' || lower === 'alpha-nn') return 'alpha-n'
   if (lower === 'alub' || lower === 'alustar') return 'alub'
-  if (lower === 'alubmax' || lower === 'alu-bmax' || lower === 'alub-max' || lower === 'startecxt') return 'alub-max'
-  return (['alpha-n','alub','alub-max'] as ProductSlug[]).includes(lower as ProductSlug) ? (lower as ProductSlug) : null
+  if (lower === 'alubmax' || lower === 'alu-bmax' || lower === 'alu-bmax') return 'alu-bmax'
+  return (['alpha-n','alub','alu-bmax'] as ProductSlug[]).includes(lower as ProductSlug) ? (lower as ProductSlug) : null
 }
 
 export default async function ProductPage(props: { params: Promise<{ product: string }> }) {

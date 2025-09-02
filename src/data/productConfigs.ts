@@ -1,6 +1,6 @@
 import { ProductPageConfig } from '../components/ProductPageTemplate'
 
-export type ProductSlug = 'alpha-n' | 'alub' | 'alub-max'
+export type ProductSlug = 'alpha-n' | 'alub' | 'alu-bmax'
 
 export const productConfigs: Record<ProductSlug, ProductPageConfig> = {
   'alpha-n': {
@@ -26,7 +26,11 @@ export const productConfigs: Record<ProductSlug, ProductPageConfig> = {
       { labelKey: 'permissiblePressure', valueKey: 'pressureValue' },
       { labelKey: 'coating', valueKey: 'coatingValue' },
       { labelKey: 'painting', valueKey: 'paintingValue' },
-      { labelKey: 'crane', valueKey: 'craneValue' }
+      { labelKey: 'crane', valueKey: 'craneValue' },
+      { labelKey: 'productionStandard', valueKey: 'productionStandardValue' },
+      { labelKey: 'materialStandard', valueKey: 'materialStandardValue' },
+      { labelKey: 'designStandard', valueKey: 'designStandardValue' },
+      { labelKey: 'documentStandard', valueKey: 'documentStandardValue' }
     ],
     applicationsTitleKey: 'applicationExamples',
     applications: [
@@ -59,7 +63,11 @@ export const productConfigs: Record<ProductSlug, ProductPageConfig> = {
       { labelKey: 'aluBWeight', valueKey: 'aluBWeightValue' },
       { labelKey: 'aluBAnchoring', valueKey: 'anchoringValue' },
       { labelKey: 'numberOfRods', valueKey: 'numberOfRodsValue' },
-      { labelKey: 'permissibleConcretePressure', valueKey: 'concretePressureValue' }
+      { labelKey: 'permissibleConcretePressure', valueKey: 'concretePressureValue' },
+      { labelKey: 'productionStandard', valueKey: 'productionStandardValue' },
+      { labelKey: 'materialStandard', valueKey: 'materialStandardValue' },
+      { labelKey: 'designStandard', valueKey: 'designStandardValue' },
+      { labelKey: 'documentStandard', valueKey: 'documentStandardValue' }
     ],
     specHeaderKey: 'aluBDetailsHeader',
     applicationsTitleKey: 'applicationExamples',
@@ -71,25 +79,34 @@ export const productConfigs: Record<ProductSlug, ProductPageConfig> = {
     ctaTitleKey: 'interestedInAluStar',
     ctaDescKey: 'aluStarContactDesc'
   },
-  'alub-max': {
-    title: 'AluB Max',
+  'alu-bmax': {
+    title: 'Alu BMax',
     heroImage: '/images/aluBMax.png',
     heroDescKey: 'aluBMaxHeroDesc',
     productDescKey: 'aluBMaxProductDesc',
-    carouselImages: ['/images/aluBMax.png', '/images/aluBMax.png', '/images/aluBMax.png'],
+    carouselImages: ['/images/aluBMax.png', '/images/new-product.png'],
+    useCarousel: true,
     detailsTitleKey: 'aluBMaxDetailsTitle',
     details: [
-      { titleKey: 'aluBMaxTripleAnchoringTitle', descKey: 'aluBMaxTripleAnchoringDesc' },
-      { titleKey: 'aluBMaxHighLoadTitle', descKey: 'aluBMaxHighLoadDesc' },
-      { titleKey: 'aluBMaxRobustSteelTitle', descKey: 'aluBMaxRobustSteelDesc' },
-      { titleKey: 'aluBMaxVersatileTitle', descKey: 'aluBMaxVersatileDesc' }
+      { titleKey: 'aluBMaxBottomUpAssemblyTitle', descKey: 'aluBMaxBottomUpAssemblyDesc' },
+      { titleKey: 'aluBMaxIndustrialResidentialEfficiencyTitle', descKey: 'aluBMaxIndustrialResidentialEfficiencyDesc' },
+      { titleKey: 'aluBMaxPrecisionJointTitle', descKey: 'aluBMaxPrecisionJointDesc' },
+      { titleKey: 'aluBMaxPowderCoatedFrameTitle', descKey: 'aluBMaxPowderCoatedFrameDesc' },
+      { titleKey: 'aluBMaxExtremeLoadSlabTitle', descKey: 'aluBMaxExtremeLoadSlabDesc' },
+      { titleKey: 'aluBMaxMinimalCleaningTitle', descKey: 'aluBMaxMinimalCleaningDesc' },
+      { titleKey: 'aluBMaxCustomSizesTitle', descKey: 'aluBMaxCustomSizesDesc' },
+      // Keep standards in the technical specs table instead of detail bullets (avoid duplication)
     ],
     techSpecsTitleKey: 'technicalSpecifications',
     specHeaderKey: 'detailsHeader',
     techSpecs: [
       { labelKey: 'panelHeights', valueKey: 'panelHeightsValue' },
       { labelKey: 'panelWidths', valueKey: 'panelWidthsValue' },
-      { labelKey: 'anchoringMethods', valueKey: 'anchoringMethodsValue' }
+      { labelKey: 'anchoringMethods', valueKey: 'anchoringMethodsValue' },
+      { labelKey: 'productionStandard', valueKey: 'productionStandardValue' },
+      { labelKey: 'materialStandard', valueKey: 'materialStandardValue' },
+      { labelKey: 'designStandard', valueKey: 'designStandardValue' },
+      { labelKey: 'documentStandard', valueKey: 'documentStandardValue' }
     ],
     applicationsTitleKey: 'applicationExamples',
     applications: [

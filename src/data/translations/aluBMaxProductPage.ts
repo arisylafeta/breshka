@@ -2,10 +2,33 @@ export const aluBMaxProductPage = {
   en: {
     // AluB Max Product Page translations
     aluBMaxHeroDesc: 'Versatile. Robust. Efficient. The triple anchoring formwork system for demanding projects.',
-    aluBMaxProductDesc: 'The AluB Max formwork combines three anchoring methods thanks to the integrated Combi rod guide, offering exceptional versatility and efficiency for your construction projects.',
+    aluBMaxProductDesc: 'The Alu BMax formwork combines three anchoring methods thanks to the integrated Combi rod guide, offering exceptional versatility and efficiency for your construction projects.',
 
     // Details
     aluBMaxDetailsTitle: 'Details',
+    // New details (added)
+    aluBMaxBottomUpAssemblyTitle: 'Bottom-Up Assembly',
+    aluBMaxBottomUpAssemblyDesc: 'Fast slab formwork assembled from below by a single person for efficient handling on site.',
+    aluBMaxIndustrialResidentialEfficiencyTitle: 'Industrial & Residential Efficiency',
+    aluBMaxIndustrialResidentialEfficiencyDesc: 'Designed for maximum efficiency in both industrial and residential construction.',
+    aluBMaxPrecisionJointTitle: 'Precision Joints',
+    aluBMaxPrecisionJointDesc: 'High manufacturing precision for perfectly aligned joints and clean finishes.',
+    aluBMaxPowderCoatedFrameTitle: 'Powder‑Coated Frame',
+    aluBMaxPowderCoatedFrameDesc: 'Thermally powder‑coated surfaces for superior durability and service life.',
+    aluBMaxExtremeLoadSlabTitle: 'Extreme Load Capacity',
+    aluBMaxExtremeLoadSlabDesc: 'Supports slab thicknesses up to 50 cm while maintaining performance and safety.',
+    aluBMaxMinimalCleaningTitle: 'Minimal Cleaning',
+    aluBMaxMinimalCleaningDesc: 'Optimized surfaces and components reduce cleaning work between pours.',
+    aluBMaxCustomSizesTitle: 'Standard & Custom Sizes',
+    aluBMaxCustomSizesDesc: 'Standard lengths 100 | 150 cm and widths 50 | 75 | 100 | 150 cm, with custom sizes available.',
+    aluBMaxTripleAnchoringTitle: 'Triple Anchoring',
+    aluBMaxTripleAnchoringDesc: 'Integrated Combi rod guide enabling three anchoring methods for maximum flexibility.',
+    aluBMaxHighLoadTitle: 'High Load Capacity',
+    aluBMaxHighLoadDesc: 'Designed to withstand high concrete pressures for demanding pours.',
+    aluBMaxRobustSteelTitle: 'Robust Steel Frame',
+    aluBMaxRobustSteelDesc: 'Durable, brace-friendly frame built for intensive site use.',
+    aluBMaxVersatileTitle: 'Versatile Panel System',
+    aluBMaxVersatileDesc: 'Wide range of panel sizes and accessories to adapt to any geometry.',
     aluBMaxProductionTitle: 'Certified Production',
     aluBMaxProductionDesc: 'Manufactured under ISO 9001 and TS EN 1090 standards, ensuring the highest quality and compliance.',
     aluBMaxMaterialTitle: 'High-Quality Materials',
@@ -19,6 +42,12 @@ export const aluBMaxProductPage = {
     technicalSpecifications: 'Technical Specifications',
     specification: 'Specification',
     detailsHeader: 'Details',
+    panelHeights: 'Panel heights',
+    panelHeightsValue: '100, 150 cm',
+    panelWidths: 'Panel widths',
+    panelWidthsValue: '50, 75, 100, 150 cm',
+    anchoringMethods: 'Anchoring methods',
+    anchoringMethodsValue: 'Tie rod, combi rod, and frame anchoring',
     productionStandard: 'Production',
     productionStandardValue: 'ISO 9001, TS EN 1090',
     materialStandard: 'Material',
@@ -38,8 +67,8 @@ export const aluBMaxProductPage = {
     aluBMaxInfrastructureProjectsDesc: 'Used in bridges, tunnels, and other major infrastructure elements requiring high load capacity.',
 
     // CTA
-    aluBMaxInterested: 'Interested in AluB Max for your project?',
-    aluBMaxContactDesc: 'Contact our team for a quote or to learn more about how AluB Max can benefit your construction project.',
+    aluBMaxInterested: 'Interested in Alu BMax for your project?',
+    aluBMaxContactDesc: 'Contact our team for a quote or to learn more about how Alu BMax can benefit your construction project.',
 
     // Recommended
     youMightAlsoLike: 'You Might Also Like',
@@ -47,10 +76,33 @@ export const aluBMaxProductPage = {
   fr: {
     // AluB Max Product Page translations
     aluBMaxHeroDesc: 'Polyvalent. Robuste. Efficace. Le système de coffrage à triple ancrage pour les projets exigeants.',
-    aluBMaxProductDesc: "Le coffrage AluB Max combine trois méthodes d'ancrage grâce au guide de tige Combi intégré, offrant une polyvalence et une efficacité exceptionnelles pour vos projets de construction.",
+    aluBMaxProductDesc: "Le coffrage Alu BMax combine trois méthodes d'ancrage grâce au guide de tige Combi intégré, offrant une polyvalence et une efficacité exceptionnelles pour vos projets de construction.",
 
     // Details
     aluBMaxDetailsTitle: 'Détails',
+    // Nouveaux détails (ajoutés)
+    aluBMaxBottomUpAssemblyTitle: 'Montage par le bas',
+    aluBMaxBottomUpAssemblyDesc: 'Un coffrage de dalle rapide, à la main, monté par le bas par une seule personne.',
+    aluBMaxIndustrialResidentialEfficiencyTitle: 'Efficacité industrielle et résidentielle',
+    aluBMaxIndustrialResidentialEfficiencyDesc: 'Conçu pour offrir une efficacité maximale aussi bien en industriel qu’en résidentiel.',
+    aluBMaxPrecisionJointTitle: 'Précision de jointure',
+    aluBMaxPrecisionJointDesc: 'Précision de fabrication élevée pour des jonctions parfaites et des finitions propres.',
+    aluBMaxPowderCoatedFrameTitle: 'Cadre thermolaqué',
+    aluBMaxPowderCoatedFrameDesc: 'Traitement thermolaqué pour une longévité et une résistance supérieures.',
+    aluBMaxExtremeLoadSlabTitle: 'Capacité de charge extrême',
+    aluBMaxExtremeLoadSlabDesc: "Supporte des épaisseurs de dalle jusqu’à 50 cm tout en garantissant performances et sécurité.",
+    aluBMaxMinimalCleaningTitle: 'Nettoyage minimal',
+    aluBMaxMinimalCleaningDesc: 'Conception optimisée réduisant le travail de nettoyage entre les coulées.',
+    aluBMaxCustomSizesTitle: 'Tailles standard et sur mesure',
+    aluBMaxCustomSizesDesc: 'Longueurs standard 100 | 150 cm et largeurs 50 | 75 | 100 | 150 cm, avec options sur mesure.',
+    aluBMaxTripleAnchoringTitle: 'Triple ancrage',
+    aluBMaxTripleAnchoringDesc: "Guide de tige Combi intégré permettant trois méthodes d'ancrage pour une flexibilité maximale.",
+    aluBMaxHighLoadTitle: 'Haute capacité de charge',
+    aluBMaxHighLoadDesc: 'Conçu pour résister à de fortes pressions de béton lors des coulées exigeantes.',
+    aluBMaxRobustSteelTitle: 'Cadre en acier robuste',
+    aluBMaxRobustSteelDesc: 'Cadre durable, compatible avec les étais, conçu pour un usage intensif sur chantier.',
+    aluBMaxVersatileTitle: 'Système de panneaux polyvalent',
+    aluBMaxVersatileDesc: 'Large gamme de tailles de panneaux et d’accessoires pour s’adapter à toute géométrie.',
     aluBMaxProductionTitle: 'Production Certifiée',
     aluBMaxProductionDesc: 'Fabriqué selon les normes ISO 9001 et TS EN 1090, garantissant la plus haute qualité et conformité.',
     aluBMaxMaterialTitle: 'Matériaux de Haute Qualité',
@@ -64,6 +116,12 @@ export const aluBMaxProductPage = {
     technicalSpecifications: 'Spécifications Techniques',
     specification: 'Spécification',
     detailsHeader: 'Détails',
+    panelHeights: 'Hauteurs des panneaux',
+    panelHeightsValue: '100, 150 cm',
+    panelWidths: 'Largeurs des panneaux',
+    panelWidthsValue: '50, 75, 100, 150 cm',
+    anchoringMethods: "Méthodes d’ancrage",
+    anchoringMethodsValue: "Tige d’ancrage, tige Combi et ancrage sur le cadre",
     productionStandard: 'Production',
     productionStandardValue: 'ISO 9001, TS EN 1090',
     materialStandard: 'Matériau',
@@ -83,8 +141,8 @@ export const aluBMaxProductPage = {
     aluBMaxInfrastructureProjectsDesc: 'Utilisé dans les ponts, tunnels et autres grands ouvrages nécessitant une grande capacité de charge.',
 
     // CTA
-    aluBMaxInterested: 'Intéressé par AluB Max pour votre projet ?',
-    aluBMaxContactDesc: 'Contactez notre équipe pour un devis ou pour en savoir plus sur la manière dont AluB Max peut bénéficier à votre projet de construction.',
+    aluBMaxInterested: 'Intéressé par Alu BMax pour votre projet ?',
+    aluBMaxContactDesc: 'Contactez notre équipe pour un devis ou pour en savoir plus sur la manière dont Alu BMax peut bénéficier à votre projet de construction.',
 
     // Recommended
     youMightAlsoLike: 'Vous Pourriez Aussi Aimer',
@@ -92,10 +150,33 @@ export const aluBMaxProductPage = {
   de: {
     // AluB Max Product Page translations
     aluBMaxHeroDesc: 'Vielseitig. Robust. Effizient. Das Schalungssystem mit dreifacher Verankerung für anspruchsvolle Projekte.',
-    aluBMaxProductDesc: 'Die AluB Max-Schalung kombiniert dank der integrierten Combi-Stabführung drei Verankerungsmethoden und bietet außergewöhnliche Vielseitigkeit und Effizienz für Ihre Bauprojekte.',
+    aluBMaxProductDesc: 'Die Alu BMax-Schalung kombiniert dank der integrierten Combi-Stabführung drei Verankerungsmethoden und bietet außergewöhnliche Vielseitigkeit und Effizienz für Ihre Bauprojekte.',
 
     // Details
     aluBMaxDetailsTitle: 'Details',
+    // Neue Details (hinzugefügt)
+    aluBMaxBottomUpAssemblyTitle: 'Montage von unten',
+    aluBMaxBottomUpAssemblyDesc: 'Schnelle Handschalung für Decken – von unten montierbar durch eine einzelne Person.',
+    aluBMaxIndustrialResidentialEfficiencyTitle: 'Effizienz im Industrie- und Wohnbau',
+    aluBMaxIndustrialResidentialEfficiencyDesc: 'Für maximale Effizienz in Industrie- und Wohnbauprojekten ausgelegt.',
+    aluBMaxPrecisionJointTitle: 'Präzise Fugen',
+    aluBMaxPrecisionJointDesc: 'Hohe Fertigungsgenauigkeit für perfekt ausgerichtete Fugen und saubere Oberflächen.',
+    aluBMaxPowderCoatedFrameTitle: 'Pulverbeschichteter Rahmen',
+    aluBMaxPowderCoatedFrameDesc: 'Thermische Pulverbeschichtung für besonders lange Lebensdauer.',
+    aluBMaxExtremeLoadSlabTitle: 'Extreme Tragfähigkeit',
+    aluBMaxExtremeLoadSlabDesc: 'Trägt Deckendicken bis zu 50 cm bei gleichbleibender Leistung und Sicherheit.',
+    aluBMaxMinimalCleaningTitle: 'Minimaler Reinigungsaufwand',
+    aluBMaxMinimalCleaningDesc: 'Optimierte Oberflächen reduzieren die Reinigung zwischen den Einsätzen.',
+    aluBMaxCustomSizesTitle: 'Standard- und Sondergrößen',
+    aluBMaxCustomSizesDesc: 'Standardlängen 100 | 150 cm und Breiten 50 | 75 | 100 | 150 cm; Sondergrößen verfügbar.',
+    aluBMaxTripleAnchoringTitle: 'Dreifache Verankerung',
+    aluBMaxTripleAnchoringDesc: 'Integrierte Combi-Stabführung für drei Verankerungsmethoden und maximale Flexibilität.',
+    aluBMaxHighLoadTitle: 'Hohe Tragfähigkeit',
+    aluBMaxHighLoadDesc: 'Ausgelegt für hohe Betonierdrücke bei anspruchsvollen Einsätzen.',
+    aluBMaxRobustSteelTitle: 'Robuster Stahlrahmen',
+    aluBMaxRobustSteelDesc: 'Langlebiger, strebenfreundlicher Rahmen für den intensiven Baustelleneinsatz.',
+    aluBMaxVersatileTitle: 'Vielseitiges Paneelsystem',
+    aluBMaxVersatileDesc: 'Große Auswahl an Paneelgrößen und Zubehör für jede Geometrie.',
     aluBMaxProductionTitle: 'Zertifizierte Produktion',
     aluBMaxProductionDesc: 'Hergestellt nach den Normen ISO 9001 und TS EN 1090, um höchste Qualität und Konformität zu gewährleisten.',
     aluBMaxMaterialTitle: 'Hochwertige Materialien',
@@ -109,6 +190,12 @@ export const aluBMaxProductPage = {
     technicalSpecifications: 'Technische Spezifikationen',
     specification: 'Spezifikation',
     detailsHeader: 'Details',
+    panelHeights: 'Paneelhöhen',
+    panelHeightsValue: '100, 150 cm',
+    panelWidths: 'Paneelbreiten',
+    panelWidthsValue: '50, 75, 100, 150 cm',
+    anchoringMethods: 'Verankerungsmethoden',
+    anchoringMethodsValue: 'Ankerstab, Combi-Stab und Rahmenverankerung',
     productionStandard: 'Produktion',
     productionStandardValue: 'ISO 9001, TS EN 1090',
     materialStandard: 'Material',
@@ -128,10 +215,11 @@ export const aluBMaxProductPage = {
     aluBMaxInfrastructureProjectsDesc: 'Einsatz bei Brücken, Tunneln und anderen großen Infrastrukturelementen mit hoher Tragfähigkeit.',
 
     // CTA
-    aluBMaxInterested: 'Interessiert an AluB Max für Ihr Projekt?',
-    aluBMaxContactDesc: 'Kontaktieren Sie unser Team für ein Angebot oder um mehr darüber zu erfahren, wie AluB Max Ihrem Bauvorhaben zugutekommen kann.',
+    aluBMaxInterested: 'Interessiert an Alu BMax für Ihr Projekt?',
+    aluBMaxContactDesc: 'Kontaktieren Sie unser Team für ein Angebot oder um mehr darüber zu erfahren, wie Alu BMax Ihrem Bauvorhaben zugutekommen kann.',
 
     // Recommended
     youMightAlsoLike: 'Das Könnte Ihnen Auch Gefallen',
   }
 } as const;
+

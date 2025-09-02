@@ -1,7 +1,7 @@
 export const footer = {
   en: {
     // Footer translations
-    companyDescription: 'Specialists in the manufacture and sale of formwork equipment. AlphaTech is a family-owned company with an international reach. With 40+ years worldwide, we are proud of the confidence put in more than 40 countries. The headquarters is located in Rolle, Switzerland. Be the first. Build smart.',
+    companyDescription: 'Years of combined experience delivering high-quality construction solutions. Successfully completed projects across commercial, residential, and industrial sectors, with a growing presence in multiple locations and a proven capacity for large-scale projects.',
     footerPopularProducts: 'Popular Products',
     alphaTechServices: 'AlphaTech Services',
     footerRental: 'Rental',
@@ -25,10 +25,14 @@ export const footer = {
     legalNotice: 'Legal Notice',
     privacyPolicyFooter: 'Privacy Policy',
     visitSocialMedia: 'Visit us on social media:',
+    // Working hours (used in Footer and Contact page)
+    workingHours: 'Working Hours',
+    workingHoursWeekdays: 'Monday - Friday: 8:00 AM - 18:00 PM',
+    workingHoursWeekends: 'Saturday - Sunday: Closed',
   },
   fr: {
     // Footer translations
-    companyDescription: 'Spécialistes dans la fabrication et la vente d\'équipements de coffrage. AlphaTech est une entreprise familiale avec une portée internationale. Avec plus de 40 ans dans le monde, nous sommes fiers de la confiance accordée dans plus de 40 pays. Le siège social est situé à Haiterbach, en Allemagne. Soyez les premiers. Construisez intelligemment.',
+    companyDescription: 'Années d\'expérience combinée dans la fourniture de solutions de construction de haute qualité. Projets menés à bien dans les secteurs commercial, résidentiel et industriel, avec une présence croissante dans plusieurs endroits et une capacité avérée à gérer des projets d\'envergure.',
     footerPopularProducts: 'Produits Populaires',
     alphaTechServices: 'Services AlphaTech',
     footerRental: 'Location',
@@ -52,10 +56,14 @@ export const footer = {
     legalNotice: 'Mentions Légales',
     privacyPolicyFooter: 'Politique de Confidentialité',
     visitSocialMedia: 'Visitez-nous sur les réseaux sociaux:',
+    // Working hours (used in Footer and Contact page)
+    workingHours: 'Heures d\'ouverture',
+    workingHoursWeekdays: 'Lundi - Vendredi : 8h00 - 17h00',
+    workingHoursWeekends: 'Samedi - Dimanche : Fermé',
   },
   de: {
     // Footer translations
-    companyDescription: 'Specialisten in der Herstellung und dem Verkauf von Schalungsausrüstung. AlphaTech ist ein Familienunternehmen mit internationaler Reichweite. Mit über 40 Jahren weltweit sind wir stolz auf das Vertrauen in mehr als 40 Ländern. Der Hauptsitz befindet sich in Haiterbach, Deutschland. Seien Sie die Ersten. Bauen Sie intelligent.',
+    companyDescription: 'Jahre kombinierte Erfahrung in der Bereitstellung hochwertiger Baulösungen. Erfolgreich abgeschlossene Projekte in verschiedenen Bereichen, mit wachsender Präsenz an mehreren Standorten und nachgewiesener Kapazität für Großprojekte.',
     footerPopularProducts: 'Beliebte Produkte',
     alphaTechServices: 'AlphaTech Services',
     footerRental: 'Vermietung',
@@ -79,5 +87,10 @@ export const footer = {
     legalNotice: 'Impressum',
     privacyPolicyFooter: 'Datenschutzerklärung',
     visitSocialMedia: 'Besuchen Sie uns in den sozialen Medien:',
+    // Working hours (used in Footer and Contact page)
+    workingHours: 'Öffnungszeiten',
+    workingHoursWeekdays: 'Montag - Freitag: 8:00 - 18:00',
+    workingHoursWeekends: 'Samstag - Sonntag: Geschlossen',
   }
 } as const;
+

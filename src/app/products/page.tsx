@@ -43,41 +43,35 @@ const ProductsPage = () => {
               <thead className="bg-gray-50">
                 <tr>
                   <th className="py-4 px-6 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">{t('features')}</th>
-                  <th className="py-4 px-6 text-center text-sm font-medium text-gray-500 uppercase tracking-wider">AluFix</th>
-                  <th className="py-4 px-6 text-center text-sm font-medium text-gray-500 uppercase tracking-wider">AluStar</th>
-                  <th className="py-4 px-6 text-center text-sm font-medium text-gray-500 uppercase tracking-wider">AluB Max</th>
+                  <th className="py-4 px-6 text-center text-sm font-medium text-gray-500 uppercase tracking-wider">Alpha N</th>
+                  <th className="py-4 px-6 text-center text-sm font-medium text-gray-500 uppercase tracking-wider">AluB</th>
+                  <th className="py-4 px-6 text-center text-sm font-medium text-gray-500 uppercase tracking-wider">Alu BMax</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
                 <tr>
                   <td className="py-4 px-6 text-sm font-medium text-gray-900">{t('material')}</td>
-                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('aluminum')}</td>
-                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('aluminumSteel')}</td>
-                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('steel')}</td>
-                </tr>
-                <tr>
-                  <td className="py-4 px-6 text-sm font-medium text-gray-900">{t('weight')}</td>
-                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('lightweight')}</td>
-                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('medium')}</td>
-                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('heavyDuty')}</td>
+                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('materialSpec')}</td>
+                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('materialStandardValue')}</td>
+                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('materialStandardValue')}</td>
                 </tr>
                 <tr>
                   <td className="py-4 px-6 text-sm font-medium text-gray-900">{t('freshConcretePressure')}</td>
-                  <td className="py-4 px-6 text-sm text-gray-500 text-center">50 kN/m²</td>
-                  <td className="py-4 px-6 text-sm text-gray-500 text-center">60 kN/m²</td>
-                  <td className="py-4 px-6 text-sm text-gray-500 text-center">80 kN/m²</td>
+                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('pressureValue')}</td>
+                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('concretePressureValue')}</td>
+                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('aluBMaxHighLoadDesc')}</td>
                 </tr>
                 <tr>
                   <td className="py-4 px-6 text-sm font-medium text-gray-900">{t('bestFor')}</td>
-                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('smallMediumProjects')}</td>
-                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('mediumLargeProjects')}</td>
-                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('largeCommercial')}</td>
+                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('residentialConstruction')}</td>
+                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('multiStoryBuildings')}</td>
+                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('aluBMaxHighRise')}</td>
                 </tr>
                 <tr>
                   <td className="py-4 px-6 text-sm font-medium text-gray-900">{t('specialFeature')}</td>
-                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('optimizedHeights')}</td>
-                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('enhancedDurability')}</td>
-                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('tripleAnchoring')}</td>
+                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('alphaTechLock')}</td>
+                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('manuportable')}</td>
+                  <td className="py-4 px-6 text-sm text-gray-500 text-center">{t('aluBMaxTripleAnchoringTitle')}</td>
                 </tr>
               </tbody>
             </table>
