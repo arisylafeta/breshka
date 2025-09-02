@@ -30,7 +30,7 @@ const FeaturedProducts: React.FC<{ title?: string }> = ({ title }) => {
 
           <ProductCard
             href="/products/alub"
-            imageSrc="/images/AluB.png"
+            imageSrc="/images/Alub.png"
             imageAlt="Alu B Formwork"
             title="Alu B"
             categoryKey="wallFormwork"

@@ -16,6 +16,7 @@ import { alphaNProductPage } from '../data/translations/alphaNProductPage';
 import { aluBProductPage } from '../data/translations/aluBProductPage';
 import { aluBMaxProductPage } from '../data/translations/aluBMaxProductPage';
 import { accessories } from '../data/translations/accessories';
+import { contactPage } from '../data/translations/contactPage';
 
 export type Language = 'en' | 'fr' | 'de';
 
@@ -929,6 +930,7 @@ const translations = {
     ...contactSection.en,
     ...footer.en,
     ...contactForm.en,
+    ...contactPage.en,
     ...productsPage.en,
     ...alphaNProductPage.en,
     ...aluBProductPage.en,
@@ -946,6 +948,7 @@ const translations = {
     ...contactSection.fr,
     ...footer.fr,
     ...contactForm.fr,
+    ...contactPage.fr,
     ...productsPage.fr,
     ...alphaNProductPage.fr,
     ...aluBProductPage.fr,
@@ -963,6 +966,7 @@ const translations = {
     ...contactSection.de,
     ...footer.de,
     ...contactForm.de,
+    ...contactPage.de,
     ...productsPage.de,
     ...alphaNProductPage.de,
     ...aluBProductPage.de,
