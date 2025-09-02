@@ -47,7 +47,7 @@ const Footer = () => {
           <AnimatedContainer delay={0.1} className="md:col-span-1">
             <div className="mb-6">
               <Image 
-                src="/images/Logo-white.png" 
+                src="/images/logo-white.png" 
                 alt="AlphaTech Logo" 
                 width={150}
                 height={80}
