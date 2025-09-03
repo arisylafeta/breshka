@@ -12,6 +12,12 @@ const ContactPage = () => {
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<null | { ok: boolean; msg: string }>(null);
 
+  // Build phone numbers from translations (same as Header/Footer)
+  const phoneNumberKeys = ['phone1', 'phone2'] as const;
+  const phoneNumbers = phoneNumberKeys
+    .map((k) => t(k))
+    .filter((v) => v && v !== 'phone1' && v !== 'phone2');
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
@@ -150,7 +156,18 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-medium">{t('contactPhone')}</h3>
-                  <p className="text-gray-600">{t('contactPhoneValue')}</p>
+                  <div className="flex flex-col">
+                    {phoneNumbers.map((num, idx) => (
+                      <a
+                        key={idx}
+                        href={`tel:${String(num).replace(/\s+/g, '')}`}
+                        className="text-red-600 hover:underline"
+                        aria-label={`Call ${num}`}
+                      >
+                        {num}
+                      </a>
+                    ))}
+                  </div>
                 </div>
                 <div>
                   <h3 className="text-lg font-medium">{t('contactEmailLabel')}</h3>

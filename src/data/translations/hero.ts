@@ -1,23 +1,23 @@
 export const hero = {
   en: {
     // Hero Section
-    heroTitle: 'Premium Metal Building ',
-    heroTitleSpan: 'Solutions',
-    heroDescription: 'Engineering excellence in steel construction. From industrial warehouses to commercial complexes, we deliver durable, cost-effective metal building solutions that stand the test of time.',
+    heroTitle: 'Welcome to AlphaTech Systems Switzerland',
+    heroTitleSpan: '',
+    heroDescription: 'Manufacturer, seller and renter of formwork equipment and accessories. Whatever your needs — purchase or rental of formwork, delivery of accessories, assistance with formwork implementation, technical advice, after-sales service or repairs.',
     getQuote: 'Get Quote',
   },
   fr: {
     // Hero Section
-    heroTitle: 'Solutions de Construction',
-    heroTitleSpan: 'Métallique Premium',
-    heroDescription: 'Excellence en ingénierie dans la construction en acier. Des entrepôts industriels aux complexes commerciaux, nous livrons des solutions de bâtiments métalliques durables et rentables qui résistent à l\'épreuve du temps.',
+    heroTitle: 'Bienvenue chez AlphaTech Systèmes Suisse',
+    heroTitleSpan: '',
+    heroDescription: 'Fabricant, vendeur et loueur de matériel de coffrage et d’accessoires. Quels que soient vos besoins — achat ou location de coffrages, livraison d’accessoires, assistance à la mise en œuvre de coffrages, conseils techniques, service après-vente ou réparations',
     getQuote: 'Obtenir un Devis',
   },
   de: {
     // Hero Section
-    heroTitle: 'Premium Metallbau',
-    heroTitleSpan: 'Lösungen',
-    heroDescription: 'Ingenieurexzellenz im Stahlbau. Von Industrielagern bis hin zu Gewerbeanlagen liefern wir langlebige, kosteneffektive Metallbaulösungen, die der Zeit standhalten.',
+    heroTitle: 'Willkommen bei AlphaTech Systeme Schweiz',
+    heroTitleSpan: '',
+    heroDescription: 'Hersteller, Verkäufer und Vermieter von Schalungsausrüstung und Zubehör. Was auch immer Sie benötigen — Kauf oder Miete von Schalungen, Lieferung von Zubehör, Unterstützung bei der Schalungsmontage, technische Beratung, Kundendienst oder Reparaturen.',
     getQuote: 'Angebot Erhalten',
   }
 } as const;

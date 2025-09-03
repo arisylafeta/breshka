@@ -35,7 +35,7 @@ const Stats = () => {
         {/* Experience */}
         <div className="flex-1 px-8 py-6 relative">
           <h3 className="text-5xl font-normal text-red-600 mb-2">
-            <AnimatedCounter end={7} suffix="+" className="inline-block" />
+            <AnimatedCounter end={14} suffix="+" className="inline-block" />
           </h3>
           <h4 className="text-lg font-medium text-red-600 mb-3">{t('experience')}</h4>
           <p className="text-sm text-gray-600 leading-relaxed">{t('experienceDesc')}</p>
