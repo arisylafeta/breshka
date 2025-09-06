@@ -26,7 +26,6 @@ const Hero = () => {
             <div className="absolute inset-0 bg-white/5 backdrop-blur-[1.5px] rounded-r-3xl -z-10"></div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
               {t('heroTitle')}
-              <span className="text-white">{t('heroTitleSpan')}</span>
             </h1>
             <p className="text-xl font-bold text-white mb-8 leading-relaxed">
               {t('heroDescription')}
