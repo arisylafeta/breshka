@@ -2,7 +2,6 @@
 
 import React from 'react';
 import type { ComponentProps, ReactNode } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import { motion, useReducedMotion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -60,18 +59,17 @@ const Footer = () => {
             </p>
           </AnimatedContainer>
 
-          {/* Popular Products */}
+          {/* Footer Video */}
           <AnimatedContainer delay={0.2} className="md:col-span-1">
-            <h3 className="text-sm font-bold mb-4">{t('footerPopularProducts')}</h3>
-            <ul className="space-y-2">
-              <li><Link href="/products/AlphaN" className="text-gray-400 hover:text-white text-sm transition-all duration-300">Alpha N</Link></li>
-              <li><Link href="/products/AluB" className="text-gray-400 hover:text-white text-sm transition-all duration-300">Alu B</Link></li>
-              <li><Link href="/products/AluBMax" className="text-gray-400 hover:text-white text-sm transition-all duration-300">Alu BMax</Link></li>
-              {/* <li><Link href="#" className="text-gray-400 hover:text-white text-sm transition-all duration-300">AluDec</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white text-sm transition-all duration-300">MT 60</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white text-sm transition-all duration-300">MGC-H</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white text-sm transition-all duration-300">AlphaFlex</Link></li> */}
-            </ul>
+            <div className="w-full">
+              <video
+                className="w-full rounded-lg shadow-lg"
+                src="/video2.mp4"
+                controls
+                preload="metadata"
+                playsInline
+              />
+            </div>
           </AnimatedContainer>
 
           {/* MEVA Services */}
